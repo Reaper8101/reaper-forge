@@ -67,14 +67,6 @@
       margin-bottom: 8px;
     }
 
-    .section-title {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: .95;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
     /* NAV */
 
     nav {
@@ -308,8 +300,6 @@
       margin-right: 7px;
     }
 
-    /* SINGLE HERO COMPOSITION */
-
     .hero-visual {
       height: 665px;
       position: relative;
@@ -471,42 +461,29 @@
       color: var(--red);
     }
 
-    /* PROCESS */
+    /* PROCESS ARTWORK */
 
     .process {
-      padding: 105px 0;
-      background: #070707;
+      position: relative;
+      padding: 95px 0;
+      overflow: hidden;
+      background: #030303;
       border-top: 1px solid var(--line);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin-top: 55px;
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .process-step {
-      padding: 27px;
-      border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
-    .process-step b {
-      color: var(--red);
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 2.7rem;
+    .process-art-wrap {
+      width: min(1320px, calc(100% - 40px));
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      background: #000;
     }
 
-    .process-step h3 {
-      font-family: "Barlow Condensed", sans-serif;
-      text-transform: uppercase;
-    }
-
-    .process-step p {
-      color: #777;
-      font-size: .82rem;
+    .process-art {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     /* ABOUT ARTWORK */
@@ -623,8 +600,12 @@
         transform: translateX(50%);
       }
 
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .process {
+        padding: 70px 0;
+      }
+
+      .process-art-wrap {
+        width: min(1000px, calc(100% - 30px));
       }
 
       .about {
@@ -701,8 +682,12 @@
         padding: 3px;
       }
 
-      .process-grid {
-        grid-template-columns: 1fr;
+      .process {
+        padding: 45px 0;
+      }
+
+      .process-art-wrap {
+        width: calc(100% - 20px);
       }
 
       .about {
@@ -921,43 +906,13 @@
 
 <section class="process" id="process">
 
-  <div class="container">
+  <div class="process-art-wrap">
 
-    <div class="section-tag">
-      The Process
-    </div>
-
-    <h2 class="section-title">
-      Simple. Clear. Built Together.
-    </h2>
-
-    <div class="process-grid">
-
-      <div class="process-step">
-        <b>01</b>
-        <h3>Idea</h3>
-        <p>Tell us what you're imagining.</p>
-      </div>
-
-      <div class="process-step">
-        <b>02</b>
-        <h3>Design</h3>
-        <p>We shape the layout and visual direction.</p>
-      </div>
-
-      <div class="process-step">
-        <b>03</b>
-        <h3>Build</h3>
-        <p>The idea becomes a responsive website.</p>
-      </div>
-
-      <div class="process-step">
-        <b>04</b>
-        <h3>Launch</h3>
-        <p>Final adjustments, then the site goes live.</p>
-      </div>
-
-    </div>
+    <img
+      src="reaper-forge-process.png"
+      alt="Reaper Forge website development process from idea to launch"
+      class="process-art"
+    >
 
   </div>
 
