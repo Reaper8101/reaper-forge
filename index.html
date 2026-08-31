@@ -36,7 +36,6 @@
         var(--bg);
 
       background-size: 44px 44px;
-
       color: var(--white);
       font-family: "Inter", Arial, sans-serif;
       line-height: 1.6;
@@ -69,14 +68,26 @@
     }
 
     /* =========================================================
-       FULL FLATTENED HERO
+       FULL HERO
        ========================================================= */
 
     .hero-full {
-      position: relative;
       width: 100%;
+      padding: 26px 0;
       background: #000;
       border-bottom: 1px solid var(--line);
+    }
+
+    /*
+      IMPORTANT:
+      Image and clickable areas are inside this SAME wrapper.
+      When the artwork shrinks, the links shrink with it.
+    */
+
+    .hero-stage {
+      position: relative;
+      width: min(1380px, 90vw);
+      margin: 0 auto;
     }
 
     .hero-full-art {
@@ -85,76 +96,70 @@
       display: block;
     }
 
-    /*
-      Invisible clickable areas.
-      Nothing visual is being layered onto the artwork.
-      These simply make the buttons baked into the PNG functional.
-    */
-
     .hero-hotspot {
       position: absolute;
+      z-index: 10;
       display: block;
-      z-index: 5;
       cursor: pointer;
     }
 
-    /* Top navigation links */
+    /* NAV HOTSPOTS */
 
     .hot-home {
-      left: 42%;
-      top: 5%;
-      width: 6%;
+      left: 42.5%;
+      top: 4.4%;
+      width: 5.2%;
       height: 6%;
     }
 
     .hot-services {
-      left: 48%;
-      top: 5%;
-      width: 8%;
-      height: 6%;
-    }
-
-    .hot-concepts {
-      left: 56%;
-      top: 5%;
-      width: 8%;
-      height: 6%;
-    }
-
-    .hot-process {
-      left: 65%;
-      top: 5%;
+      left: 48.8%;
+      top: 4.4%;
       width: 7%;
       height: 6%;
     }
 
+    .hot-concepts {
+      left: 57%;
+      top: 4.4%;
+      width: 7%;
+      height: 6%;
+    }
+
+    .hot-process {
+      left: 65.5%;
+      top: 4.4%;
+      width: 6.8%;
+      height: 6%;
+    }
+
     .hot-about {
-      left: 73%;
-      top: 5%;
-      width: 6%;
+      left: 74%;
+      top: 4.4%;
+      width: 5.8%;
       height: 6%;
     }
 
     .hot-nav-project {
-      right: 2.5%;
-      top: 4%;
+      left: 83%;
+      top: 4.2%;
       width: 14%;
-      height: 7%;
+      height: 6.5%;
     }
 
-    /* Main hero buttons */
+    /* MAIN HERO BUTTONS */
 
     .hot-main-project {
       left: 3.4%;
-      top: 79%;
-      width: 18%;
+      top: 74.2%;
+      width: 18.2%;
       height: 7%;
     }
 
     .hot-view-concepts {
-      left: 22.5%;
-      top: 79%;
-      width: 16%;
+      left: 22.9%;
+      top: 74.2%;
+      width: 16.4%;
       height: 7%;
     }
 
@@ -288,7 +293,7 @@
     }
 
     /* =========================================================
-       PROCESS ARTWORK
+       PROCESS
        ========================================================= */
 
     .process {
@@ -319,7 +324,7 @@
     }
 
     /* =========================================================
-       ABOUT ARTWORK
+       ABOUT
        ========================================================= */
 
     .about {
@@ -490,6 +495,14 @@
 
     @media (max-width: 900px) {
 
+      .hero-full {
+        padding: 16px 0;
+      }
+
+      .hero-stage {
+        width: 96vw;
+      }
+
       .services {
         padding: 70px 0 80px;
       }
@@ -516,6 +529,14 @@
        ========================================================= */
 
     @media (max-width: 700px) {
+
+      .hero-full {
+        padding: 8px 0;
+      }
+
+      .hero-stage {
+        width: 100%;
+      }
 
       .services {
         padding: 55px 0 65px;
@@ -566,76 +587,80 @@
 
 
 <!-- =========================================================
-     COMPLETE SINGLE-IMAGE HERO
+     COMPLETE HERO
      ========================================================= -->
 
 <section class="hero-full" id="home">
 
-  <img
-    src="reaper-forge-hero-full.png"
-    alt="Reaper Forge web development"
-    class="hero-full-art"
-  >
+  <div class="hero-stage">
+
+    <img
+      src="reaper-forge-hero-full.png"
+      alt="Reaper Forge web development"
+      class="hero-full-art"
+    >
 
 
-  <!-- NAVIGATION CLICK AREAS -->
+    <!-- NAVIGATION -->
 
-  <a
-    href="#home"
-    class="hero-hotspot hot-home"
-    aria-label="Home"
-  ></a>
+    <a
+      href="#home"
+      class="hero-hotspot hot-home"
+      aria-label="Home"
+    ></a>
 
-  <a
-    href="#services"
-    class="hero-hotspot hot-services"
-    aria-label="Services"
-  ></a>
+    <a
+      href="#services"
+      class="hero-hotspot hot-services"
+      aria-label="Services"
+    ></a>
 
-  <a
-    href="#services"
-    class="hero-hotspot hot-concepts"
-    aria-label="Concepts"
-  ></a>
+    <a
+      href="#services"
+      class="hero-hotspot hot-concepts"
+      aria-label="Concepts"
+    ></a>
 
-  <a
-    href="#process"
-    class="hero-hotspot hot-process"
-    aria-label="Process"
-  ></a>
+    <a
+      href="#process"
+      class="hero-hotspot hot-process"
+      aria-label="Process"
+    ></a>
 
-  <a
-    href="#about"
-    class="hero-hotspot hot-about"
-    aria-label="About"
-  ></a>
+    <a
+      href="#about"
+      class="hero-hotspot hot-about"
+      aria-label="About"
+    ></a>
 
-  <a
-    href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
-    class="hero-hotspot hot-nav-project"
-    aria-label="Start a Project"
-  ></a>
+    <a
+      href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      class="hero-hotspot hot-nav-project"
+      aria-label="Start a Project"
+    ></a>
 
 
-  <!-- MAIN HERO BUTTON CLICK AREAS -->
+    <!-- MAIN BUTTONS -->
 
-  <a
-    href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
-    class="hero-hotspot hot-main-project"
-    aria-label="Start a Project"
-  ></a>
+    <a
+      href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      class="hero-hotspot hot-main-project"
+      aria-label="Start a Project"
+    ></a>
 
-  <a
-    href="#services"
-    class="hero-hotspot hot-view-concepts"
-    aria-label="View Concepts"
-  ></a>
+    <a
+      href="#services"
+      class="hero-hotspot hot-view-concepts"
+      aria-label="View Concepts"
+    ></a>
+
+  </div>
 
 </section>
 
 
 <!-- =========================================================
-     CONCEPT SHOWCASE
+     CONCEPTS
      ========================================================= -->
 
 <section class="services" id="services">
@@ -684,7 +709,7 @@
 
 
 <!-- =========================================================
-     MOVING CODE STRIP
+     CODE STRIP
      ========================================================= -->
 
 <div class="code-strip">
