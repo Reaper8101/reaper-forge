@@ -164,7 +164,6 @@
       display: flex;
       align-items: center;
       border-bottom: 1px solid var(--line);
-
       background:
         linear-gradient(
           90deg,
@@ -182,7 +181,6 @@
       inset: 0;
       pointer-events: none;
       opacity: .12;
-
       background:
         linear-gradient(
           90deg,
@@ -195,19 +193,16 @@
           rgba(255,0,0,.06) 50%,
           transparent 50.2%
         );
-
       background-size: 120px 120px;
     }
 
     .hero-inner {
       width: min(1240px, calc(100% - 40px));
       margin: auto;
-
       display: grid;
       grid-template-columns: .88fr 1.12fr;
       align-items: center;
       gap: 8px;
-
       position: relative;
       z-index: 2;
     }
@@ -260,16 +255,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
       min-height: 46px;
       padding: 0 24px;
-
       font-family: "Barlow Condensed", sans-serif;
       font-size: .84rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-
       transition: .2s;
     }
 
@@ -298,9 +290,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 22px;
-
       margin-top: 38px;
-
       color: #777;
       font-family: "Barlow Condensed", sans-serif;
       font-size: .72rem;
@@ -315,13 +305,10 @@
       margin-right: 7px;
     }
 
-    /* SINGLE HERO COMPOSITION */
-
     .hero-visual {
       height: 665px;
       position: relative;
       overflow: hidden;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -330,10 +317,8 @@
     .hero-art {
       position: absolute;
       z-index: 2;
-
       width: 800px;
       max-width: 124%;
-
       right: -92px;
       bottom: -8px;
 
@@ -358,17 +343,15 @@
         );
     }
 
-    /* MOVING CODE STRIP */
+    /* CODE STRIP */
 
     .code-strip {
       height: 78px;
       display: flex;
       align-items: center;
       overflow: hidden;
-
       border-top: 1px solid rgba(255,0,0,.10);
       border-bottom: 1px solid rgba(255,0,0,.10);
-
       background:
         linear-gradient(
           90deg,
@@ -381,11 +364,9 @@
     .code-track {
       white-space: nowrap;
       min-width: max-content;
-
       color: #4f4f4f;
       font-family: monospace;
       font-size: .71rem;
-
       animation: codeMove 35s linear infinite;
     }
 
@@ -411,7 +392,6 @@
 
     .services {
       padding: 100px 0 115px;
-
       background:
         radial-gradient(
           circle at 50% 40%,
@@ -424,12 +404,9 @@
     .mockup-wrap {
       position: relative;
       width: 100%;
-
       padding: 7px;
-
       background: #070707;
       border: 1px solid rgba(255,255,255,.10);
-
       box-shadow:
         0 25px 65px rgba(0,0,0,.55),
         0 0 45px rgba(120,0,0,.08);
@@ -439,7 +416,6 @@
       content: "";
       position: absolute;
       inset: -1px;
-
       border: 1px solid rgba(210,20,20,.12);
       pointer-events: none;
     }
@@ -451,10 +427,8 @@
 
     .mockup-caption {
       margin-top: 18px;
-
       text-align: center;
       color: #666;
-
       font-size: .75rem;
       letter-spacing: 1px;
     }
@@ -464,7 +438,6 @@
     .statement {
       padding: 105px 0;
       text-align: center;
-
       background:
         radial-gradient(
           circle at center,
@@ -472,14 +445,12 @@
           transparent 45%
         ),
         #070707;
-
       border-bottom: 1px solid var(--line);
     }
 
     .statement h2 {
       max-width: 950px;
       margin: auto;
-
       font-family: "Barlow Condensed", sans-serif;
       font-size: clamp(3rem, 7vw, 6rem);
       line-height: .92;
@@ -501,23 +472,19 @@
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-
       margin-top: 55px;
-
       border-top: 1px solid var(--line);
       border-left: 1px solid var(--line);
     }
 
     .process-step {
       padding: 27px;
-
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .process-step b {
       color: var(--red);
-
       font-family: "Barlow Condensed", sans-serif;
       font-size: 2.7rem;
     }
@@ -535,54 +502,114 @@
     /* ABOUT */
 
     .about {
-      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+      padding: 125px 0;
+      background:
+        radial-gradient(circle at 78% 50%, rgba(130,0,0,.09), transparent 35%),
+        linear-gradient(180deg, #050505, #070707);
+      border-top: 1px solid var(--line);
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      align-items: center;
-      gap: 80px;
+    .about::before {
+      content:
+        "<section class='idea'>  build: custom;  design: intentional;  identity: yours;  </section>";
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-family: monospace;
+      font-size: clamp(.8rem, 1.3vw, 1rem);
+      color: rgba(255,255,255,.05);
+      letter-spacing: 1px;
+      pointer-events: none;
     }
 
-    .about-mark {
-      height: 320px;
+    .about::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -120px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(255,0,0,.05);
+      transform: rotate(18deg);
+      pointer-events: none;
+    }
 
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 980px;
+    }
+
+    .about-kicker {
       display: flex;
       align-items: center;
-      justify-content: center;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(150,0,0,.14),
-          transparent 45%
-        ),
-        #080808;
-
-      border: 1px solid var(--line);
-    }
-
-    .big-rf {
-      color: var(--red);
-
+      gap: 14px;
+      margin-bottom: 18px;
+      color: var(--red2);
       font-family: "Barlow Condensed", sans-serif;
-      font-size: 5rem;
-      font-weight: 900;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
 
-    .about p {
-      margin-top: 18px;
-      color: #8e8e8e;
+    .about-kicker::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: var(--red);
+    }
+
+    .about h2 {
+      max-width: 900px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(3.8rem, 7vw, 6.8rem);
+      line-height: .86;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .about h2 span {
+      color: var(--red);
+    }
+
+    .about-copy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      max-width: 900px;
+      margin-top: 36px;
+    }
+
+    .about-copy p {
+      color: #909090;
+      font-size: .95rem;
+      line-height: 1.85;
+    }
+
+    .about-line {
+      width: 100%;
+      max-width: 900px;
+      height: 1px;
+      margin-top: 48px;
+      background:
+        linear-gradient(
+          90deg,
+          var(--red),
+          rgba(215,22,22,.15),
+          transparent
+        );
     }
 
     /* CONTACT */
 
     .contact {
       padding: 105px 0;
-
       text-align: center;
-
       background:
         radial-gradient(
           circle at center,
@@ -590,7 +617,6 @@
           transparent 42%
         ),
         #050505;
-
       border-top: 1px solid var(--line);
     }
 
@@ -643,7 +669,6 @@
     /* TABLET */
 
     @media (max-width: 900px) {
-
       .hero {
         min-height: auto;
         padding: 70px 0 30px;
@@ -661,10 +686,8 @@
       .hero-art {
         width: 720px;
         max-width: 122%;
-
         right: 50%;
         bottom: -5px;
-
         transform: translateX(50%);
       }
 
@@ -672,33 +695,28 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .about-grid {
+      .about-copy {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 18px;
       }
     }
 
     /* MOBILE */
 
     @media (max-width: 700px) {
-
       nav {
         height: 60px;
       }
 
       .nav-links {
         display: none;
-
         position: absolute;
         top: 60px;
         left: 0;
         right: 0;
-
         flex-direction: column;
         align-items: stretch;
-
         padding: 20px;
-
         background: #080808;
       }
 
@@ -734,10 +752,8 @@
       .hero-art {
         width: 540px;
         max-width: 145%;
-
         right: 50%;
         bottom: 0;
-
         transform: translateX(50%);
       }
 
@@ -751,6 +767,18 @@
 
       .process-grid {
         grid-template-columns: 1fr;
+      }
+
+      .about {
+        padding: 85px 0;
+      }
+
+      .about h2 {
+        font-size: clamp(3.2rem, 17vw, 5rem);
+      }
+
+      .about::before {
+        font-size: .62rem;
       }
 
       .footer-inner {
@@ -785,7 +813,6 @@
   </div>
 </nav>
 
-
 <header class="hero" id="home">
 
   <div class="hero-inner">
@@ -808,15 +835,8 @@
       </p>
 
       <div class="hero-buttons">
-
-        <a href="#contact" class="btn btn-red">
-          Start a Project
-        </a>
-
-        <a href="#services" class="btn btn-dark">
-          View Concepts
-        </a>
-
+        <a href="#contact" class="btn btn-red">Start a Project</a>
+        <a href="#services" class="btn btn-dark">View Concepts</a>
       </div>
 
       <div class="hero-notes">
@@ -826,7 +846,6 @@
       </div>
 
     </div>
-
 
     <div class="hero-visual">
 
@@ -842,44 +861,29 @@
 
 </header>
 
-
 <div class="code-strip">
-
   <div class="code-track">
 
     <span class="red">&lt;main&gt;</span>
     &nbsp;&nbsp;
-
     &lt;section class="<span class="light">project</span>"&gt;
     &nbsp;&nbsp;
-
     display: grid;
     &nbsp;&nbsp;
-
     gap: 24px;
     &nbsp;&nbsp;
-
     <span class="red">const</span> idea = "something worth building";
     &nbsp;&nbsp;
-
     background: #050505;
     &nbsp;&nbsp;
-
-    function buildWebsite() {
-      return <span class="red">vision</span>;
-    }
-
+    function buildWebsite() { return <span class="red">vision</span>; }
     &nbsp;&nbsp;
-
     @media (max-width:700px)
     &nbsp;&nbsp;
-
     <span class="red">&lt;/main&gt;</span>
 
   </div>
-
 </div>
-
 
 <section class="services" id="services">
 
@@ -903,7 +907,6 @@
 
 </section>
 
-
 <section class="statement">
 
   <div class="container">
@@ -921,43 +924,27 @@
 
 </section>
 
-
 <div class="code-strip">
 
   <div class="code-track">
 
-    <span class="red">
-      /* DESIGN SYSTEM */
-    </span>
-
+    <span class="red">/* DESIGN SYSTEM */</span>
     &nbsp;&nbsp;
-
     --brand: unique;
-
     &nbsp;&nbsp;
-
     --layout: responsive;
-
     &nbsp;&nbsp;
-
     --experience: intentional;
-
     &nbsp;&nbsp;
-
     document.querySelector(".idea");
-
     &nbsp;&nbsp;
-
     visualIdentity++;
-
     &nbsp;&nbsp;
-
     @media screen and (max-width: 700px)
 
   </div>
 
 </div>
-
 
 <section class="process" id="process">
 
@@ -974,54 +961,27 @@
     <div class="process-grid">
 
       <div class="process-step">
-
         <b>01</b>
-
         <h3>Idea</h3>
-
-        <p>
-          Tell us what you're imagining.
-        </p>
-
+        <p>Tell us what you're imagining.</p>
       </div>
 
-
       <div class="process-step">
-
         <b>02</b>
-
         <h3>Design</h3>
-
-        <p>
-          We shape the layout and visual direction.
-        </p>
-
+        <p>We shape the layout and visual direction.</p>
       </div>
 
-
       <div class="process-step">
-
         <b>03</b>
-
         <h3>Build</h3>
-
-        <p>
-          The idea becomes a responsive website.
-        </p>
-
+        <p>The idea becomes a responsive website.</p>
       </div>
 
-
       <div class="process-step">
-
         <b>04</b>
-
         <h3>Launch</h3>
-
-        <p>
-          Final adjustments, then the site goes live.
-        </p>
-
+        <p>Final adjustments, then the site goes live.</p>
       </div>
 
     </div>
@@ -1029,49 +989,44 @@
   </div>
 
 </section>
-
 
 <section class="about" id="about">
 
-  <div class="container about-grid">
+  <div class="container">
 
-    <div class="about-mark">
+    <div class="about-content">
 
-      <div class="big-rf">
-        RF
+      <div class="about-kicker">
+        Reaper Forge // About
       </div>
 
-    </div>
-
-
-    <div>
-
-      <div class="section-tag">
-        Reaper Forge
-      </div>
-
-      <h2 class="section-title">
+      <h2>
         Bring the Idea.<br>
-        We'll Shape the Site.
+        <span>We'll Shape the Site.</span>
       </h2>
 
-      <p>
-        Reaper Forge creates modern websites for businesses, creators,
-        communities, personal projects and anyone with an idea that deserves
-        its own place on the web.
-      </p>
+      <div class="about-copy">
 
-      <p>
-        We keep the process straightforward and build around the project
-        instead of forcing every website into the same template.
-      </p>
+        <p>
+          Reaper Forge creates modern websites for businesses, creators,
+          communities, personal projects and anyone with an idea that deserves
+          its own place on the web.
+        </p>
+
+        <p>
+          We keep the process straightforward and build around the project
+          instead of forcing every website into the same template.
+        </p>
+
+      </div>
+
+      <div class="about-line"></div>
 
     </div>
 
   </div>
 
 </section>
-
 
 <section class="contact" id="contact">
 
@@ -1099,19 +1054,13 @@
 
 </section>
 
-
 <footer>
 
   <div class="container footer-inner">
 
     <div class="brand">
-
       REAPER <span>FORGE</span>
-
-      <small>
-        WEB DEVELOPMENT
-      </small>
-
+      <small>WEB DEVELOPMENT</small>
     </div>
 
     <div class="footer-copy">
@@ -1126,9 +1075,7 @@
 
 </footer>
 
-
 <script>
-
   function toggleMenu() {
     document
       .getElementById("navLinks")
@@ -1136,22 +1083,16 @@
       .toggle("open");
   }
 
-
   document
     .querySelectorAll(".nav-links a")
     .forEach(link => {
-
       link.addEventListener("click", () => {
-
         document
           .getElementById("navLinks")
           .classList
           .remove("open");
-
       });
-
     });
-
 </script>
 
 </body>
