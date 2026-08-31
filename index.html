@@ -164,6 +164,7 @@
       display: flex;
       align-items: center;
       border-bottom: 1px solid var(--line);
+
       background:
         linear-gradient(
           90deg,
@@ -181,6 +182,7 @@
       inset: 0;
       pointer-events: none;
       opacity: .12;
+
       background:
         linear-gradient(
           90deg,
@@ -193,6 +195,7 @@
           rgba(255,0,0,.06) 50%,
           transparent 50.2%
         );
+
       background-size: 120px 120px;
     }
 
@@ -305,6 +308,8 @@
       margin-right: 7px;
     }
 
+    /* SINGLE HERO COMPOSITION */
+
     .hero-visual {
       height: 665px;
       position: relative;
@@ -352,6 +357,7 @@
       overflow: hidden;
       border-top: 1px solid rgba(255,0,0,.10);
       border-bottom: 1px solid rgba(255,0,0,.10);
+
       background:
         linear-gradient(
           90deg,
@@ -392,6 +398,7 @@
 
     .services {
       padding: 100px 0 115px;
+
       background:
         radial-gradient(
           circle at 50% 40%,
@@ -407,6 +414,7 @@
       padding: 7px;
       background: #070707;
       border: 1px solid rgba(255,255,255,.10);
+
       box-shadow:
         0 25px 65px rgba(0,0,0,.55),
         0 0 45px rgba(120,0,0,.08);
@@ -438,6 +446,7 @@
     .statement {
       padding: 105px 0;
       text-align: center;
+
       background:
         radial-gradient(
           circle at center,
@@ -445,6 +454,7 @@
           transparent 45%
         ),
         #070707;
+
       border-bottom: 1px solid var(--line);
     }
 
@@ -499,110 +509,29 @@
       font-size: .82rem;
     }
 
-    /* ABOUT */
+    /* ABOUT ARTWORK */
 
     .about {
       position: relative;
+      padding: 105px 0;
       overflow: hidden;
-      padding: 125px 0;
-      background:
-        radial-gradient(circle at 78% 50%, rgba(130,0,0,.09), transparent 35%),
-        linear-gradient(180deg, #050505, #070707);
+      background: #030303;
       border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .about::before {
-      content:
-        "<section class='idea'>  build: custom;  design: intentional;  identity: yours;  </section>";
-      position: absolute;
-      left: 50%;
-      bottom: 30px;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      font-family: monospace;
-      font-size: clamp(.8rem, 1.3vw, 1rem);
-      color: rgba(255,255,255,.05);
-      letter-spacing: 1px;
-      pointer-events: none;
-    }
-
-    .about::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: -120px;
-      width: 520px;
-      height: 520px;
-      border: 1px solid rgba(255,0,0,.05);
-      transform: rotate(18deg);
-      pointer-events: none;
-    }
-
-    .about-content {
+    .about-art-wrap {
+      width: min(1320px, calc(100% - 40px));
+      margin: auto;
       position: relative;
-      z-index: 2;
-      max-width: 980px;
+      overflow: hidden;
+      background: #000;
     }
 
-    .about-kicker {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-      color: var(--red2);
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: .85rem;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .about-kicker::before {
-      content: "";
-      width: 38px;
-      height: 1px;
-      background: var(--red);
-    }
-
-    .about h2 {
-      max-width: 900px;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: clamp(3.8rem, 7vw, 6.8rem);
-      line-height: .86;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-    }
-
-    .about h2 span {
-      color: var(--red);
-    }
-
-    .about-copy {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      max-width: 900px;
-      margin-top: 36px;
-    }
-
-    .about-copy p {
-      color: #909090;
-      font-size: .95rem;
-      line-height: 1.85;
-    }
-
-    .about-line {
+    .about-art {
       width: 100%;
-      max-width: 900px;
-      height: 1px;
-      margin-top: 48px;
-      background:
-        linear-gradient(
-          90deg,
-          var(--red),
-          rgba(215,22,22,.15),
-          transparent
-        );
+      height: auto;
+      display: block;
     }
 
     /* CONTACT */
@@ -610,6 +539,7 @@
     .contact {
       padding: 105px 0;
       text-align: center;
+
       background:
         radial-gradient(
           circle at center,
@@ -617,6 +547,7 @@
           transparent 42%
         ),
         #050505;
+
       border-top: 1px solid var(--line);
     }
 
@@ -669,6 +600,7 @@
     /* TABLET */
 
     @media (max-width: 900px) {
+
       .hero {
         min-height: auto;
         padding: 70px 0 30px;
@@ -695,15 +627,19 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .about-copy {
-        grid-template-columns: 1fr;
-        gap: 18px;
+      .about {
+        padding: 70px 0;
+      }
+
+      .about-art-wrap {
+        width: min(1000px, calc(100% - 30px));
       }
     }
 
     /* MOBILE */
 
     @media (max-width: 700px) {
+
       nav {
         height: 60px;
       }
@@ -770,15 +706,11 @@
       }
 
       .about {
-        padding: 85px 0;
+        padding: 45px 0;
       }
 
-      .about h2 {
-        font-size: clamp(3.2rem, 17vw, 5rem);
-      }
-
-      .about::before {
-        font-size: .62rem;
+      .about-art-wrap {
+        width: calc(100% - 20px);
       }
 
       .footer-inner {
@@ -813,6 +745,7 @@
   </div>
 </nav>
 
+
 <header class="hero" id="home">
 
   <div class="hero-inner">
@@ -835,8 +768,15 @@
       </p>
 
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-red">Start a Project</a>
-        <a href="#services" class="btn btn-dark">View Concepts</a>
+
+        <a href="#contact" class="btn btn-red">
+          Start a Project
+        </a>
+
+        <a href="#services" class="btn btn-dark">
+          View Concepts
+        </a>
+
       </div>
 
       <div class="hero-notes">
@@ -846,6 +786,7 @@
       </div>
 
     </div>
+
 
     <div class="hero-visual">
 
@@ -861,29 +802,44 @@
 
 </header>
 
+
 <div class="code-strip">
+
   <div class="code-track">
 
     <span class="red">&lt;main&gt;</span>
     &nbsp;&nbsp;
+
     &lt;section class="<span class="light">project</span>"&gt;
     &nbsp;&nbsp;
+
     display: grid;
     &nbsp;&nbsp;
+
     gap: 24px;
     &nbsp;&nbsp;
+
     <span class="red">const</span> idea = "something worth building";
     &nbsp;&nbsp;
+
     background: #050505;
     &nbsp;&nbsp;
-    function buildWebsite() { return <span class="red">vision</span>; }
+
+    function buildWebsite() {
+      return <span class="red">vision</span>;
+    }
+
     &nbsp;&nbsp;
+
     @media (max-width:700px)
     &nbsp;&nbsp;
+
     <span class="red">&lt;/main&gt;</span>
 
   </div>
+
 </div>
+
 
 <section class="services" id="services">
 
@@ -907,6 +863,7 @@
 
 </section>
 
+
 <section class="statement">
 
   <div class="container">
@@ -924,27 +881,43 @@
 
 </section>
 
+
 <div class="code-strip">
 
   <div class="code-track">
 
-    <span class="red">/* DESIGN SYSTEM */</span>
+    <span class="red">
+      /* DESIGN SYSTEM */
+    </span>
+
     &nbsp;&nbsp;
+
     --brand: unique;
+
     &nbsp;&nbsp;
+
     --layout: responsive;
+
     &nbsp;&nbsp;
+
     --experience: intentional;
+
     &nbsp;&nbsp;
+
     document.querySelector(".idea");
+
     &nbsp;&nbsp;
+
     visualIdentity++;
+
     &nbsp;&nbsp;
+
     @media screen and (max-width: 700px)
 
   </div>
 
 </div>
+
 
 <section class="process" id="process">
 
@@ -990,43 +963,21 @@
 
 </section>
 
+
 <section class="about" id="about">
 
-  <div class="container">
+  <div class="about-art-wrap">
 
-    <div class="about-content">
-
-      <div class="about-kicker">
-        Reaper Forge // About
-      </div>
-
-      <h2>
-        Bring the Idea.<br>
-        <span>We'll Shape the Site.</span>
-      </h2>
-
-      <div class="about-copy">
-
-        <p>
-          Reaper Forge creates modern websites for businesses, creators,
-          communities, personal projects and anyone with an idea that deserves
-          its own place on the web.
-        </p>
-
-        <p>
-          We keep the process straightforward and build around the project
-          instead of forcing every website into the same template.
-        </p>
-
-      </div>
-
-      <div class="about-line"></div>
-
-    </div>
+    <img
+      src="reaper-forge-about.png"
+      alt="Reaper Forge web development studio"
+      class="about-art"
+    >
 
   </div>
 
 </section>
+
 
 <section class="contact" id="contact">
 
@@ -1054,13 +1005,19 @@
 
 </section>
 
+
 <footer>
 
   <div class="container footer-inner">
 
     <div class="brand">
+
       REAPER <span>FORGE</span>
-      <small>WEB DEVELOPMENT</small>
+
+      <small>
+        WEB DEVELOPMENT
+      </small>
+
     </div>
 
     <div class="footer-copy">
@@ -1075,7 +1032,9 @@
 
 </footer>
 
+
 <script>
+
   function toggleMenu() {
     document
       .getElementById("navLinks")
@@ -1083,16 +1042,22 @@
       .toggle("open");
   }
 
+
   document
     .querySelectorAll(".nav-links a")
     .forEach(link => {
+
       link.addEventListener("click", () => {
+
         document
           .getElementById("navLinks")
           .classList
           .remove("open");
+
       });
+
     });
+
 </script>
 
 </body>
