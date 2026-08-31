@@ -73,20 +73,17 @@
 
     .hero-full {
       width: 100%;
-      padding: 26px 0;
+      padding: 28px 0;
       background: #000;
       border-bottom: 1px solid var(--line);
     }
 
-    /*
-      IMPORTANT:
-      Image and clickable areas are inside this SAME wrapper.
-      When the artwork shrinks, the links shrink with it.
-    */
-
     .hero-stage {
       position: relative;
-      width: min(1380px, 90vw);
+
+      /* Slightly smaller hero */
+      width: min(1320px, 86vw);
+
       margin: 0 auto;
     }
 
@@ -95,6 +92,12 @@
       height: auto;
       display: block;
     }
+
+    /*
+      Invisible clickable zones.
+      Because these live inside hero-stage,
+      they scale together with the artwork.
+    */
 
     .hero-hotspot {
       position: absolute;
@@ -310,10 +313,8 @@
     .process-art-wrap {
       width: min(1320px, calc(100% - 40px));
       margin: auto;
-
       position: relative;
       overflow: hidden;
-
       background: #000;
     }
 
@@ -341,10 +342,8 @@
     .about-art-wrap {
       width: min(1320px, calc(100% - 40px));
       margin: auto;
-
       position: relative;
       overflow: hidden;
-
       background: #000;
     }
 
@@ -500,7 +499,7 @@
       }
 
       .hero-stage {
-        width: 96vw;
+        width: 94vw;
       }
 
       .services {
@@ -633,20 +632,30 @@
       aria-label="About"
     ></a>
 
+
+    <!-- TOP START PROJECT -->
+
     <a
-      href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      target="_blank"
+      rel="noopener noreferrer"
       class="hero-hotspot hot-nav-project"
       aria-label="Start a Project"
     ></a>
 
 
-    <!-- MAIN BUTTONS -->
+    <!-- MAIN START PROJECT -->
 
     <a
-      href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      target="_blank"
+      rel="noopener noreferrer"
       class="hero-hotspot hot-main-project"
       aria-label="Start a Project"
     ></a>
+
+
+    <!-- VIEW CONCEPTS -->
 
     <a
       href="#services"
@@ -813,15 +822,23 @@
       you have in mind.
     </p>
 
+
+    <!-- BOTTOM START PROJECT -->
+
     <a
-      href="mailto:reaperforgenet@gmail.com?subject=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+      target="_blank"
+      rel="noopener noreferrer"
       class="btn btn-red"
     >
       Start a Project
     </a>
 
+
     <a
-      href="mailto:reaperforgenet@gmail.com"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
       class="contact-email"
     >
       reaperforgenet@gmail.com
