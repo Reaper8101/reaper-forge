@@ -82,7 +82,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(5,5,5,.93);
+      background: rgba(5,5,5,.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
@@ -135,7 +135,7 @@
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #fff;
     }
 
     .nav-cta {
@@ -165,35 +165,42 @@
       align-items: center;
       border-bottom: 1px solid var(--line);
       background:
-        linear-gradient(90deg, #050505 0%, #050505 43%, #000 58%, #000 100%);
+        linear-gradient(
+          90deg,
+          #050505 0%,
+          #050505 42%,
+          #020202 51%,
+          #000 62%,
+          #000 100%
+        );
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      opacity: .15;
-      background:
-        linear-gradient(90deg, transparent 49.8%, rgba(255,0,0,.10) 50%, transparent 50.2%),
-        linear-gradient(transparent 49.8%, rgba(255,0,0,.05) 50%, transparent 50.2%);
-      background-size: 120px 120px;
       pointer-events: none;
+      opacity: .12;
+      background:
+        linear-gradient(90deg, transparent 49.8%, rgba(255,0,0,.12) 50%, transparent 50.2%),
+        linear-gradient(transparent 49.8%, rgba(255,0,0,.06) 50%, transparent 50.2%);
+      background-size: 120px 120px;
     }
 
     .hero-inner {
-      width: min(1220px, calc(100% - 40px));
+      width: min(1240px, calc(100% - 40px));
       margin: auto;
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: .88fr 1.12fr;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       position: relative;
       z-index: 2;
     }
 
     .hero-copy {
       position: relative;
-      z-index: 4;
+      z-index: 5;
     }
 
     .hero-label {
@@ -216,12 +223,12 @@
     }
 
     .hero h1 span {
-      color: var(--red);
       display: block;
+      color: var(--red);
     }
 
     .hero-desc {
-      max-width: 610px;
+      max-width: 600px;
       margin-top: 28px;
       color: #aaa;
       font-size: 1rem;
@@ -230,9 +237,9 @@
 
     .hero-buttons {
       display: flex;
+      flex-wrap: wrap;
       gap: 12px;
       margin-top: 30px;
-      flex-wrap: wrap;
     }
 
     .btn {
@@ -260,14 +267,14 @@
     }
 
     .btn-dark {
+      background: rgba(255,255,255,.02);
       border: 1px solid rgba(255,255,255,.16);
       color: #bbb;
-      background: rgba(255,255,255,.02);
     }
 
     .btn-dark:hover {
-      border-color: #555;
       color: white;
+      border-color: #555;
     }
 
     .hero-notes {
@@ -289,32 +296,32 @@
       margin-right: 7px;
     }
 
-    /* SINGLE CLEAN HERO IMAGE */
+    /* SINGLE HERO COMPOSITION */
 
     .hero-visual {
-      height: 650px;
+      height: 665px;
       position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
 
     .hero-art {
       position: absolute;
-      width: 760px;
-      max-width: 118%;
-      right: -85px;
-      bottom: -10px;
       z-index: 2;
+      width: 800px;
+      max-width: 124%;
+      right: -92px;
+      bottom: -8px;
 
       -webkit-mask-image:
         linear-gradient(
           90deg,
           transparent 0%,
-          rgba(0,0,0,.25) 6%,
-          rgba(0,0,0,.8) 14%,
-          black 24%,
+          rgba(0,0,0,.2) 4%,
+          rgba(0,0,0,.7) 10%,
+          black 18%,
           black 100%
         );
 
@@ -322,14 +329,14 @@
         linear-gradient(
           90deg,
           transparent 0%,
-          rgba(0,0,0,.25) 6%,
-          rgba(0,0,0,.8) 14%,
-          black 24%,
+          rgba(0,0,0,.2) 4%,
+          rgba(0,0,0,.7) 10%,
+          black 18%,
           black 100%
         );
     }
 
-    /* CODE STRIP */
+    /* MOVING CODE STRIP */
 
     .code-strip {
       height: 78px;
@@ -338,7 +345,8 @@
       overflow: hidden;
       border-top: 1px solid rgba(255,0,0,.10);
       border-bottom: 1px solid rgba(255,0,0,.10);
-      background: linear-gradient(90deg, #030303, rgba(20,0,0,.2), #030303);
+      background:
+        linear-gradient(90deg, #030303, rgba(20,0,0,.2), #030303);
     }
 
     .code-track {
@@ -351,7 +359,7 @@
     }
 
     .code-track .red {
-      color: #932020;
+      color: #a12222;
     }
 
     .code-track .light {
@@ -359,11 +367,16 @@
     }
 
     @keyframes codeMove {
-      from { transform: translateX(0); }
-      to { transform: translateX(-35%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-35%);
+      }
     }
 
-    /* MOCKUP IMAGE */
+    /* WEBSITE MOCKUPS */
 
     .services {
       padding: 100px 0 115px;
@@ -375,9 +388,9 @@
     .mockup-wrap {
       position: relative;
       width: 100%;
-      border: 1px solid rgba(255,255,255,.10);
-      background: #070707;
       padding: 7px;
+      background: #070707;
+      border: 1px solid rgba(255,255,255,.10);
       box-shadow:
         0 25px 65px rgba(0,0,0,.55),
         0 0 45px rgba(120,0,0,.08);
@@ -387,8 +400,8 @@
       content: "";
       position: absolute;
       inset: -1px;
-      pointer-events: none;
       border: 1px solid rgba(210,20,20,.12);
+      pointer-events: none;
     }
 
     .mockup-image {
@@ -455,17 +468,17 @@
     }
 
     .concept {
-      border: 1px solid var(--line);
-      background: #090909;
       overflow: hidden;
+      background: #090909;
+      border: 1px solid var(--line);
     }
 
     .browser-bar {
       height: 34px;
       display: flex;
       align-items: center;
-      padding: 0 12px;
       gap: 6px;
+      padding: 0 12px;
       background: #111;
     }
 
@@ -477,8 +490,8 @@
     }
 
     .browser-url {
-      height: 14px;
       flex: 1;
+      height: 14px;
       margin-left: 8px;
       border-radius: 10px;
       background: #181818;
@@ -525,9 +538,9 @@
     }
 
     .creator-site {
+      color: #181818;
       background:
         linear-gradient(90deg, #f4f0eb 0 56%, #c7b19c 56%);
-      color: #181818;
     }
 
     .food-site {
@@ -536,11 +549,11 @@
     }
 
     .preview-title {
+      margin-top: 50px;
       font-family: "Barlow Condensed", sans-serif;
       font-size: 2.3rem;
       line-height: .9;
       text-transform: uppercase;
-      margin-top: 50px;
     }
 
     .preview-red {
@@ -594,8 +607,8 @@
     .about-grid {
       display: grid;
       grid-template-columns: .8fr 1.2fr;
-      gap: 80px;
       align-items: center;
+      gap: 80px;
     }
 
     .about-mark {
@@ -603,22 +616,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid var(--line);
       background:
         radial-gradient(circle, rgba(150,0,0,.14), transparent 45%),
         #080808;
+      border: 1px solid var(--line);
     }
 
     .big-rf {
+      color: var(--red);
       font-family: "Barlow Condensed", sans-serif;
       font-size: 5rem;
       font-weight: 900;
-      color: var(--red);
     }
 
     .about p {
-      color: #8e8e8e;
       margin-top: 18px;
+      color: #8e8e8e;
     }
 
     /* CONTACT */
@@ -635,8 +648,8 @@
     .contact h2 {
       font-family: "Barlow Condensed", sans-serif;
       font-size: clamp(3rem, 6vw, 5.8rem);
-      text-transform: uppercase;
       line-height: .9;
+      text-transform: uppercase;
     }
 
     .contact h2 span {
@@ -657,14 +670,14 @@
 
     footer {
       padding: 40px 0;
-      border-top: 1px solid var(--line);
       background: #030303;
+      border-top: 1px solid var(--line);
     }
 
     .footer-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
@@ -692,13 +705,14 @@
       }
 
       .hero-visual {
-        height: 560px;
+        height: 570px;
       }
 
       .hero-art {
-        width: 690px;
-        max-width: 118%;
+        width: 720px;
+        max-width: 122%;
         right: 50%;
+        bottom: -5px;
         transform: translateX(50%);
       }
 
@@ -727,8 +741,8 @@
         right: 0;
         flex-direction: column;
         align-items: stretch;
-        background: #080808;
         padding: 20px;
+        background: #080808;
       }
 
       .nav-links.open {
@@ -756,15 +770,15 @@
       }
 
       .hero-visual {
-        height: 420px;
-        margin-top: 15px;
+        height: 430px;
+        margin-top: 12px;
       }
 
       .hero-art {
-        width: 500px;
-        max-width: 135%;
+        width: 540px;
+        max-width: 145%;
         right: 50%;
-        bottom: -2px;
+        bottom: 0;
         transform: translateX(50%);
       }
 
@@ -824,7 +838,6 @@
   </div>
 </nav>
 
-
 <header class="hero" id="home">
 
   <div class="hero-inner">
@@ -859,12 +872,11 @@
 
     </div>
 
-
     <div class="hero-visual">
 
       <img
         src="reaper-forge-hero.png"
-        alt="Reaper Forge hooded developer with floating code panels"
+        alt="Hooded Reaper Forge developer with floating code panels"
         class="hero-art"
       >
 
@@ -874,31 +886,37 @@
 
 </header>
 
-
 <div class="code-strip">
-
   <div class="code-track">
+
     <span class="red">&lt;main&gt;</span>
     &nbsp;&nbsp;
+
     &lt;section class="<span class="light">project</span>"&gt;
     &nbsp;&nbsp;
+
     display: grid;
     &nbsp;&nbsp;
+
     gap: 24px;
     &nbsp;&nbsp;
+
     <span class="red">const</span> idea = "something worth building";
     &nbsp;&nbsp;
+
     background: #050505;
     &nbsp;&nbsp;
+
     function buildWebsite() { return <span class="red">vision</span>; }
     &nbsp;&nbsp;
+
     @media (max-width:700px)
     &nbsp;&nbsp;
+
     <span class="red">&lt;/main&gt;</span>
+
   </div>
-
 </div>
-
 
 <section class="services" id="services">
 
@@ -908,7 +926,7 @@
 
       <img
         src="reaper-forge-concepts.png"
-        alt="Reaper Forge website design examples"
+        alt="Reaper Forge website concept examples"
         class="mockup-image"
       >
 
@@ -921,7 +939,6 @@
   </div>
 
 </section>
-
 
 <section class="statement">
 
@@ -940,27 +957,33 @@
 
 </section>
 
-
 <div class="code-strip">
 
   <div class="code-track">
+
     <span class="red">/* DESIGN SYSTEM */</span>
     &nbsp;&nbsp;
+
     --brand: unique;
     &nbsp;&nbsp;
+
     --layout: responsive;
     &nbsp;&nbsp;
+
     --experience: intentional;
     &nbsp;&nbsp;
+
     document.querySelector(".idea");
     &nbsp;&nbsp;
+
     visualIdentity++;
     &nbsp;&nbsp;
+
     @media screen and (max-width: 700px)
+
   </div>
 
 </div>
-
 
 <section class="concepts" id="concepts">
 
@@ -988,7 +1011,6 @@
 
     </div>
 
-
     <div class="concept-grid">
 
       <div class="concept">
@@ -1001,26 +1023,19 @@
         </div>
 
         <div class="site-preview auto-site">
-
           <div class="preview-title">
             Premium Care.<br>
             <span class="preview-red">Serious Finish.</span>
           </div>
-
         </div>
 
         <div class="concept-info">
-
           <small>Concept Build 01</small>
-
           <h3>Automotive / Detailing</h3>
-
           <p>Premium automotive website direction.</p>
-
         </div>
 
       </div>
-
 
       <div class="concept">
 
@@ -1032,26 +1047,19 @@
         </div>
 
         <div class="site-preview game-site">
-
           <div class="preview-title">
             Find Your Squad.<br>
             Build Your Legacy.
           </div>
-
         </div>
 
         <div class="concept-info">
-
           <small>Concept Build 02</small>
-
           <h3>Gaming Community</h3>
-
           <p>Community and gaming focused website.</p>
-
         </div>
 
       </div>
-
 
       <div class="concept">
 
@@ -1063,27 +1071,20 @@
         </div>
 
         <div class="site-preview creator-site">
-
           <div class="preview-title">
             Build.<br>
             Create.<br>
             Evolve.
           </div>
-
         </div>
 
         <div class="concept-info">
-
           <small>Concept Build 03</small>
-
           <h3>Creator / Portfolio</h3>
-
           <p>Personal branding, creator and portfolio design.</p>
-
         </div>
 
       </div>
-
 
       <div class="concept">
 
@@ -1095,22 +1096,16 @@
         </div>
 
         <div class="site-preview food-site">
-
           <div class="preview-title">
             Real Food.<br>
             Bold Flavor.
           </div>
-
         </div>
 
         <div class="concept-info">
-
           <small>Concept Build 04</small>
-
           <h3>Restaurant / Food</h3>
-
           <p>Warm food and hospitality focused design.</p>
-
         </div>
 
       </div>
@@ -1120,7 +1115,6 @@
   </div>
 
 </section>
-
 
 <section class="process" id="process">
 
@@ -1166,7 +1160,6 @@
 
 </section>
 
-
 <section class="about" id="about">
 
   <div class="container about-grid">
@@ -1203,7 +1196,6 @@
 
 </section>
 
-
 <section class="contact" id="contact">
 
   <div class="container">
@@ -1218,8 +1210,8 @@
     </h2>
 
     <p>
-      Tell us what you're thinking, what the website is for
-      and the style you have in mind.
+      Tell us what you're thinking, what the website is for and the style
+      you have in mind.
     </p>
 
     <a href="#home" class="btn btn-red">
@@ -1229,7 +1221,6 @@
   </div>
 
 </section>
-
 
 <footer>
 
@@ -1251,7 +1242,6 @@
   </div>
 
 </footer>
-
 
 <script>
   function toggleMenu() {
