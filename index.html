@@ -8,13 +8,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
     :root {
       --bg: #050505;
-      --bg2: #090909;
-      --panel: #0d0d0d;
       --red: #d71616;
       --red2: #ff3030;
       --white: #f3f3f3;
@@ -37,10 +37,15 @@
         linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px),
         var(--bg);
+
       background-size: 44px 44px;
+
       color: var(--white);
+
       font-family: "Inter", Arial, sans-serif;
+
       line-height: 1.6;
+
       overflow-x: hidden;
     }
 
@@ -77,12 +82,6 @@
       letter-spacing: 1px;
     }
 
-    .section-copy {
-      max-width: 700px;
-      margin-top: 18px;
-      color: var(--gray);
-    }
-
     /* NAV */
 
     nav {
@@ -90,8 +89,11 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(5,5,5,.92);
+
+      background: rgba(5,5,5,.93);
+
       backdrop-filter: blur(12px);
+
       border-bottom: 1px solid var(--line);
     }
 
@@ -99,6 +101,7 @@
       width: min(1220px, calc(100% - 36px));
       height: 100%;
       margin: auto;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -119,10 +122,13 @@
     .brand small {
       display: block;
       margin-top: 5px;
+
       color: #777;
+
       font-family: "Inter", sans-serif;
       font-size: .52rem;
       font-weight: 500;
+
       letter-spacing: 4px;
     }
 
@@ -130,9 +136,11 @@
       display: flex;
       align-items: center;
       gap: 30px;
+
       font-family: "Barlow Condensed", sans-serif;
       font-size: .82rem;
       font-weight: 600;
+
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
@@ -154,12 +162,18 @@
 
     .menu-btn {
       display: none;
+
       width: 40px;
       height: 40px;
+
       background: transparent;
+
       border: 1px solid var(--line);
+
       color: white;
+
       font-size: 1.2rem;
+
       cursor: pointer;
     }
 
@@ -167,96 +181,157 @@
 
     .hero {
       min-height: 780px;
+
       position: relative;
-      overflow: hidden;
+
       display: flex;
       align-items: center;
-      border-bottom: 1px solid var(--line);
+
+      overflow: hidden;
+
       background:
-        radial-gradient(circle at 75% 42%, rgba(140,0,0,.24), transparent 32%),
-        radial-gradient(circle at 20% 35%, rgba(80,0,0,.1), transparent 26%),
-        linear-gradient(to bottom, #060606, #030303);
+        radial-gradient(circle at 75% 46%, rgba(150,0,0,.20), transparent 35%),
+        radial-gradient(circle at 18% 35%, rgba(80,0,0,.08), transparent 28%),
+        linear-gradient(to bottom, #060606, #020202);
+
+      border-bottom: 1px solid var(--line);
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
       inset: 0;
-      opacity: .18;
+
       background:
-        linear-gradient(90deg, transparent 49.8%, rgba(255,0,0,.14) 50%, transparent 50.2%),
-        linear-gradient(transparent 49.8%, rgba(255,0,0,.08) 50%, transparent 50.2%);
+        linear-gradient(
+          90deg,
+          transparent 49.8%,
+          rgba(255,0,0,.10) 50%,
+          transparent 50.2%
+        ),
+        linear-gradient(
+          transparent 49.8%,
+          rgba(255,0,0,.06) 50%,
+          transparent 50.2%
+        );
+
       background-size: 120px 120px;
+
+      opacity: .18;
+
       pointer-events: none;
     }
 
     .hero-inner {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1220px, calc(100% - 40px));
+
       margin: auto;
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns: .9fr 1.1fr;
+
       align-items: center;
-      gap: 30px;
+
+      gap: 20px;
+
       position: relative;
+
       z-index: 3;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 10;
     }
 
     .hero-label {
       color: var(--red2);
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: .8rem;
+
       font-weight: 700;
+
       letter-spacing: 5px;
+
       text-transform: uppercase;
+
       margin-bottom: 18px;
     }
 
     .hero h1 {
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: clamp(4.4rem, 8vw, 7.7rem);
+
       font-weight: 900;
+
       line-height: .78;
+
       text-transform: uppercase;
+
       letter-spacing: -2px;
     }
 
     .hero h1 span {
       color: var(--red);
+
       display: block;
     }
 
     .hero-desc {
-      max-width: 620px;
-      margin-top: 27px;
+      max-width: 610px;
+
+      margin-top: 28px;
+
       color: #aaa;
+
       font-size: 1rem;
+
       line-height: 1.8;
     }
 
     .hero-buttons {
       display: flex;
+
       gap: 12px;
+
       margin-top: 30px;
+
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       min-height: 46px;
+
       padding: 0 24px;
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: .84rem;
+
       font-weight: 700;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
       transition: .2s;
     }
 
     .btn-red {
       background: var(--red);
+
       border: 1px solid var(--red);
+
       color: white;
     }
 
@@ -266,170 +341,218 @@
 
     .btn-dark {
       border: 1px solid rgba(255,255,255,.16);
+
       color: #bbb;
+
       background: rgba(255,255,255,.02);
     }
 
     .btn-dark:hover {
       border-color: #555;
+
       color: white;
     }
 
     .hero-notes {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 22px;
+
       margin-top: 38px;
+
       color: #777;
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: .72rem;
+
       font-weight: 600;
+
       letter-spacing: 1.3px;
+
       text-transform: uppercase;
     }
 
     .hero-notes span::before {
       content: "◆";
+
       color: var(--red);
+
       margin-right: 7px;
     }
 
-    /* TEMP HERO ART */
+    /* REAL HERO IMAGE */
 
-    .coder-scene {
-      height: 600px;
+    .hero-visual {
+      height: 650px;
+
       position: relative;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
     }
+
+    .hero-art {
+      position: absolute;
+
+      z-index: 5;
+
+      width: 690px;
+
+      max-width: 108%;
+
+      right: -55px;
+
+      bottom: -4px;
+
+      filter:
+        contrast(1.04)
+        brightness(.94);
+
+      -webkit-mask-image:
+        radial-gradient(
+          ellipse at center,
+          black 0%,
+          black 66%,
+          rgba(0,0,0,.92) 75%,
+          rgba(0,0,0,.5) 88%,
+          transparent 100%
+        );
+
+      mask-image:
+        radial-gradient(
+          ellipse at center,
+          black 0%,
+          black 66%,
+          rgba(0,0,0,.92) 75%,
+          rgba(0,0,0,.5) 88%,
+          transparent 100%
+        );
+    }
+
+    .hero-red-glow {
+      position: absolute;
+
+      z-index: 1;
+
+      width: 520px;
+      height: 520px;
+
+      right: 20px;
+      top: 90px;
+
+      border-radius: 50%;
+
+      background: rgba(180,0,0,.13);
+
+      filter: blur(70px);
+    }
+
+    /* CODE PANELS */
 
     .code-window {
       position: absolute;
-      border: 1px solid rgba(255,60,60,.16);
-      background: rgba(10,10,10,.63);
+
+      z-index: 3;
+
+      border: 1px solid rgba(255,60,60,.19);
+
+      background: rgba(7,7,7,.75);
+
       padding: 14px;
+
       font-family: monospace;
+
       font-size: .62rem;
-      color: #6e6e6e;
+
+      color: #686868;
+
       line-height: 1.65;
+
       overflow: hidden;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,.65),
+        0 0 24px rgba(120,0,0,.06);
     }
 
     .code-window b {
-      color: #a22222;
+      color: #b92727;
+
       font-weight: normal;
     }
 
     .cw1 {
-      width: 270px;
+      width: 260px;
       height: 170px;
-      left: 0;
-      top: 75px;
+
+      left: -15px;
+      top: 90px;
+
       transform: rotate(-2deg);
     }
 
     .cw2 {
-      width: 270px;
+      width: 275px;
       height: 190px;
-      right: -20px;
-      top: 130px;
-      transform: rotate(2deg);
+
+      right: -40px;
+      top: 125px;
+
+      transform: rotate(1.5deg);
     }
 
     .cw3 {
-      width: 250px;
-      height: 140px;
-      right: 40px;
-      bottom: 40px;
-      opacity: .65;
-    }
-
-    .hood {
-      position: absolute;
-      width: 280px;
-      height: 330px;
-      left: 50%;
-      top: 72px;
-      transform: translateX(-50%);
-      border-radius: 48% 48% 35% 35%;
-      background:
-        radial-gradient(circle at 50% 37%, #060606 0 29%, transparent 30%),
-        linear-gradient(110deg, #090909, #232323 35%, #070707 72%, #151515);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .hood::after {
-      content: "";
-      position: absolute;
-      width: 150px;
+      width: 245px;
       height: 135px;
-      left: 65px;
-      top: 84px;
-      border-radius: 50%;
-      background: #000;
-    }
 
-    .body-shape {
-      position: absolute;
-      width: 470px;
-      height: 245px;
-      left: 50%;
-      bottom: 40px;
-      transform: translateX(-50%);
-      border-radius: 50% 50% 10% 10%;
-      background: linear-gradient(100deg, #080808, #171717 40%, #0a0a0a 67%, #141414);
-    }
+      right: -8px;
+      bottom: 70px;
 
-    .laptop {
-      position: absolute;
-      width: 345px;
-      height: 200px;
-      left: 50%;
-      bottom: 20px;
-      transform: translateX(-50%);
-      clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
-      background: linear-gradient(145deg, #171717, #060606);
-      border: 1px solid #333;
-      z-index: 6;
-    }
+      opacity: .76;
 
-    .rf-mark {
-      position: absolute;
-      left: 50%;
-      top: 48%;
-      width: 63px;
-      height: 63px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--red);
-      border: 2px solid #7d1515;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 1.65rem;
-      font-weight: 900;
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .rf-mark span {
-      transform: rotate(-45deg);
+      transform: rotate(-1deg);
     }
 
     /* CODE STRIP */
 
     .code-strip {
       height: 78px;
+
       display: flex;
+
       align-items: center;
+
       overflow: hidden;
+
       border-top: 1px solid rgba(255,0,0,.10);
+
       border-bottom: 1px solid rgba(255,0,0,.10);
-      background: linear-gradient(90deg, #030303, rgba(20,0,0,.2), #030303);
+
+      background:
+        linear-gradient(
+          90deg,
+          #030303,
+          rgba(20,0,0,.2),
+          #030303
+        );
     }
 
     .code-track {
       white-space: nowrap;
+
       min-width: max-content;
+
       color: #4f4f4f;
+
       font-family: monospace;
+
       font-size: .71rem;
+
       animation: codeMove 35s linear infinite;
     }
 
@@ -442,26 +565,42 @@
     }
 
     @keyframes codeMove {
-      from { transform: translateX(0); }
-      to { transform: translateX(-35%); }
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-35%);
+      }
+
     }
 
-    /* WEBSITE MOCKUPS */
+    /* MOCKUP IMAGE */
 
     .services {
       padding: 100px 0 115px;
+
       background:
-        radial-gradient(circle at 50% 40%, rgba(100,0,0,.07), transparent 45%),
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(100,0,0,.07),
+          transparent 45%
+        ),
         #050505;
     }
 
     .mockup-wrap {
       position: relative;
+
       width: 100%;
-      margin-top: 28px;
+
       border: 1px solid rgba(255,255,255,.10);
+
       background: #070707;
+
       padding: 7px;
+
       box-shadow:
         0 25px 65px rgba(0,0,0,.55),
         0 0 45px rgba(120,0,0,.08);
@@ -469,9 +608,13 @@
 
     .mockup-wrap::before {
       content: "";
+
       position: absolute;
+
       inset: -1px;
+
       pointer-events: none;
+
       border: 1px solid rgba(210,20,20,.12);
     }
 
@@ -482,9 +625,13 @@
 
     .mockup-caption {
       margin-top: 18px;
+
       text-align: center;
+
       color: #666;
+
       font-size: .75rem;
+
       letter-spacing: 1px;
     }
 
@@ -492,19 +639,31 @@
 
     .statement {
       padding: 105px 0;
+
       text-align: center;
+
       background:
-        radial-gradient(circle at center, rgba(130,0,0,.12), transparent 45%),
+        radial-gradient(
+          circle at center,
+          rgba(130,0,0,.12),
+          transparent 45%
+        ),
         #070707;
+
       border-bottom: 1px solid var(--line);
     }
 
     .statement h2 {
       max-width: 950px;
+
       margin: auto;
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: clamp(3rem, 7vw, 6rem);
+
       line-height: .92;
+
       text-transform: uppercase;
     }
 
@@ -520,104 +679,160 @@
 
     .concept-head {
       display: flex;
+
       justify-content: space-between;
+
       align-items: end;
+
       gap: 30px;
+
       margin-bottom: 55px;
     }
 
     .concept-note {
       max-width: 420px;
+
       color: #777;
+
       font-size: .88rem;
     }
 
     .concept-grid {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 26px;
     }
 
     .concept {
       border: 1px solid var(--line);
+
       background: #090909;
+
       overflow: hidden;
     }
 
     .browser-bar {
       height: 34px;
+
       display: flex;
+
       align-items: center;
+
       padding: 0 12px;
+
       gap: 6px;
+
       background: #111;
     }
 
     .browser-dot {
       width: 6px;
       height: 6px;
+
       border-radius: 50%;
+
       background: #444;
     }
 
     .browser-url {
       height: 14px;
+
       flex: 1;
+
       margin-left: 8px;
+
       border-radius: 10px;
+
       background: #181818;
     }
 
     .site-preview {
       height: 260px;
+
       position: relative;
+
       padding: 30px;
     }
 
     .concept-info {
       padding: 22px;
+
       border-top: 1px solid var(--line);
     }
 
     .concept-info small {
       color: var(--red);
+
       font-family: "Barlow Condensed", sans-serif;
+
       letter-spacing: 2px;
     }
 
     .concept-info h3 {
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: 1.55rem;
+
       text-transform: uppercase;
     }
 
     .concept-info p {
       color: #777;
+
       font-size: .84rem;
     }
 
     .auto-site {
-      background: radial-gradient(circle at 72% 58%, rgba(255,0,0,.18), transparent 35%), #111;
+      background:
+        radial-gradient(
+          circle at 72% 58%,
+          rgba(255,0,0,.18),
+          transparent 35%
+        ),
+        #111;
     }
 
     .game-site {
-      background: radial-gradient(circle at 70% 42%, rgba(80,40,255,.32), transparent 30%), #080815;
+      background:
+        radial-gradient(
+          circle at 70% 42%,
+          rgba(80,40,255,.32),
+          transparent 30%
+        ),
+        #080815;
     }
 
     .creator-site {
-      background: linear-gradient(90deg, #f4f0eb 0 56%, #c7b19c 56%);
+      background:
+        linear-gradient(
+          90deg,
+          #f4f0eb 0 56%,
+          #c7b19c 56%
+        );
+
       color: #181818;
     }
 
     .food-site {
-      background: linear-gradient(120deg, #15100d, #382115);
+      background:
+        linear-gradient(
+          120deg,
+          #15100d,
+          #382115
+        );
     }
 
     .preview-title {
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: 2.3rem;
+
       line-height: .9;
+
       text-transform: uppercase;
+
       margin-top: 50px;
     }
 
@@ -629,37 +844,49 @@
 
     .process {
       padding: 105px 0;
+
       background: #070707;
+
       border-top: 1px solid var(--line);
     }
 
     .process-grid {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       margin-top: 55px;
+
       border-top: 1px solid var(--line);
+
       border-left: 1px solid var(--line);
     }
 
     .process-step {
       padding: 27px;
+
       border-right: 1px solid var(--line);
+
       border-bottom: 1px solid var(--line);
     }
 
     .process-step b {
       color: var(--red);
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: 2.7rem;
     }
 
     .process-step h3 {
       font-family: "Barlow Condensed", sans-serif;
+
       text-transform: uppercase;
     }
 
     .process-step p {
       color: #777;
+
       font-size: .82rem;
     }
 
@@ -671,31 +898,47 @@
 
     .about-grid {
       display: grid;
+
       grid-template-columns: .8fr 1.2fr;
+
       gap: 80px;
+
       align-items: center;
     }
 
     .about-mark {
       height: 320px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       border: 1px solid var(--line);
+
       background:
-        radial-gradient(circle, rgba(150,0,0,.14), transparent 45%),
+        radial-gradient(
+          circle,
+          rgba(150,0,0,.14),
+          transparent 45%
+        ),
         #080808;
     }
 
     .big-rf {
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: 5rem;
+
       font-weight: 900;
+
       color: var(--red);
     }
 
     .about p {
       color: #8e8e8e;
+
       margin-top: 18px;
     }
 
@@ -703,17 +946,27 @@
 
     .contact {
       padding: 105px 0;
+
       text-align: center;
+
       background:
-        radial-gradient(circle at center, rgba(130,0,0,.13), transparent 42%),
+        radial-gradient(
+          circle at center,
+          rgba(130,0,0,.13),
+          transparent 42%
+        ),
         #050505;
+
       border-top: 1px solid var(--line);
     }
 
     .contact h2 {
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: clamp(3rem, 6vw, 5.8rem);
+
       text-transform: uppercase;
+
       line-height: .9;
     }
 
@@ -723,7 +976,9 @@
 
     .contact p {
       max-width: 570px;
+
       margin: 24px auto 0;
+
       color: #888;
     }
 
@@ -735,42 +990,58 @@
 
     footer {
       padding: 40px 0;
+
       border-top: 1px solid var(--line);
+
       background: #030303;
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
+
       gap: 20px;
     }
 
     .footer-copy {
       color: #555;
+
       font-size: .72rem;
     }
 
     .footer-location {
       color: #666;
+
       font-size: .78rem;
     }
 
-    /* MOBILE */
+    /* TABLET */
 
     @media (max-width: 900px) {
 
       .hero {
         min-height: auto;
-        padding: 80px 0 60px;
+
+        padding: 70px 0 30px;
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
       }
 
-      .coder-scene {
-        height: 500px;
+      .hero-visual {
+        height: 570px;
+      }
+
+      .hero-art {
+        width: 620px;
+
+        right: 50%;
+
+        transform: translateX(50%);
       }
 
       .process-grid {
@@ -779,10 +1050,13 @@
 
       .about-grid {
         grid-template-columns: 1fr;
+
         gap: 40px;
       }
 
     }
+
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -792,13 +1066,19 @@
 
       .nav-links {
         display: none;
+
         position: absolute;
+
         top: 60px;
         left: 0;
         right: 0;
+
         flex-direction: column;
+
         align-items: stretch;
+
         background: #080808;
+
         padding: 20px;
       }
 
@@ -806,43 +1086,72 @@
         display: flex;
       }
 
+      .nav-links a {
+        padding: 12px;
+      }
+
       .menu-btn {
         display: block;
+      }
+
+      .hero {
+        padding-top: 60px;
       }
 
       .hero h1 {
         font-size: clamp(4rem, 19vw, 6rem);
       }
 
-      .coder-scene {
-        height: 390px;
+      .hero-desc {
+        font-size: .9rem;
       }
 
-      .hood {
-        width: 200px;
-        height: 245px;
+      .hero-visual {
+        height: 410px;
+
+        margin-top: 10px;
       }
 
-      .hood::after {
-        width: 105px;
-        height: 100px;
-        left: 47px;
-        top: 65px;
+      .hero-art {
+        width: 430px;
+
+        max-width: 115%;
+
+        right: 50%;
+
+        bottom: -2px;
+
+        transform: translateX(50%);
       }
 
-      .body-shape {
-        width: 340px;
-        height: 185px;
+      .hero-red-glow {
+        width: 330px;
+        height: 330px;
+
+        right: 50%;
+        top: 40px;
+
+        transform: translateX(50%);
       }
 
-      .laptop {
-        width: 270px;
-        height: 155px;
+      .cw1 {
+        width: 160px;
+        height: 105px;
+
+        left: -10px;
+        top: 25px;
+
+        font-size: .47rem;
       }
 
-      .cw1,
       .cw2 {
-        width: 175px;
+        width: 165px;
+        height: 110px;
+
+        right: -12px;
+        top: 55px;
+
+        font-size: .47rem;
       }
 
       .cw3 {
@@ -875,6 +1184,7 @@
 
       .footer-inner {
         flex-direction: column;
+
         align-items: flex-start;
       }
 
@@ -885,25 +1195,45 @@
 
 <body>
 
+
 <nav>
 
   <div class="nav-inner">
 
     <a href="#home" class="brand">
+
       REAPER <span>FORGE</span>
+
       <small>WEB DEVELOPMENT</small>
+
     </a>
 
+
     <div class="nav-links" id="navLinks">
+
       <a href="#home">Home</a>
+
       <a href="#services">Services</a>
+
       <a href="#concepts">Concepts</a>
+
       <a href="#process">Process</a>
+
       <a href="#about">About</a>
-      <a href="#contact" class="nav-cta">Start a Project</a>
+
+      <a href="#contact" class="nav-cta">
+        Start a Project
+      </a>
+
     </div>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <button
+      class="menu-btn"
+      onclick="toggleMenu()"
+    >
+      ☰
+    </button>
 
   </div>
 
@@ -914,75 +1244,131 @@
 
   <div class="hero-inner">
 
-    <div>
+
+    <div class="hero-copy">
 
       <div class="hero-label">
         Reaper Forge // Web Development
       </div>
 
       <h1>
+
         Imagine It.
-        <span>We'll Build It.</span>
+
+        <span>
+          We'll Build It.
+        </span>
+
       </h1>
 
+
       <p class="hero-desc">
-        Custom websites built around your vision. Business, personal,
-        creative, gaming, communities, portfolios, brands and everything
-        in between.
+
+        Custom websites built around your vision.
+
+        Business, personal, creative, gaming, communities,
+        portfolios, brands and everything in between.
+
       </p>
 
+
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-red">Start a Project</a>
-        <a href="#concepts" class="btn btn-dark">View Concepts</a>
+
+        <a href="#contact" class="btn btn-red">
+          Start a Project
+        </a>
+
+        <a href="#concepts" class="btn btn-dark">
+          View Concepts
+        </a>
+
       </div>
 
+
       <div class="hero-notes">
+
         <span>Custom Designs</span>
+
         <span>Mobile Ready</span>
+
         <span>Built Around You</span>
+
       </div>
 
     </div>
 
 
-    <div class="coder-scene">
+    <div class="hero-visual">
+
+      <div class="hero-red-glow"></div>
+
 
       <div class="code-window cw1">
+
         <b>&lt;section</b> class="hero"&gt;<br>
+
         &nbsp;&nbsp;&lt;h1&gt;Build Something&lt;/h1&gt;<br>
+
         &nbsp;&nbsp;&lt;p&gt;Turn ideas into websites.&lt;/p&gt;<br>
+
         <b>&lt;/section&gt;</b><br><br>
+
         .project {<br>
+
         &nbsp;&nbsp;display: grid;<br>
+
         &nbsp;&nbsp;position: relative;<br>
+
         }
+
       </div>
+
 
       <div class="code-window cw2">
+
         const project = {<br>
+
         &nbsp;&nbsp;idea: <b>"your vision"</b>,<br>
+
         &nbsp;&nbsp;design: "custom",<br>
+
         &nbsp;&nbsp;mobile: true,<br>
+
         &nbsp;&nbsp;status: "building"<br>
-        };
+
+        };<br><br>
+
+        function launch() {<br>
+
+        &nbsp;&nbsp;return project;<br>
+
+        }
+
       </div>
+
 
       <div class="code-window cw3">
+
         @media (max-width:700px) {<br>
+
         &nbsp;&nbsp;.site {<br>
+
         &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
+
         &nbsp;&nbsp;}<br>
+
         }
+
       </div>
 
-      <div class="body-shape"></div>
-      <div class="hood"></div>
 
-      <div class="laptop">
-        <div class="rf-mark">
-          <span>RF</span>
-        </div>
-      </div>
+      <img
+        src="reaper-forge-hero.png"
+        alt="Reaper Forge web developer"
+        class="hero-art"
+      >
 
     </div>
 
@@ -996,21 +1382,43 @@
   <div class="code-track">
 
     <span class="red">&lt;main&gt;</span>
+
     &nbsp;&nbsp;
+
     &lt;section class="<span class="light">project</span>"&gt;
+
     &nbsp;&nbsp;
+
     display: grid;
+
     &nbsp;&nbsp;
+
     gap: 24px;
+
     &nbsp;&nbsp;
-    <span class="red">const</span> idea = "something worth building";
+
+    <span class="red">const</span>
+
+    idea = "something worth building";
+
     &nbsp;&nbsp;
+
     background: #050505;
+
     &nbsp;&nbsp;
-    function buildWebsite() { return <span class="red">vision</span>; }
+
+    function buildWebsite() {
+
+    return <span class="red">vision</span>;
+
+    }
+
     &nbsp;&nbsp;
+
     @media (max-width:700px)
+
     &nbsp;&nbsp;
+
     <span class="red">&lt;/main&gt;</span>
 
   </div>
@@ -1032,8 +1440,11 @@
 
     </div>
 
+
     <div class="mockup-caption">
+
       CONCEPT DESIGNS // EXAMPLES OF POSSIBLE WEBSITE DIRECTIONS
+
     </div>
 
   </div>
@@ -1050,8 +1461,13 @@
     </div>
 
     <h2>
+
       Your Website Shouldn't Look Like Ours.
-      <span>It Should Look Like Yours.</span>
+
+      <span>
+        It Should Look Like Yours.
+      </span>
+
     </h2>
 
   </div>
@@ -1063,18 +1479,32 @@
 
   <div class="code-track">
 
-    <span class="red">/* DESIGN SYSTEM */</span>
+    <span class="red">
+      /* DESIGN SYSTEM */
+    </span>
+
     &nbsp;&nbsp;
+
     --brand: unique;
+
     &nbsp;&nbsp;
+
     --layout: responsive;
+
     &nbsp;&nbsp;
+
     --experience: intentional;
+
     &nbsp;&nbsp;
+
     document.querySelector(".idea");
+
     &nbsp;&nbsp;
+
     visualIdentity++;
+
     &nbsp;&nbsp;
+
     @media screen and (max-width: 700px)
 
   </div>
@@ -1095,15 +1525,23 @@
         </div>
 
         <h2 class="section-title">
+
           Different Ideas.<br>
+
           Different Identities.
+
         </h2>
 
       </div>
 
+
       <p class="concept-note">
-        These are design concepts showing different directions a website
-        could take. They are examples, not previous client projects.
+
+        These are design concepts showing different directions
+        a website could take.
+
+        They are examples, not previous client projects.
+
       </p>
 
     </div>
@@ -1111,26 +1549,49 @@
 
     <div class="concept-grid">
 
+
       <div class="concept">
 
         <div class="browser-bar">
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-url"></div>
+
         </div>
 
         <div class="site-preview auto-site">
+
           <div class="preview-title">
+
             Premium Care.<br>
-            <span class="preview-red">Serious Finish.</span>
+
+            <span class="preview-red">
+              Serious Finish.
+            </span>
+
           </div>
+
         </div>
 
         <div class="concept-info">
-          <small>Concept Build 01</small>
-          <h3>Automotive / Detailing</h3>
-          <p>Premium automotive website direction.</p>
+
+          <small>
+            Concept Build 01
+          </small>
+
+          <h3>
+            Automotive / Detailing
+          </h3>
+
+          <p>
+            Premium automotive website direction.
+          </p>
+
         </div>
 
       </div>
@@ -1139,23 +1600,43 @@
       <div class="concept">
 
         <div class="browser-bar">
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-url"></div>
+
         </div>
 
         <div class="site-preview game-site">
+
           <div class="preview-title">
+
             Find Your Squad.<br>
+
             Build Your Legacy.
+
           </div>
+
         </div>
 
         <div class="concept-info">
-          <small>Concept Build 02</small>
-          <h3>Gaming Community</h3>
-          <p>Community and gaming focused website.</p>
+
+          <small>
+            Concept Build 02
+          </small>
+
+          <h3>
+            Gaming Community
+          </h3>
+
+          <p>
+            Community and gaming focused website.
+          </p>
+
         </div>
 
       </div>
@@ -1164,22 +1645,45 @@
       <div class="concept">
 
         <div class="browser-bar">
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-url"></div>
+
         </div>
 
         <div class="site-preview creator-site">
+
           <div class="preview-title">
-            Build.<br>Create.<br>Evolve.
+
+            Build.<br>
+
+            Create.<br>
+
+            Evolve.
+
           </div>
+
         </div>
 
         <div class="concept-info">
-          <small>Concept Build 03</small>
-          <h3>Creator / Portfolio</h3>
-          <p>Personal branding, creator and portfolio design.</p>
+
+          <small>
+            Concept Build 03
+          </small>
+
+          <h3>
+            Creator / Portfolio
+          </h3>
+
+          <p>
+            Personal branding, creator and portfolio design.
+          </p>
+
         </div>
 
       </div>
@@ -1188,23 +1692,43 @@
       <div class="concept">
 
         <div class="browser-bar">
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-dot"></div>
+
           <div class="browser-url"></div>
+
         </div>
 
         <div class="site-preview food-site">
+
           <div class="preview-title">
+
             Real Food.<br>
+
             Bold Flavor.
+
           </div>
+
         </div>
 
         <div class="concept-info">
-          <small>Concept Build 04</small>
-          <h3>Restaurant / Food</h3>
-          <p>Warm food and hospitality focused design.</p>
+
+          <small>
+            Concept Build 04
+          </small>
+
+          <h3>
+            Restaurant / Food
+          </h3>
+
+          <p>
+            Warm food and hospitality focused design.
+          </p>
+
         </div>
 
       </div>
@@ -1228,30 +1752,58 @@
       Simple. Clear. Built Together.
     </h2>
 
+
     <div class="process-grid">
 
       <div class="process-step">
+
         <b>01</b>
+
         <h3>Idea</h3>
-        <p>Tell us what you're imagining.</p>
+
+        <p>
+          Tell us what you're imagining.
+        </p>
+
       </div>
 
+
       <div class="process-step">
+
         <b>02</b>
+
         <h3>Design</h3>
-        <p>We shape the layout and visual direction.</p>
+
+        <p>
+          We shape the layout and visual direction.
+        </p>
+
       </div>
 
+
       <div class="process-step">
+
         <b>03</b>
+
         <h3>Build</h3>
-        <p>The idea becomes a responsive website.</p>
+
+        <p>
+          The idea becomes a responsive website.
+        </p>
+
       </div>
 
+
       <div class="process-step">
+
         <b>04</b>
+
         <h3>Launch</h3>
-        <p>Final adjustments, then the site goes live.</p>
+
+        <p>
+          Final adjustments, then the site goes live.
+        </p>
+
       </div>
 
     </div>
@@ -1266,8 +1818,13 @@
   <div class="container about-grid">
 
     <div class="about-mark">
-      <div class="big-rf">RF</div>
+
+      <div class="big-rf">
+        RF
+      </div>
+
     </div>
+
 
     <div>
 
@@ -1276,19 +1833,27 @@
       </div>
 
       <h2 class="section-title">
+
         Bring the Idea.<br>
+
         We'll Shape the Site.
+
       </h2>
 
       <p>
-        Reaper Forge creates modern websites for businesses, creators,
-        communities, personal projects and anyone with an idea that deserves
-        its own place on the web.
+
+        Reaper Forge creates modern websites for businesses,
+        creators, communities, personal projects and anyone
+        with an idea that deserves its own place on the web.
+
       </p>
 
       <p>
-        We keep the process straightforward and build around the project
-        instead of forcing every website into the same template.
+
+        We keep the process straightforward and build around
+        the project instead of forcing every website into the
+        same template.
+
       </p>
 
     </div>
@@ -1307,17 +1872,26 @@
     </div>
 
     <h2>
+
       Got an Idea?
-      <span>Let's Build It.</span>
+
+      <span>
+        Let's Build It.
+      </span>
+
     </h2>
 
     <p>
-      Tell us what you're thinking, what the website is for and the style
-      you have in mind.
+
+      Tell us what you're thinking, what the website is for
+      and the style you have in mind.
+
     </p>
 
     <a href="#home" class="btn btn-red">
+
       Start a Project
+
     </a>
 
   </div>
@@ -1330,16 +1904,27 @@
   <div class="container footer-inner">
 
     <div class="brand">
+
       REAPER <span>FORGE</span>
-      <small>WEB DEVELOPMENT</small>
+
+      <small>
+        WEB DEVELOPMENT
+      </small>
+
     </div>
+
 
     <div class="footer-copy">
+
       © 2026 Reaper Forge. Part of Reaper Network.
+
     </div>
 
+
     <div class="footer-location">
+
       Albuquerque, New Mexico
+
     </div>
 
   </div>
@@ -1350,16 +1935,32 @@
 <script>
 
   function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("open");
+
+    document
+      .getElementById("navLinks")
+      .classList
+      .toggle("open");
+
   }
 
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("navLinks").classList.remove("open");
+
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        document
+          .getElementById("navLinks")
+          .classList
+          .remove("open");
+
+      });
+
     });
-  });
 
 </script>
+
 
 </body>
 </html>
