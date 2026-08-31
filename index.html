@@ -15,12 +15,10 @@
       --bg: #050505;
       --bg2: #090909;
       --panel: #0d0d0d;
-      --panel2: #121212;
       --red: #d71616;
       --red2: #ff3030;
       --white: #f3f3f3;
       --gray: #a0a0a0;
-      --darkgray: #555;
       --line: rgba(255,255,255,.09);
     }
 
@@ -51,8 +49,14 @@
       text-decoration: none;
     }
 
-    button {
-      font-family: inherit;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
     }
 
     .section-tag {
@@ -77,11 +81,6 @@
       max-width: 700px;
       margin-top: 18px;
       color: var(--gray);
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: auto;
     }
 
     /* NAV */
@@ -290,12 +289,12 @@
     }
 
     .hero-notes span::before {
-      content: "◈";
+      content: "◆";
       color: var(--red);
       margin-right: 7px;
     }
 
-    /* HOODED CODER */
+    /* TEMP HERO ART */
 
     .coder-scene {
       height: 600px;
@@ -312,7 +311,6 @@
       color: #6e6e6e;
       line-height: 1.65;
       overflow: hidden;
-      box-shadow: 0 0 40px rgba(120,0,0,.06);
     }
 
     .code-window b {
@@ -351,15 +349,11 @@
       left: 50%;
       top: 72px;
       transform: translateX(-50%);
-      border-radius: 48% 48% 35% 35% / 34% 34% 66% 66%;
+      border-radius: 48% 48% 35% 35%;
       background:
         radial-gradient(circle at 50% 37%, #060606 0 29%, transparent 30%),
-        linear-gradient(110deg, #090909 0%, #232323 35%, #070707 72%, #151515 100%);
+        linear-gradient(110deg, #090909, #232323 35%, #070707 72%, #151515);
       border: 1px solid rgba(255,255,255,.08);
-      box-shadow:
-        inset 45px 0 70px rgba(0,0,0,.8),
-        inset -28px 0 50px rgba(110,0,0,.15),
-        0 0 80px rgba(130,0,0,.14);
     }
 
     .hood::after {
@@ -369,10 +363,8 @@
       height: 135px;
       left: 65px;
       top: 84px;
-      border-radius: 50% 50% 42% 42%;
-      background:
-        radial-gradient(circle at center, #000 0%, #010101 55%, #080808 100%);
-      box-shadow: inset 0 0 25px rgba(120,0,0,.12);
+      border-radius: 50%;
+      background: #000;
     }
 
     .body-shape {
@@ -383,9 +375,7 @@
       bottom: 40px;
       transform: translateX(-50%);
       border-radius: 50% 50% 10% 10%;
-      background:
-        linear-gradient(100deg, #080808 5%, #171717 40%, #0a0a0a 67%, #141414 100%);
-      border-top: 1px solid rgba(255,255,255,.05);
+      background: linear-gradient(100deg, #080808, #171717 40%, #0a0a0a 67%, #141414);
     }
 
     .laptop {
@@ -396,10 +386,8 @@
       bottom: 20px;
       transform: translateX(-50%);
       clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
-      background:
-        linear-gradient(145deg, #171717, #060606);
+      background: linear-gradient(145deg, #171717, #060606);
       border: 1px solid #333;
-      box-shadow: 0 18px 30px rgba(0,0,0,.7);
       z-index: 6;
     }
 
@@ -407,70 +395,33 @@
       position: absolute;
       left: 50%;
       top: 48%;
-      transform: translate(-50%, -50%);
-      color: var(--red);
-      border: 2px solid #7d1515;
       width: 63px;
       height: 63px;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: var(--red);
+      border: 2px solid #7d1515;
       font-family: "Barlow Condensed", sans-serif;
       font-size: 1.65rem;
       font-weight: 900;
-      transform-origin: center;
-      rotate: 45deg;
+      transform: translate(-50%, -50%) rotate(45deg);
     }
 
     .rf-mark span {
-      rotate: -45deg;
+      transform: rotate(-45deg);
     }
 
-    .desk-glow {
-      position: absolute;
-      width: 500px;
-      height: 80px;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      background: rgba(160,0,0,.16);
-      filter: blur(35px);
-    }
-
-    /* CODE STRIPS */
+    /* CODE STRIP */
 
     .code-strip {
-      width: 100%;
       height: 78px;
       display: flex;
       align-items: center;
       overflow: hidden;
       border-top: 1px solid rgba(255,0,0,.10);
       border-bottom: 1px solid rgba(255,0,0,.10);
-      background:
-        linear-gradient(90deg, #030303, rgba(20,0,0,.2), #030303);
-      position: relative;
-    }
-
-    .code-strip::before,
-    .code-strip::after {
-      content: "";
-      position: absolute;
-      z-index: 3;
-      top: 0;
-      bottom: 0;
-      width: 100px;
-    }
-
-    .code-strip::before {
-      left: 0;
-      background: linear-gradient(90deg, #050505, transparent);
-    }
-
-    .code-strip::after {
-      right: 0;
-      background: linear-gradient(-90deg, #050505, transparent);
+      background: linear-gradient(90deg, #030303, rgba(20,0,0,.2), #030303);
     }
 
     .code-track {
@@ -479,7 +430,6 @@
       color: #4f4f4f;
       font-family: monospace;
       font-size: .71rem;
-      letter-spacing: .3px;
       animation: codeMove 35s linear infinite;
     }
 
@@ -492,77 +442,53 @@
     }
 
     @keyframes codeMove {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-35%);
-      }
+      from { transform: translateX(0); }
+      to { transform: translateX(-35%); }
     }
 
-    /* SERVICES */
+    /* WEBSITE MOCKUPS */
 
     .services {
-      padding: 105px 0;
-      background: #050505;
-    }
-
-    .services-head {
-      margin-bottom: 55px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .service {
-      min-height: 245px;
-      padding: 32px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      padding: 100px 0 115px;
       background:
-        linear-gradient(145deg, rgba(255,255,255,.018), transparent);
-      transition: .2s;
+        radial-gradient(circle at 50% 40%, rgba(100,0,0,.07), transparent 45%),
+        #050505;
     }
 
-    .service:hover {
-      background: rgba(110,0,0,.07);
+    .mockup-wrap {
+      position: relative;
+      width: 100%;
+      margin-top: 28px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: #070707;
+      padding: 7px;
+      box-shadow:
+        0 25px 65px rgba(0,0,0,.55),
+        0 0 45px rgba(120,0,0,.08);
     }
 
-    .service-num {
-      color: var(--red);
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: .73rem;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+    .mockup-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      pointer-events: none;
+      border: 1px solid rgba(210,20,20,.12);
     }
 
-    .service-icon {
-      height: 36px;
-      margin-bottom: 18px;
-      font-family: monospace;
-      color: #d52a2a;
-      font-size: 1.5rem;
+    .mockup-image {
+      width: 100%;
+      height: auto;
     }
 
-    .service h3 {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
+    .mockup-caption {
+      margin-top: 18px;
+      text-align: center;
+      color: #666;
+      font-size: .75rem;
+      letter-spacing: 1px;
     }
 
-    .service p {
-      color: #888;
-      font-size: .88rem;
-    }
-
-    /* IDEA STATEMENT */
+    /* STATEMENT */
 
     .statement {
       padding: 105px 0;
@@ -586,7 +512,7 @@
       color: var(--red);
     }
 
-    /* CONCEPT BUILDS */
+    /* CONCEPTS */
 
     .concepts {
       padding: 110px 0;
@@ -616,12 +542,6 @@
       border: 1px solid var(--line);
       background: #090909;
       overflow: hidden;
-      transition: transform .2s, border-color .2s;
-    }
-
-    .concept:hover {
-      transform: translateY(-4px);
-      border-color: rgba(215,22,22,.35);
     }
 
     .browser-bar {
@@ -631,7 +551,6 @@
       padding: 0 12px;
       gap: 6px;
       background: #111;
-      border-bottom: 1px solid #202020;
     }
 
     .browser-dot {
@@ -650,9 +569,9 @@
     }
 
     .site-preview {
-      height: 310px;
+      height: 260px;
       position: relative;
-      overflow: hidden;
+      padding: 30px;
     }
 
     .concept-info {
@@ -663,13 +582,10 @@
     .concept-info small {
       color: var(--red);
       font-family: "Barlow Condensed", sans-serif;
-      font-weight: 700;
       letter-spacing: 2px;
-      text-transform: uppercase;
     }
 
     .concept-info h3 {
-      margin-top: 4px;
       font-family: "Barlow Condensed", sans-serif;
       font-size: 1.55rem;
       text-transform: uppercase;
@@ -677,277 +593,36 @@
 
     .concept-info p {
       color: #777;
-      margin-top: 5px;
       font-size: .84rem;
     }
 
-    /* AUTOMOTIVE MOCKUP */
-
     .auto-site {
-      background:
-        radial-gradient(circle at 72% 58%, rgba(255,0,0,.18), transparent 35%),
-        linear-gradient(120deg, #080808, #141414);
-      padding: 32px;
+      background: radial-gradient(circle at 72% 58%, rgba(255,0,0,.18), transparent 35%), #111;
     }
 
-    .auto-nav {
-      display: flex;
-      justify-content: space-between;
+    .game-site {
+      background: radial-gradient(circle at 70% 42%, rgba(80,40,255,.32), transparent 30%), #080815;
+    }
+
+    .creator-site {
+      background: linear-gradient(90deg, #f4f0eb 0 56%, #c7b19c 56%);
+      color: #181818;
+    }
+
+    .food-site {
+      background: linear-gradient(120deg, #15100d, #382115);
+    }
+
+    .preview-title {
       font-family: "Barlow Condensed", sans-serif;
-      font-weight: 800;
-      letter-spacing: 1px;
-      font-size: .72rem;
-    }
-
-    .auto-nav span:last-child {
-      color: #df2222;
-    }
-
-    .auto-content {
-      width: 48%;
+      font-size: 2.3rem;
+      line-height: .9;
+      text-transform: uppercase;
       margin-top: 50px;
     }
 
-    .auto-content h4 {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 2.1rem;
-      line-height: .9;
-      text-transform: uppercase;
-    }
-
-    .auto-content h4 span {
-      color: #e01d1d;
-    }
-
-    .auto-content p {
-      width: 90%;
-      height: 5px;
-      margin-top: 17px;
-      background: #363636;
-      box-shadow: 0 10px #242424;
-    }
-
-    .auto-btn {
-      width: 80px;
-      height: 23px;
-      margin-top: 27px;
-      background: #c81818;
-    }
-
-    .car-shape {
-      position: absolute;
-      width: 250px;
-      height: 72px;
-      right: 30px;
-      bottom: 55px;
-      border-radius: 70% 35% 20% 20%;
-      background:
-        linear-gradient(155deg, #222, #070707);
-      box-shadow:
-        -20px 18px 25px rgba(0,0,0,.7),
-        0 0 30px rgba(150,0,0,.18);
-      transform: skewX(-8deg);
-    }
-
-    .car-shape::before,
-    .car-shape::after {
-      content: "";
-      position: absolute;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      bottom: -19px;
-      background: #050505;
-      border: 5px solid #202020;
-    }
-
-    .car-shape::before {
-      left: 35px;
-    }
-
-    .car-shape::after {
-      right: 32px;
-    }
-
-    /* GAMING MOCKUP */
-
-    .game-site {
-      background:
-        radial-gradient(circle at 70% 42%, rgba(80,40,255,.32), transparent 30%),
-        linear-gradient(135deg, #080815, #06060a);
-      padding: 30px;
-    }
-
-    .game-nav {
-      display: flex;
-      justify-content: space-between;
-      color: #8d7cff;
-      font-family: "Barlow Condensed", sans-serif;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: .72rem;
-    }
-
-    .game-content {
-      margin-top: 55px;
-    }
-
-    .game-content h4 {
-      max-width: 300px;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 2.4rem;
-      line-height: .88;
-      text-transform: uppercase;
-    }
-
-    .game-content h4 span {
-      color: #8572ff;
-    }
-
-    .game-btn {
-      width: 90px;
-      height: 24px;
-      margin-top: 25px;
-      background: #6856df;
-    }
-
-    .game-panel {
-      position: absolute;
-      width: 180px;
-      height: 185px;
-      right: 30px;
-      top: 70px;
-      border: 1px solid rgba(130,110,255,.3);
-      background:
-        linear-gradient(145deg, rgba(120,80,255,.08), rgba(0,0,0,.4));
-      transform: rotate(2deg);
-    }
-
-    .game-panel::before {
-      content: "";
-      position: absolute;
-      width: 85px;
-      height: 85px;
-      border-radius: 50%;
-      left: 47px;
-      top: 32px;
-      border: 1px solid rgba(140,120,255,.45);
-      box-shadow:
-        0 0 0 16px rgba(100,70,255,.05),
-        0 0 40px rgba(100,70,255,.22);
-    }
-
-    /* CREATOR MOCKUP */
-
-    .creator-site {
-      background:
-        linear-gradient(90deg, #f4f0eb 0 56%, #c7b19c 56% 100%);
-      color: #181818;
-      padding: 30px;
-    }
-
-    .creator-nav {
-      display: flex;
-      justify-content: space-between;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .creator-content {
-      width: 47%;
-      margin-top: 58px;
-    }
-
-    .creator-content small {
-      font-size: .6rem;
-      letter-spacing: 2px;
-    }
-
-    .creator-content h4 {
-      margin-top: 7px;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 2.6rem;
-      line-height: .88;
-      text-transform: uppercase;
-    }
-
-    .creator-line {
-      width: 120px;
-      height: 4px;
-      background: #aaa094;
-      margin-top: 20px;
-      box-shadow: 0 9px #cbc3bb;
-    }
-
-    .creator-person {
-      position: absolute;
-      width: 155px;
-      height: 235px;
-      right: 58px;
-      bottom: -20px;
-      border-radius: 65px 65px 8px 8px;
-      background:
-        radial-gradient(circle at 50% 23%, #9b806b 0 20%, transparent 21%),
-        linear-gradient(#252525 38%, #111 38%);
-      box-shadow: 0 20px 30px rgba(0,0,0,.18);
-    }
-
-    /* FOOD MOCKUP */
-
-    .food-site {
-      background:
-        radial-gradient(circle at 74% 57%, #7f401f 0 17%, transparent 18%),
-        radial-gradient(circle at 70% 54%, #c39257 0 27%, transparent 28%),
-        radial-gradient(circle at 75% 58%, #392013 0 38%, transparent 39%),
-        linear-gradient(120deg, #15100d, #24170f);
-      padding: 30px;
-    }
-
-    .food-nav {
-      display: flex;
-      justify-content: space-between;
-      color: #d8b477;
-      font-family: "Barlow Condensed", sans-serif;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: .72rem;
-    }
-
-    .food-content {
-      width: 48%;
-      margin-top: 52px;
-    }
-
-    .food-content small {
-      color: #c99352;
-      font-family: "Barlow Condensed", sans-serif;
-      letter-spacing: 2px;
-    }
-
-    .food-content h4 {
-      margin-top: 7px;
-      color: #f2e4ca;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 2.5rem;
-      line-height: .88;
-      text-transform: uppercase;
-    }
-
-    .food-content p {
-      width: 120px;
-      height: 4px;
-      margin-top: 18px;
-      background: #765d41;
-      box-shadow: 0 9px #503d2a;
-    }
-
-    .food-btn {
-      width: 80px;
-      height: 23px;
-      margin-top: 28px;
-      background: #b16b2d;
+    .preview-red {
+      color: #e21b1b;
     }
 
     /* PROCESS */
@@ -956,7 +631,6 @@
       padding: 105px 0;
       background: #070707;
       border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
     }
 
     .process-grid {
@@ -968,30 +642,23 @@
     }
 
     .process-step {
-      min-height: 180px;
       padding: 27px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .process-step b {
-      display: block;
       color: var(--red);
       font-family: "Barlow Condensed", sans-serif;
       font-size: 2.7rem;
-      line-height: 1;
     }
 
     .process-step h3 {
-      margin-top: 16px;
       font-family: "Barlow Condensed", sans-serif;
-      font-size: 1.25rem;
-      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .process-step p {
-      margin-top: 5px;
       color: #777;
       font-size: .82rem;
     }
@@ -1014,29 +681,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
       border: 1px solid var(--line);
       background:
         radial-gradient(circle, rgba(150,0,0,.14), transparent 45%),
         #080808;
-    }
-
-    .about-mark::before,
-    .about-mark::after {
-      content: "";
-      position: absolute;
-      border: 1px solid rgba(180,0,0,.18);
-      transform: rotate(45deg);
-    }
-
-    .about-mark::before {
-      width: 130px;
-      height: 130px;
-    }
-
-    .about-mark::after {
-      width: 190px;
-      height: 190px;
     }
 
     .big-rf {
@@ -1044,8 +692,6 @@
       font-size: 5rem;
       font-weight: 900;
       color: var(--red);
-      position: relative;
-      z-index: 2;
     }
 
     .about p {
@@ -1065,12 +711,10 @@
     }
 
     .contact h2 {
-      max-width: 800px;
-      margin: auto;
       font-family: "Barlow Condensed", sans-serif;
       font-size: clamp(3rem, 6vw, 5.8rem);
-      line-height: .9;
       text-transform: uppercase;
+      line-height: .9;
     }
 
     .contact h2 span {
@@ -1097,8 +741,8 @@
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
@@ -1109,20 +753,13 @@
 
     .footer-location {
       color: #666;
-      font-family: "Barlow Condensed", sans-serif;
       font-size: .78rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .footer-location::after {
-      content: " •";
-      color: var(--red);
     }
 
     /* MOBILE */
 
     @media (max-width: 900px) {
+
       .hero {
         min-height: auto;
         padding: 80px 0 60px;
@@ -1136,10 +773,6 @@
         height: 500px;
       }
 
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1148,9 +781,11 @@
         grid-template-columns: 1fr;
         gap: 40px;
       }
+
     }
 
     @media (max-width: 700px) {
+
       nav {
         height: 60px;
       }
@@ -1158,45 +793,25 @@
       .nav-links {
         display: none;
         position: absolute;
+        top: 60px;
         left: 0;
         right: 0;
-        top: 60px;
-        padding: 22px;
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
         background: #080808;
-        border-bottom: 1px solid #222;
+        padding: 20px;
       }
 
       .nav-links.open {
         display: flex;
       }
 
-      .nav-links a {
-        padding: 12px;
-        border-bottom: 1px solid #151515;
-      }
-
       .menu-btn {
         display: block;
       }
 
-      .hero {
-        padding-top: 65px;
-      }
-
       .hero h1 {
         font-size: clamp(4rem, 19vw, 6rem);
-      }
-
-      .hero-desc {
-        font-size: .9rem;
-      }
-
-      .hero-notes {
-        gap: 12px;
-        font-size: .63rem;
       }
 
       .coder-scene {
@@ -1206,7 +821,6 @@
       .hood {
         width: 200px;
         height: 245px;
-        top: 25px;
       }
 
       .hood::after {
@@ -1219,39 +833,28 @@
       .body-shape {
         width: 340px;
         height: 185px;
-        bottom: 15px;
       }
 
       .laptop {
         width: 270px;
         height: 155px;
-        bottom: 5px;
       }
 
-      .cw1 {
-        width: 180px;
-        height: 110px;
-        top: 40px;
-        left: -15px;
-      }
-
+      .cw1,
       .cw2 {
-        width: 180px;
-        height: 120px;
-        right: -15px;
-        top: 80px;
+        width: 175px;
       }
 
       .cw3 {
         display: none;
       }
 
-      .service-grid {
-        grid-template-columns: 1fr;
+      .services {
+        padding: 65px 0 75px;
       }
 
-      .service {
-        min-height: 200px;
+      .mockup-wrap {
+        padding: 3px;
       }
 
       .concept-head {
@@ -1266,29 +869,6 @@
         grid-template-columns: 1fr;
       }
 
-      .site-preview {
-        height: 250px;
-      }
-
-      .car-shape {
-        width: 180px;
-        right: 10px;
-      }
-
-      .game-panel {
-        width: 130px;
-        height: 150px;
-        right: 18px;
-      }
-
-      .game-panel::before {
-        left: 26px;
-      }
-
-      .creator-person {
-        right: 25px;
-      }
-
       .process-grid {
         grid-template-columns: 1fr;
       }
@@ -1297,673 +877,489 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <div class="nav-inner">
+<nav>
 
-      <a href="#home" class="brand">
-        REAPER <span>FORGE</span>
-        <small>WEB DEVELOPMENT</small>
-      </a>
+  <div class="nav-inner">
 
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#concepts">Concepts</a>
-        <a href="#process">Process</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Start a Project</a>
-      </div>
+    <a href="#home" class="brand">
+      REAPER <span>FORGE</span>
+      <small>WEB DEVELOPMENT</small>
+    </a>
 
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#concepts">Concepts</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Start a Project</a>
     </div>
-  </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  </div>
+
+</nav>
 
 
-  <header class="hero" id="home">
+<header class="hero" id="home">
 
-    <div class="hero-inner">
+  <div class="hero-inner">
 
-      <div class="hero-copy">
+    <div>
 
-        <div class="hero-label">
-          Reaper Forge // Web Development
-        </div>
-
-        <h1>
-          Imagine It.
-          <span>We'll Build It.</span>
-        </h1>
-
-        <p class="hero-desc">
-          Custom websites built around your vision. Business, personal,
-          creative, gaming, communities, portfolios, brands and everything
-          in between.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-red">Start a Project</a>
-          <a href="#concepts" class="btn btn-dark">View Concepts</a>
-        </div>
-
-        <div class="hero-notes">
-          <span>Custom Designs</span>
-          <span>Mobile Ready</span>
-          <span>Built Around You</span>
-        </div>
-
+      <div class="hero-label">
+        Reaper Forge // Web Development
       </div>
 
+      <h1>
+        Imagine It.
+        <span>We'll Build It.</span>
+      </h1>
 
-      <div class="coder-scene">
+      <p class="hero-desc">
+        Custom websites built around your vision. Business, personal,
+        creative, gaming, communities, portfolios, brands and everything
+        in between.
+      </p>
 
-        <div class="code-window cw1">
-          <b>&lt;section</b> class="hero"&gt;<br>
-          &nbsp;&nbsp;&lt;h1&gt;Build Something&lt;/h1&gt;<br>
-          &nbsp;&nbsp;&lt;p&gt;Turn ideas into websites.&lt;/p&gt;<br>
-          <b>&lt;/section&gt;</b><br><br>
-          .project {<br>
-          &nbsp;&nbsp;display: grid;<br>
-          &nbsp;&nbsp;position: relative;<br>
-          }
-        </div>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-red">Start a Project</a>
+        <a href="#concepts" class="btn btn-dark">View Concepts</a>
+      </div>
 
-        <div class="code-window cw2">
-          const project = {<br>
-          &nbsp;&nbsp;idea: <b>"your vision"</b>,<br>
-          &nbsp;&nbsp;design: "custom",<br>
-          &nbsp;&nbsp;mobile: true,<br>
-          &nbsp;&nbsp;status: "building"<br>
-          };<br><br>
-          function launch() {<br>
-          &nbsp;&nbsp;return project;<br>
-          }
-        </div>
-
-        <div class="code-window cw3">
-          @media (max-width: 700px) {<br>
-          &nbsp;&nbsp;.site {<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
-          &nbsp;&nbsp;}<br>
-          }
-        </div>
-
-        <div class="desk-glow"></div>
-        <div class="body-shape"></div>
-        <div class="hood"></div>
-
-        <div class="laptop">
-          <div class="rf-mark">
-            <span>RF</span>
-          </div>
-        </div>
-
+      <div class="hero-notes">
+        <span>Custom Designs</span>
+        <span>Mobile Ready</span>
+        <span>Built Around You</span>
       </div>
 
     </div>
 
-  </header>
 
+    <div class="coder-scene">
 
-  <div class="code-strip">
+      <div class="code-window cw1">
+        <b>&lt;section</b> class="hero"&gt;<br>
+        &nbsp;&nbsp;&lt;h1&gt;Build Something&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&lt;p&gt;Turn ideas into websites.&lt;/p&gt;<br>
+        <b>&lt;/section&gt;</b><br><br>
+        .project {<br>
+        &nbsp;&nbsp;display: grid;<br>
+        &nbsp;&nbsp;position: relative;<br>
+        }
+      </div>
 
-    <div class="code-track">
+      <div class="code-window cw2">
+        const project = {<br>
+        &nbsp;&nbsp;idea: <b>"your vision"</b>,<br>
+        &nbsp;&nbsp;design: "custom",<br>
+        &nbsp;&nbsp;mobile: true,<br>
+        &nbsp;&nbsp;status: "building"<br>
+        };
+      </div>
 
-      <span class="red">&lt;main&gt;</span>
-      &nbsp;&nbsp;
-      &lt;section class="<span class="light">project</span>"&gt;
-      &nbsp;&nbsp;
-      display: grid;
-      &nbsp;&nbsp;
-      gap: 24px;
-      &nbsp;&nbsp;
-      <span class="red">const</span> idea = "something worth building";
-      &nbsp;&nbsp;
-      background: #050505;
-      &nbsp;&nbsp;
-      transform: translateY(0);
-      &nbsp;&nbsp;
-      &lt;div class="<span class="light">experience</span>"&gt;
-      &nbsp;&nbsp;
-      function buildWebsite() { return <span class="red">vision</span>; }
-      &nbsp;&nbsp;
-      @media (max-width:700px)
-      &nbsp;&nbsp;
-      &lt;/section&gt;
-      &nbsp;&nbsp;
-      <span class="red">&lt;/main&gt;</span>
+      <div class="code-window cw3">
+        @media (max-width:700px) {<br>
+        &nbsp;&nbsp;.site {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+        &nbsp;&nbsp;}<br>
+        }
+      </div>
 
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="body-shape"></div>
+      <div class="hood"></div>
 
-      <span class="red">&lt;main&gt;</span>
-      &nbsp;&nbsp;
-      &lt;section class="<span class="light">project</span>"&gt;
-      &nbsp;&nbsp;
-      display: grid;
-      &nbsp;&nbsp;
-      gap: 24px;
-      &nbsp;&nbsp;
-      <span class="red">const</span> idea = "something worth building";
-      &nbsp;&nbsp;
-      background: #050505;
+      <div class="laptop">
+        <div class="rf-mark">
+          <span>RF</span>
+        </div>
+      </div>
 
     </div>
 
   </div>
 
-
-  <section class="services" id="services">
-
-    <div class="container">
-
-      <div class="services-head">
-
-        <div class="section-tag">
-          What We Build
-        </div>
-
-        <h2 class="section-title">
-          Websites Without the Box
-        </h2>
-
-        <p class="section-copy">
-          You don't need to fit into a category before you bring us an idea.
-          These are simply some of the types of websites we can help create.
-        </p>
-
-      </div>
+</header>
 
 
-      <div class="service-grid">
+<div class="code-strip">
 
-        <div class="service">
-          <div class="service-num">01 //</div>
-          <div class="service-icon">&lt;/&gt;</div>
-          <h3>Custom Websites</h3>
-          <p>
-            Original websites built around your idea, style and purpose.
-          </p>
-        </div>
+  <div class="code-track">
 
-        <div class="service">
-          <div class="service-num">02 //</div>
-          <div class="service-icon">▤</div>
-          <h3>Business Websites</h3>
-          <p>
-            Clean websites that clearly explain who you are and what you offer.
-          </p>
-        </div>
+    <span class="red">&lt;main&gt;</span>
+    &nbsp;&nbsp;
+    &lt;section class="<span class="light">project</span>"&gt;
+    &nbsp;&nbsp;
+    display: grid;
+    &nbsp;&nbsp;
+    gap: 24px;
+    &nbsp;&nbsp;
+    <span class="red">const</span> idea = "something worth building";
+    &nbsp;&nbsp;
+    background: #050505;
+    &nbsp;&nbsp;
+    function buildWebsite() { return <span class="red">vision</span>; }
+    &nbsp;&nbsp;
+    @media (max-width:700px)
+    &nbsp;&nbsp;
+    <span class="red">&lt;/main&gt;</span>
 
-        <div class="service">
-          <div class="service-num">03 //</div>
-          <div class="service-icon">◯</div>
-          <h3>Personal & Portfolio</h3>
-          <p>
-            Websites for creators, professionals, artists, trainers and personal brands.
-          </p>
-        </div>
+  </div>
 
-        <div class="service">
-          <div class="service-num">04 //</div>
-          <div class="service-icon">⌁</div>
-          <h3>Gaming & Communities</h3>
-          <p>
-            Sites for gaming groups, servers, clans, communities and online projects.
-          </p>
-        </div>
+</div>
 
-        <div class="service">
-          <div class="service-num">05 //</div>
-          <div class="service-icon">▱</div>
-          <h3>Landing Pages</h3>
-          <p>
-            Focused single-page websites for projects, events, products or ideas.
-          </p>
-        </div>
 
-        <div class="service">
-          <div class="service-num">06 //</div>
-          <div class="service-icon">↻</div>
-          <h3>Website Redesigns</h3>
-          <p>
-            A fresh rebuild for websites that have started showing their age.
-          </p>
-        </div>
+<section class="services" id="services">
 
-      </div>
+  <div class="container">
+
+    <div class="mockup-wrap">
+
+      <img
+        src="reaper-forge-concepts.png"
+        alt="Reaper Forge website design examples"
+        class="mockup-image"
+      >
 
     </div>
 
-  </section>
-
-
-  <section class="statement">
-
-    <div class="container">
-
-      <div class="section-tag">
-        Our Approach
-      </div>
-
-      <h2>
-        Your Website Shouldn't Look Like Ours.
-        <span>It Should Look Like Yours.</span>
-      </h2>
-
-    </div>
-
-  </section>
-
-
-  <div class="code-strip">
-
-    <div class="code-track">
-
-      <span class="red">/* DESIGN SYSTEM */</span>
-      &nbsp;&nbsp;
-      --brand: unique;
-      &nbsp;&nbsp;
-      --layout: responsive;
-      &nbsp;&nbsp;
-      --experience: intentional;
-      &nbsp;&nbsp;
-      document.querySelector(".idea");
-      &nbsp;&nbsp;
-      grid-template-columns: repeat(2, 1fr);
-      &nbsp;&nbsp;
-      <span class="red">&lt;portfolio&gt;</span>
-      &nbsp;&nbsp;
-      visualIdentity++;
-      &nbsp;&nbsp;
-      @media screen and (max-width: 700px)
-      &nbsp;&nbsp;
-      <span class="red">&lt;/portfolio&gt;</span>
-
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-      <span class="red">/* DESIGN SYSTEM */</span>
-      &nbsp;&nbsp;
-      --brand: unique;
-      &nbsp;&nbsp;
-      --layout: responsive;
-      &nbsp;&nbsp;
-      --experience: intentional;
-
+    <div class="mockup-caption">
+      CONCEPT DESIGNS // EXAMPLES OF POSSIBLE WEBSITE DIRECTIONS
     </div>
 
   </div>
 
+</section>
 
-  <section class="concepts" id="concepts">
 
-    <div class="container">
+<section class="statement">
 
-      <div class="concept-head">
+  <div class="container">
 
-        <div>
-          <div class="section-tag">
-            Potential Builds
-          </div>
-
-          <h2 class="section-title">
-            Different Ideas.<br>
-            Different Identities.
-          </h2>
-        </div>
-
-        <p class="concept-note">
-          These are example concepts showing different directions a website
-          could take. They are design examples, not previous client projects.
-        </p>
-
-      </div>
-
-
-      <div class="concept-grid">
-
-        <!-- AUTOMOTIVE -->
-
-        <div class="concept">
-
-          <div class="browser-bar">
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-url"></div>
-          </div>
-
-          <div class="site-preview auto-site">
-
-            <div class="auto-nav">
-              <span>APEX DETAIL</span>
-              <span>BOOK NOW</span>
-            </div>
-
-            <div class="auto-content">
-              <h4>
-                Premium Care.
-                <span>Serious Finish.</span>
-              </h4>
-
-              <p></p>
-
-              <div class="auto-btn"></div>
-            </div>
-
-            <div class="car-shape"></div>
-
-          </div>
-
-          <div class="concept-info">
-            <small>Concept Build 01</small>
-            <h3>Automotive / Detailing</h3>
-            <p>
-              A darker premium design focused on strong visuals, services and booking.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- GAMING -->
-
-        <div class="concept">
-
-          <div class="browser-bar">
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-url"></div>
-          </div>
-
-          <div class="site-preview game-site">
-
-            <div class="game-nav">
-              <span>NEXUS GAMING</span>
-              <span>JOIN COMMUNITY</span>
-            </div>
-
-            <div class="game-content">
-              <h4>
-                Find Your Squad.
-                <span>Build Your Legacy.</span>
-              </h4>
-
-              <div class="game-btn"></div>
-            </div>
-
-            <div class="game-panel"></div>
-
-          </div>
-
-          <div class="concept-info">
-            <small>Concept Build 02</small>
-            <h3>Gaming Community</h3>
-            <p>
-              A community-focused site with its own visual identity, events and social links.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- CREATOR -->
-
-        <div class="concept">
-
-          <div class="browser-bar">
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-url"></div>
-          </div>
-
-          <div class="site-preview creator-site">
-
-            <div class="creator-nav">
-              <span>JORDAN REYES</span>
-              <span>PORTFOLIO</span>
-            </div>
-
-            <div class="creator-content">
-
-              <small>COACH • CREATOR</small>
-
-              <h4>
-                Build.
-                Create.
-                Evolve.
-              </h4>
-
-              <div class="creator-line"></div>
-
-            </div>
-
-            <div class="creator-person"></div>
-
-          </div>
-
-          <div class="concept-info">
-            <small>Concept Build 03</small>
-            <h3>Creator / Portfolio</h3>
-            <p>
-              Clean personal branding for creators, coaches, artists or professionals.
-            </p>
-          </div>
-
-        </div>
-
-
-        <!-- FOOD -->
-
-        <div class="concept">
-
-          <div class="browser-bar">
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-dot"></div>
-            <div class="browser-url"></div>
-          </div>
-
-          <div class="site-preview food-site">
-
-            <div class="food-nav">
-              <span>EMBER & OAK</span>
-              <span>MENU</span>
-            </div>
-
-            <div class="food-content">
-
-              <small>LOCAL KITCHEN</small>
-
-              <h4>
-                Real Food.
-                Bold Flavor.
-              </h4>
-
-              <p></p>
-
-              <div class="food-btn"></div>
-
-            </div>
-
-          </div>
-
-          <div class="concept-info">
-            <small>Concept Build 04</small>
-            <h3>Restaurant / Food</h3>
-            <p>
-              A warmer visual direction built around food, atmosphere and location.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="section-tag">
+      Our Approach
     </div>
 
-  </section>
+    <h2>
+      Your Website Shouldn't Look Like Ours.
+      <span>It Should Look Like Yours.</span>
+    </h2>
+
+  </div>
+
+</section>
 
 
-  <section class="process" id="process">
+<div class="code-strip">
 
-    <div class="container">
+  <div class="code-track">
 
-      <div class="section-tag">
-        The Process
-      </div>
+    <span class="red">/* DESIGN SYSTEM */</span>
+    &nbsp;&nbsp;
+    --brand: unique;
+    &nbsp;&nbsp;
+    --layout: responsive;
+    &nbsp;&nbsp;
+    --experience: intentional;
+    &nbsp;&nbsp;
+    document.querySelector(".idea");
+    &nbsp;&nbsp;
+    visualIdentity++;
+    &nbsp;&nbsp;
+    @media screen and (max-width: 700px)
 
-      <h2 class="section-title">
-        Simple. Clear. Built Together.
-      </h2>
+  </div>
 
-
-      <div class="process-grid">
-
-        <div class="process-step">
-          <b>01</b>
-          <h3>Idea</h3>
-          <p>
-            Tell us what you want the site to do and what you want it to feel like.
-          </p>
-        </div>
-
-        <div class="process-step">
-          <b>02</b>
-          <h3>Design</h3>
-          <p>
-            We shape the layout, style and identity around your project.
-          </p>
-        </div>
-
-        <div class="process-step">
-          <b>03</b>
-          <h3>Build</h3>
-          <p>
-            The design becomes a responsive website that works across devices.
-          </p>
-        </div>
-
-        <div class="process-step">
-          <b>04</b>
-          <h3>Launch</h3>
-          <p>
-            After final adjustments, the site is prepared and put online.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+</div>
 
 
-  <section class="about" id="about">
+<section class="concepts" id="concepts">
 
-    <div class="container about-grid">
+  <div class="container">
 
-      <div class="about-mark">
-        <div class="big-rf">RF</div>
-      </div>
+    <div class="concept-head">
 
       <div>
 
         <div class="section-tag">
-          Reaper Forge
+          Potential Builds
         </div>
 
         <h2 class="section-title">
-          Bring the Idea.<br>
-          We'll Shape the Site.
+          Different Ideas.<br>
+          Different Identities.
         </h2>
 
-        <p>
-          Reaper Forge creates modern websites for businesses, creators,
-          communities, personal projects and anyone with an idea that deserves
-          its own place on the web.
-        </p>
+      </div>
 
-        <p>
-          We keep the process straightforward and build around the project
-          instead of forcing every website into the same template.
-        </p>
+      <p class="concept-note">
+        These are design concepts showing different directions a website
+        could take. They are examples, not previous client projects.
+      </p>
+
+    </div>
+
+
+    <div class="concept-grid">
+
+      <div class="concept">
+
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-url"></div>
+        </div>
+
+        <div class="site-preview auto-site">
+          <div class="preview-title">
+            Premium Care.<br>
+            <span class="preview-red">Serious Finish.</span>
+          </div>
+        </div>
+
+        <div class="concept-info">
+          <small>Concept Build 01</small>
+          <h3>Automotive / Detailing</h3>
+          <p>Premium automotive website direction.</p>
+        </div>
+
+      </div>
+
+
+      <div class="concept">
+
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-url"></div>
+        </div>
+
+        <div class="site-preview game-site">
+          <div class="preview-title">
+            Find Your Squad.<br>
+            Build Your Legacy.
+          </div>
+        </div>
+
+        <div class="concept-info">
+          <small>Concept Build 02</small>
+          <h3>Gaming Community</h3>
+          <p>Community and gaming focused website.</p>
+        </div>
+
+      </div>
+
+
+      <div class="concept">
+
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-url"></div>
+        </div>
+
+        <div class="site-preview creator-site">
+          <div class="preview-title">
+            Build.<br>Create.<br>Evolve.
+          </div>
+        </div>
+
+        <div class="concept-info">
+          <small>Concept Build 03</small>
+          <h3>Creator / Portfolio</h3>
+          <p>Personal branding, creator and portfolio design.</p>
+        </div>
+
+      </div>
+
+
+      <div class="concept">
+
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-url"></div>
+        </div>
+
+        <div class="site-preview food-site">
+          <div class="preview-title">
+            Real Food.<br>
+            Bold Flavor.
+          </div>
+        </div>
+
+        <div class="concept-info">
+          <small>Concept Build 04</small>
+          <h3>Restaurant / Food</h3>
+          <p>Warm food and hospitality focused design.</p>
+        </div>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <section class="contact" id="contact">
+<section class="process" id="process">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="section-tag">
-        Start Something
+    <div class="section-tag">
+      The Process
+    </div>
+
+    <h2 class="section-title">
+      Simple. Clear. Built Together.
+    </h2>
+
+    <div class="process-grid">
+
+      <div class="process-step">
+        <b>01</b>
+        <h3>Idea</h3>
+        <p>Tell us what you're imagining.</p>
       </div>
 
-      <h2>
-        Got an Idea?
-        <span>Let's Build It.</span>
+      <div class="process-step">
+        <b>02</b>
+        <h3>Design</h3>
+        <p>We shape the layout and visual direction.</p>
+      </div>
+
+      <div class="process-step">
+        <b>03</b>
+        <h3>Build</h3>
+        <p>The idea becomes a responsive website.</p>
+      </div>
+
+      <div class="process-step">
+        <b>04</b>
+        <h3>Launch</h3>
+        <p>Final adjustments, then the site goes live.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-mark">
+      <div class="big-rf">RF</div>
+    </div>
+
+    <div>
+
+      <div class="section-tag">
+        Reaper Forge
+      </div>
+
+      <h2 class="section-title">
+        Bring the Idea.<br>
+        We'll Shape the Site.
       </h2>
 
       <p>
-        Tell us what you're thinking, what the website is for and the kind
-        of style you have in mind.
+        Reaper Forge creates modern websites for businesses, creators,
+        communities, personal projects and anyone with an idea that deserves
+        its own place on the web.
       </p>
 
-      <a href="#home" class="btn btn-red">
-        Start a Project
-      </a>
+      <p>
+        We keep the process straightforward and build around the project
+        instead of forcing every website into the same template.
+      </p>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <footer>
+<section class="contact" id="contact">
 
-    <div class="container footer-inner">
+  <div class="container">
 
-      <div class="brand">
-        REAPER <span>FORGE</span>
-        <small>WEB DEVELOPMENT</small>
-      </div>
-
-      <div class="footer-copy">
-        © 2026 Reaper Forge. Part of Reaper Network.
-      </div>
-
-      <div class="footer-location">
-        Albuquerque, New Mexico
-      </div>
-
+    <div class="section-tag">
+      Start Something
     </div>
 
-  </footer>
+    <h2>
+      Got an Idea?
+      <span>Let's Build It.</span>
+    </h2>
+
+    <p>
+      Tell us what you're thinking, what the website is for and the style
+      you have in mind.
+    </p>
+
+    <a href="#home" class="btn btn-red">
+      Start a Project
+    </a>
+
+  </div>
+
+</section>
 
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
-    }
+<footer>
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("open");
-      });
+  <div class="container footer-inner">
+
+    <div class="brand">
+      REAPER <span>FORGE</span>
+      <small>WEB DEVELOPMENT</small>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Reaper Forge. Part of Reaper Network.
+    </div>
+
+    <div class="footer-location">
+      Albuquerque, New Mexico
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+  }
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("navLinks").classList.remove("open");
     });
-  </script>
+  });
+
+</script>
 
 </body>
 </html>
