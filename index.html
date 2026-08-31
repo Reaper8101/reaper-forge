@@ -164,6 +164,7 @@
       display: flex;
       align-items: center;
       border-bottom: 1px solid var(--line);
+
       background:
         linear-gradient(
           90deg,
@@ -181,19 +182,32 @@
       inset: 0;
       pointer-events: none;
       opacity: .12;
+
       background:
-        linear-gradient(90deg, transparent 49.8%, rgba(255,0,0,.12) 50%, transparent 50.2%),
-        linear-gradient(transparent 49.8%, rgba(255,0,0,.06) 50%, transparent 50.2%);
+        linear-gradient(
+          90deg,
+          transparent 49.8%,
+          rgba(255,0,0,.12) 50%,
+          transparent 50.2%
+        ),
+        linear-gradient(
+          transparent 49.8%,
+          rgba(255,0,0,.06) 50%,
+          transparent 50.2%
+        );
+
       background-size: 120px 120px;
     }
 
     .hero-inner {
       width: min(1240px, calc(100% - 40px));
       margin: auto;
+
       display: grid;
       grid-template-columns: .88fr 1.12fr;
       align-items: center;
       gap: 8px;
+
       position: relative;
       z-index: 2;
     }
@@ -246,13 +260,16 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       min-height: 46px;
       padding: 0 24px;
+
       font-family: "Barlow Condensed", sans-serif;
       font-size: .84rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
+
       transition: .2s;
     }
 
@@ -281,7 +298,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 22px;
+
       margin-top: 38px;
+
       color: #777;
       font-family: "Barlow Condensed", sans-serif;
       font-size: .72rem;
@@ -302,6 +321,7 @@
       height: 665px;
       position: relative;
       overflow: hidden;
+
       display: flex;
       align-items: center;
       justify-content: center;
@@ -310,8 +330,10 @@
     .hero-art {
       position: absolute;
       z-index: 2;
+
       width: 800px;
       max-width: 124%;
+
       right: -92px;
       bottom: -8px;
 
@@ -343,18 +365,27 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+
       border-top: 1px solid rgba(255,0,0,.10);
       border-bottom: 1px solid rgba(255,0,0,.10);
+
       background:
-        linear-gradient(90deg, #030303, rgba(20,0,0,.2), #030303);
+        linear-gradient(
+          90deg,
+          #030303,
+          rgba(20,0,0,.2),
+          #030303
+        );
     }
 
     .code-track {
       white-space: nowrap;
       min-width: max-content;
+
       color: #4f4f4f;
       font-family: monospace;
       font-size: .71rem;
+
       animation: codeMove 35s linear infinite;
     }
 
@@ -376,21 +407,29 @@
       }
     }
 
-    /* WEBSITE MOCKUPS */
+    /* CONCEPT SHOWCASE */
 
     .services {
       padding: 100px 0 115px;
+
       background:
-        radial-gradient(circle at 50% 40%, rgba(100,0,0,.07), transparent 45%),
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(100,0,0,.07),
+          transparent 45%
+        ),
         #050505;
     }
 
     .mockup-wrap {
       position: relative;
       width: 100%;
+
       padding: 7px;
+
       background: #070707;
       border: 1px solid rgba(255,255,255,.10);
+
       box-shadow:
         0 25px 65px rgba(0,0,0,.55),
         0 0 45px rgba(120,0,0,.08);
@@ -400,6 +439,7 @@
       content: "";
       position: absolute;
       inset: -1px;
+
       border: 1px solid rgba(210,20,20,.12);
       pointer-events: none;
     }
@@ -411,8 +451,10 @@
 
     .mockup-caption {
       margin-top: 18px;
+
       text-align: center;
       color: #666;
+
       font-size: .75rem;
       letter-spacing: 1px;
     }
@@ -422,15 +464,22 @@
     .statement {
       padding: 105px 0;
       text-align: center;
+
       background:
-        radial-gradient(circle at center, rgba(130,0,0,.12), transparent 45%),
+        radial-gradient(
+          circle at center,
+          rgba(130,0,0,.12),
+          transparent 45%
+        ),
         #070707;
+
       border-bottom: 1px solid var(--line);
     }
 
     .statement h2 {
       max-width: 950px;
       margin: auto;
+
       font-family: "Barlow Condensed", sans-serif;
       font-size: clamp(3rem, 7vw, 6rem);
       line-height: .92;
@@ -439,125 +488,6 @@
 
     .statement h2 span {
       color: var(--red);
-    }
-
-    /* CONCEPTS */
-
-    .concepts {
-      padding: 110px 0;
-    }
-
-    .concept-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
-      margin-bottom: 55px;
-    }
-
-    .concept-note {
-      max-width: 420px;
-      color: #777;
-      font-size: .88rem;
-    }
-
-    .concept-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
-    }
-
-    .concept {
-      overflow: hidden;
-      background: #090909;
-      border: 1px solid var(--line);
-    }
-
-    .browser-bar {
-      height: 34px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 0 12px;
-      background: #111;
-    }
-
-    .browser-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #444;
-    }
-
-    .browser-url {
-      flex: 1;
-      height: 14px;
-      margin-left: 8px;
-      border-radius: 10px;
-      background: #181818;
-    }
-
-    .site-preview {
-      height: 260px;
-      position: relative;
-      padding: 30px;
-    }
-
-    .concept-info {
-      padding: 22px;
-      border-top: 1px solid var(--line);
-    }
-
-    .concept-info small {
-      color: var(--red);
-      font-family: "Barlow Condensed", sans-serif;
-      letter-spacing: 2px;
-    }
-
-    .concept-info h3 {
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 1.55rem;
-      text-transform: uppercase;
-    }
-
-    .concept-info p {
-      color: #777;
-      font-size: .84rem;
-    }
-
-    .auto-site {
-      background:
-        radial-gradient(circle at 72% 58%, rgba(255,0,0,.18), transparent 35%),
-        #111;
-    }
-
-    .game-site {
-      background:
-        radial-gradient(circle at 70% 42%, rgba(80,40,255,.32), transparent 30%),
-        #080815;
-    }
-
-    .creator-site {
-      color: #181818;
-      background:
-        linear-gradient(90deg, #f4f0eb 0 56%, #c7b19c 56%);
-    }
-
-    .food-site {
-      background:
-        linear-gradient(120deg, #15100d, #382115);
-    }
-
-    .preview-title {
-      margin-top: 50px;
-      font-family: "Barlow Condensed", sans-serif;
-      font-size: 2.3rem;
-      line-height: .9;
-      text-transform: uppercase;
-    }
-
-    .preview-red {
-      color: #e21b1b;
     }
 
     /* PROCESS */
@@ -571,19 +501,23 @@
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+
       margin-top: 55px;
+
       border-top: 1px solid var(--line);
       border-left: 1px solid var(--line);
     }
 
     .process-step {
       padding: 27px;
+
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .process-step b {
       color: var(--red);
+
       font-family: "Barlow Condensed", sans-serif;
       font-size: 2.7rem;
     }
@@ -613,17 +547,25 @@
 
     .about-mark {
       height: 320px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       background:
-        radial-gradient(circle, rgba(150,0,0,.14), transparent 45%),
+        radial-gradient(
+          circle,
+          rgba(150,0,0,.14),
+          transparent 45%
+        ),
         #080808;
+
       border: 1px solid var(--line);
     }
 
     .big-rf {
       color: var(--red);
+
       font-family: "Barlow Condensed", sans-serif;
       font-size: 5rem;
       font-weight: 900;
@@ -638,10 +580,17 @@
 
     .contact {
       padding: 105px 0;
+
       text-align: center;
+
       background:
-        radial-gradient(circle at center, rgba(130,0,0,.13), transparent 42%),
+        radial-gradient(
+          circle at center,
+          rgba(130,0,0,.13),
+          transparent 42%
+        ),
         #050505;
+
       border-top: 1px solid var(--line);
     }
 
@@ -694,6 +643,7 @@
     /* TABLET */
 
     @media (max-width: 900px) {
+
       .hero {
         min-height: auto;
         padding: 70px 0 30px;
@@ -711,8 +661,10 @@
       .hero-art {
         width: 720px;
         max-width: 122%;
+
         right: 50%;
         bottom: -5px;
+
         transform: translateX(50%);
       }
 
@@ -729,19 +681,24 @@
     /* MOBILE */
 
     @media (max-width: 700px) {
+
       nav {
         height: 60px;
       }
 
       .nav-links {
         display: none;
+
         position: absolute;
         top: 60px;
         left: 0;
         right: 0;
+
         flex-direction: column;
         align-items: stretch;
+
         padding: 20px;
+
         background: #080808;
       }
 
@@ -777,8 +734,10 @@
       .hero-art {
         width: 540px;
         max-width: 145%;
+
         right: 50%;
         bottom: 0;
+
         transform: translateX(50%);
       }
 
@@ -788,18 +747,6 @@
 
       .mockup-wrap {
         padding: 3px;
-      }
-
-      .concept-head {
-        display: block;
-      }
-
-      .concept-note {
-        margin-top: 20px;
-      }
-
-      .concept-grid {
-        grid-template-columns: 1fr;
       }
 
       .process-grid {
@@ -827,7 +774,7 @@
     <div class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#concepts">Concepts</a>
+      <a href="#services">Concepts</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
       <a href="#contact" class="nav-cta">Start a Project</a>
@@ -837,6 +784,7 @@
 
   </div>
 </nav>
+
 
 <header class="hero" id="home">
 
@@ -860,8 +808,15 @@
       </p>
 
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-red">Start a Project</a>
-        <a href="#concepts" class="btn btn-dark">View Concepts</a>
+
+        <a href="#contact" class="btn btn-red">
+          Start a Project
+        </a>
+
+        <a href="#services" class="btn btn-dark">
+          View Concepts
+        </a>
+
       </div>
 
       <div class="hero-notes">
@@ -871,6 +826,7 @@
       </div>
 
     </div>
+
 
     <div class="hero-visual">
 
@@ -886,7 +842,9 @@
 
 </header>
 
+
 <div class="code-strip">
+
   <div class="code-track">
 
     <span class="red">&lt;main&gt;</span>
@@ -907,7 +865,10 @@
     background: #050505;
     &nbsp;&nbsp;
 
-    function buildWebsite() { return <span class="red">vision</span>; }
+    function buildWebsite() {
+      return <span class="red">vision</span>;
+    }
+
     &nbsp;&nbsp;
 
     @media (max-width:700px)
@@ -916,7 +877,9 @@
     <span class="red">&lt;/main&gt;</span>
 
   </div>
+
 </div>
+
 
 <section class="services" id="services">
 
@@ -940,6 +903,7 @@
 
 </section>
 
+
 <section class="statement">
 
   <div class="container">
@@ -957,26 +921,35 @@
 
 </section>
 
+
 <div class="code-strip">
 
   <div class="code-track">
 
-    <span class="red">/* DESIGN SYSTEM */</span>
+    <span class="red">
+      /* DESIGN SYSTEM */
+    </span>
+
     &nbsp;&nbsp;
 
     --brand: unique;
+
     &nbsp;&nbsp;
 
     --layout: responsive;
+
     &nbsp;&nbsp;
 
     --experience: intentional;
+
     &nbsp;&nbsp;
 
     document.querySelector(".idea");
+
     &nbsp;&nbsp;
 
     visualIdentity++;
+
     &nbsp;&nbsp;
 
     @media screen and (max-width: 700px)
@@ -985,136 +958,6 @@
 
 </div>
 
-<section class="concepts" id="concepts">
-
-  <div class="container">
-
-    <div class="concept-head">
-
-      <div>
-
-        <div class="section-tag">
-          Potential Builds
-        </div>
-
-        <h2 class="section-title">
-          Different Ideas.<br>
-          Different Identities.
-        </h2>
-
-      </div>
-
-      <p class="concept-note">
-        These are design concepts showing different directions a website
-        could take. They are examples, not previous client projects.
-      </p>
-
-    </div>
-
-    <div class="concept-grid">
-
-      <div class="concept">
-
-        <div class="browser-bar">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url"></div>
-        </div>
-
-        <div class="site-preview auto-site">
-          <div class="preview-title">
-            Premium Care.<br>
-            <span class="preview-red">Serious Finish.</span>
-          </div>
-        </div>
-
-        <div class="concept-info">
-          <small>Concept Build 01</small>
-          <h3>Automotive / Detailing</h3>
-          <p>Premium automotive website direction.</p>
-        </div>
-
-      </div>
-
-      <div class="concept">
-
-        <div class="browser-bar">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url"></div>
-        </div>
-
-        <div class="site-preview game-site">
-          <div class="preview-title">
-            Find Your Squad.<br>
-            Build Your Legacy.
-          </div>
-        </div>
-
-        <div class="concept-info">
-          <small>Concept Build 02</small>
-          <h3>Gaming Community</h3>
-          <p>Community and gaming focused website.</p>
-        </div>
-
-      </div>
-
-      <div class="concept">
-
-        <div class="browser-bar">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url"></div>
-        </div>
-
-        <div class="site-preview creator-site">
-          <div class="preview-title">
-            Build.<br>
-            Create.<br>
-            Evolve.
-          </div>
-        </div>
-
-        <div class="concept-info">
-          <small>Concept Build 03</small>
-          <h3>Creator / Portfolio</h3>
-          <p>Personal branding, creator and portfolio design.</p>
-        </div>
-
-      </div>
-
-      <div class="concept">
-
-        <div class="browser-bar">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url"></div>
-        </div>
-
-        <div class="site-preview food-site">
-          <div class="preview-title">
-            Real Food.<br>
-            Bold Flavor.
-          </div>
-        </div>
-
-        <div class="concept-info">
-          <small>Concept Build 04</small>
-          <h3>Restaurant / Food</h3>
-          <p>Warm food and hospitality focused design.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 <section class="process" id="process">
 
@@ -1131,27 +974,54 @@
     <div class="process-grid">
 
       <div class="process-step">
+
         <b>01</b>
+
         <h3>Idea</h3>
-        <p>Tell us what you're imagining.</p>
+
+        <p>
+          Tell us what you're imagining.
+        </p>
+
       </div>
 
+
       <div class="process-step">
+
         <b>02</b>
+
         <h3>Design</h3>
-        <p>We shape the layout and visual direction.</p>
+
+        <p>
+          We shape the layout and visual direction.
+        </p>
+
       </div>
 
+
       <div class="process-step">
+
         <b>03</b>
+
         <h3>Build</h3>
-        <p>The idea becomes a responsive website.</p>
+
+        <p>
+          The idea becomes a responsive website.
+        </p>
+
       </div>
 
+
       <div class="process-step">
+
         <b>04</b>
+
         <h3>Launch</h3>
-        <p>Final adjustments, then the site goes live.</p>
+
+        <p>
+          Final adjustments, then the site goes live.
+        </p>
+
       </div>
 
     </div>
@@ -1160,13 +1030,19 @@
 
 </section>
 
+
 <section class="about" id="about">
 
   <div class="container about-grid">
 
     <div class="about-mark">
-      <div class="big-rf">RF</div>
+
+      <div class="big-rf">
+        RF
+      </div>
+
     </div>
+
 
     <div>
 
@@ -1196,6 +1072,7 @@
 
 </section>
 
+
 <section class="contact" id="contact">
 
   <div class="container">
@@ -1222,13 +1099,19 @@
 
 </section>
 
+
 <footer>
 
   <div class="container footer-inner">
 
     <div class="brand">
+
       REAPER <span>FORGE</span>
-      <small>WEB DEVELOPMENT</small>
+
+      <small>
+        WEB DEVELOPMENT
+      </small>
+
     </div>
 
     <div class="footer-copy">
@@ -1243,16 +1126,32 @@
 
 </footer>
 
+
 <script>
+
   function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("open");
+    document
+      .getElementById("navLinks")
+      .classList
+      .toggle("open");
   }
 
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("navLinks").classList.remove("open");
+
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        document
+          .getElementById("navLinks")
+          .classList
+          .remove("open");
+
+      });
+
     });
-  });
+
 </script>
 
 </body>
