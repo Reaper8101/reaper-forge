@@ -1,757 +1,1405 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Reaper Forge | Web Development</title>
+  <title>Reaper Forge | Web Design and Development</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
 
   <style>
+
     :root {
+
       --bg: #050505;
+
       --red: #d71616;
+
       --red2: #ff3030;
+
       --white: #f3f3f3;
+
       --line: rgba(255,255,255,.09);
+
     }
+
 
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
+
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
+
     body {
+
       background:
-        linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px),
+
+        linear-gradient(
+          rgba(255,255,255,.015) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.015) 1px,
+          transparent 1px
+        ),
+
         var(--bg);
 
       background-size: 44px 44px;
+
       color: var(--white);
+
       font-family: "Inter", Arial, sans-serif;
+
       line-height: 1.6;
+
       overflow-x: hidden;
+
     }
+
 
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
+
 
     img {
+
       display: block;
+
       max-width: 100%;
+
     }
+
 
     .container {
+
       width: min(1180px, calc(100% - 40px));
+
       margin: auto;
+
     }
 
+
     .section-tag {
+
       color: var(--red2);
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: .84rem;
+
       font-weight: 700;
+
       letter-spacing: 3px;
+
       text-transform: uppercase;
+
       margin-bottom: 8px;
+
     }
+
+
 
     /* =========================================================
        TOP BRAND BANNER
        ========================================================= */
 
+
     .top-brand-banner {
+
       position: relative;
+
       z-index: 100;
+
       width: 100%;
-      padding: 16px 0;
-      background: #020202;
-      border-bottom: 1px solid rgba(215,22,22,.34);
-      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+
+      padding: 17px 0;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #020202,
+          #080000,
+          #020202
+        );
+
+      border-bottom: 1px solid rgba(215,22,22,.35);
+
+      box-shadow:
+        0 10px 35px rgba(0,0,0,.5),
+        0 0 35px rgba(120,0,0,.08);
+
     }
+
 
     .top-brand-inner {
+
       position: relative;
+
       width: min(1320px, calc(100% - 40px));
-      min-height: 70px;
+
       margin: auto;
+
+      min-height: 68px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
     }
+
 
     .top-brand-lockup {
+
       display: inline-block;
+
       text-align: center;
+
     }
+
 
     .top-brand-title {
+
       font-family: "Barlow Condensed", sans-serif;
-      font-size: clamp(2.2rem, 4vw, 3.35rem);
+
+      font-size: clamp(2.3rem, 4vw, 3.5rem);
+
       font-weight: 800;
+
+      letter-spacing: 5px;
+
       line-height: .9;
-      letter-spacing: 4px;
+
       text-transform: uppercase;
+
     }
+
 
     .top-brand-title span {
+
       color: var(--red2);
+
     }
+
 
     .top-brand-subtitle {
-      margin-top: 8px;
-      color: #8b8b8b;
+
+      margin-top: 9px;
+
+      color: #8a8a8a;
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: .78rem;
+
       font-weight: 600;
+
       letter-spacing: 5px;
+
       text-transform: uppercase;
+
     }
 
+
+
+    /* =========================================================
+       MOBILE MENU
+       ========================================================= */
+
+
     .mobile-menu-toggle,
+
     .mobile-menu {
+
       display: none;
+
     }
+
+
 
     /* =========================================================
        FULL HERO
        ========================================================= */
 
+
     .hero-full {
+
       width: 100%;
+
       padding: 28px 0;
+
       background: #000;
+
       border-bottom: 1px solid var(--line);
+
     }
+
 
     .hero-stage {
+
       position: relative;
+
       width: min(1320px, 86vw);
+
       margin: 0 auto;
+
     }
+
 
     .hero-full-art {
+
       width: 100%;
+
       height: auto;
+
       display: block;
+
     }
+
+
+
+    /* =========================================================
+       DESKTOP HERO NAV
+       ========================================================= */
+
+
+    .desktop-hero-nav {
+
+      position: absolute;
+
+      z-index: 20;
+
+      left: 41.2%;
+
+      top: 3.2%;
+
+      width: 40%;
+
+      height: 7.5%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-evenly;
+
+      gap: 10px;
+
+      padding: 0 8px;
+
+      background: #000;
+
+    }
+
+
+    .desktop-hero-nav a {
+
+      color: #eeeeee;
+
+      font-family: "Barlow Condensed", sans-serif;
+
+      font-size: clamp(.56rem, .72vw, .8rem);
+
+      font-weight: 600;
+
+      letter-spacing: 1.7px;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+      transition:
+        color .2s ease,
+        text-shadow .2s ease;
+
+    }
+
+
+    .desktop-hero-nav a:hover {
+
+      color: var(--red2);
+
+      text-shadow:
+        0 0 12px rgba(255,48,48,.45);
+
+    }
+
+
+
+    /* =========================================================
+       HERO CLICKABLE AREAS
+       ========================================================= */
+
 
     .hero-hotspot {
+
       position: absolute;
+
       z-index: 10;
+
       display: block;
+
       cursor: pointer;
+
     }
 
-    .hot-home {
-      left: 42.5%;
-      top: 4.4%;
-      width: 5.2%;
-      height: 6%;
-    }
 
-    .hot-services {
-      left: 48.8%;
-      top: 4.4%;
-      width: 7%;
-      height: 6%;
-    }
+    /* START PROJECT BUTTON IN HERO NAV */
 
-    .hot-concepts {
-      left: 57%;
-      top: 4.4%;
-      width: 7%;
-      height: 6%;
-    }
-
-    .hot-process {
-      left: 65.5%;
-      top: 4.4%;
-      width: 6.8%;
-      height: 6%;
-    }
-
-    .hot-about {
-      left: 74%;
-      top: 4.4%;
-      width: 5.8%;
-      height: 6%;
-    }
 
     .hot-nav-project {
+
       left: 83%;
+
       top: 4.2%;
+
       width: 14%;
+
       height: 6.5%;
+
     }
+
+
+    /* MAIN HERO BUTTONS */
+
 
     .hot-main-project {
+
       left: 3.4%;
+
       top: 74.2%;
+
       width: 18.2%;
+
       height: 7%;
+
     }
+
 
     .hot-view-concepts {
+
       left: 22.9%;
+
       top: 74.2%;
+
       width: 16.4%;
+
       height: 7%;
+
     }
+
+
 
     /* =========================================================
-       CONCEPT SHOWCASE
+       OUR APPROACH
        ========================================================= */
 
-    .services {
-      padding: 100px 0 115px;
-
-      background:
-        radial-gradient(
-          circle at 50% 40%,
-          rgba(100,0,0,.07),
-          transparent 45%
-        ),
-        #050505;
-    }
-
-    .mockup-wrap {
-      position: relative;
-      width: 100%;
-      padding: 7px;
-      background: #070707;
-      border: 1px solid rgba(255,255,255,.10);
-
-      box-shadow:
-        0 25px 65px rgba(0,0,0,.55),
-        0 0 45px rgba(120,0,0,.08);
-    }
-
-    .mockup-wrap::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border: 1px solid rgba(210,20,20,.12);
-      pointer-events: none;
-    }
-
-    .mockup-image {
-      width: 100%;
-      height: auto;
-    }
-
-    .mockup-caption {
-      margin-top: 18px;
-      text-align: center;
-      color: #666;
-      font-size: .75rem;
-      letter-spacing: 1px;
-    }
-
-    /* =========================================================
-       STATEMENT
-       ========================================================= */
 
     .statement {
+
       padding: 105px 0;
+
       text-align: center;
 
       background:
+
         radial-gradient(
           circle at center,
           rgba(130,0,0,.12),
           transparent 45%
         ),
+
         #070707;
 
       border-bottom: 1px solid var(--line);
+
     }
 
+
     .statement h2 {
+
       max-width: 950px;
+
       margin: auto;
 
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: clamp(3rem, 7vw, 6rem);
+
       line-height: .92;
+
       text-transform: uppercase;
+
     }
 
+
     .statement h2 span {
+
       color: var(--red);
+
     }
+
+
+
+    /* =========================================================
+       WHAT WE BUILD / CONCEPT SHOWCASE
+       ========================================================= */
+
+
+    .services {
+
+      padding: 100px 0 115px;
+
+      background:
+
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(100,0,0,.07),
+          transparent 45%
+        ),
+
+        #050505;
+
+    }
+
+
+    .mockup-wrap {
+
+      position: relative;
+
+      width: 100%;
+
+      padding: 7px;
+
+      background: #070707;
+
+      border: 1px solid rgba(255,255,255,.10);
+
+      box-shadow:
+        0 25px 65px rgba(0,0,0,.55),
+        0 0 45px rgba(120,0,0,.08);
+
+    }
+
+
+    .mockup-wrap::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: -1px;
+
+      border: 1px solid rgba(210,20,20,.12);
+
+      pointer-events: none;
+
+    }
+
+
+    .mockup-image {
+
+      width: 100%;
+
+      height: auto;
+
+    }
+
+
+    .mockup-caption {
+
+      margin-top: 18px;
+
+      text-align: center;
+
+      color: #666;
+
+      font-size: .75rem;
+
+      letter-spacing: 1px;
+
+    }
+
+
 
     /* =========================================================
        CODE STRIP
        ========================================================= */
 
+
     .code-strip {
+
       height: 78px;
+
       display: flex;
+
       align-items: center;
+
       overflow: hidden;
 
       border-top: 1px solid rgba(255,0,0,.10);
+
       border-bottom: 1px solid rgba(255,0,0,.10);
 
       background:
+
         linear-gradient(
           90deg,
           #030303,
           rgba(20,0,0,.2),
           #030303
         );
+
     }
 
+
     .code-track {
+
       white-space: nowrap;
+
       min-width: max-content;
 
       color: #4f4f4f;
+
       font-family: monospace;
+
       font-size: .71rem;
 
       animation: codeMove 35s linear infinite;
+
     }
+
 
     .code-track .red {
+
       color: #a12222;
+
     }
+
 
     @keyframes codeMove {
+
       from {
+
         transform: translateX(0);
+
       }
+
 
       to {
+
         transform: translateX(-35%);
+
       }
+
     }
 
-    /* =========================================================
-       PROCESS
-       ========================================================= */
 
-    .process {
-      position: relative;
-      padding: 95px 0;
-      overflow: hidden;
-
-      background: #030303;
-
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .process-art-wrap {
-      width: min(1320px, calc(100% - 40px));
-      margin: auto;
-      position: relative;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .process-art {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
 
     /* =========================================================
        ABOUT
        ========================================================= */
 
+
     .about {
+
       position: relative;
+
       padding: 105px 0;
+
       overflow: hidden;
 
       background: #030303;
 
       border-top: 1px solid var(--line);
+
       border-bottom: 1px solid var(--line);
+
     }
+
 
     .about-art-wrap {
+
       width: min(1320px, calc(100% - 40px));
+
       margin: auto;
+
       position: relative;
+
       overflow: hidden;
+
       background: #000;
+
     }
 
+
     .about-art {
+
       width: 100%;
+
       height: auto;
+
       display: block;
+
     }
+
+
+
+    /* =========================================================
+       PROCESS
+       ========================================================= */
+
+
+    .process {
+
+      position: relative;
+
+      padding: 95px 0;
+
+      overflow: hidden;
+
+      background: #030303;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .process-art-wrap {
+
+      width: min(1320px, calc(100% - 40px));
+
+      margin: auto;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: #000;
+
+    }
+
+
+    .process-art {
+
+      width: 100%;
+
+      height: auto;
+
+      display: block;
+
+    }
+
+
 
     /* =========================================================
        CONTACT
        ========================================================= */
 
+
     .contact {
+
       padding: 105px 0;
+
       text-align: center;
 
       background:
+
         radial-gradient(
           circle at center,
           rgba(130,0,0,.13),
           transparent 42%
         ),
+
         #050505;
 
       border-top: 1px solid var(--line);
+
     }
+
 
     .contact h2 {
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: clamp(3rem, 6vw, 5.8rem);
+
       line-height: .9;
+
       text-transform: uppercase;
+
     }
+
 
     .contact h2 span {
+
       color: var(--red);
+
     }
+
 
     .contact p {
+
       max-width: 570px;
+
       margin: 24px auto 0;
+
       color: #888;
+
     }
 
+
     .btn {
+
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
 
       min-height: 46px;
+
       padding: 0 24px;
 
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: .84rem;
+
       font-weight: 700;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
 
       transition: .2s;
+
     }
+
 
     .btn-red {
+
       background: var(--red);
+
       border: 1px solid var(--red);
+
       color: white;
+
     }
+
 
     .btn-red:hover {
+
       background: #f01c1c;
+
     }
+
 
     .contact .btn {
+
       margin-top: 30px;
+
     }
 
+
     .contact-email {
+
       display: block;
+
       width: fit-content;
 
       margin: 18px auto 0;
 
       color: #777;
+
       font-size: .78rem;
+
       letter-spacing: 1px;
 
       transition: .2s;
+
     }
 
+
     .contact-email:hover {
+
       color: var(--red2);
+
     }
+
+
 
     /* =========================================================
        FOOTER
        ========================================================= */
 
+
     footer {
+
       padding: 40px 0;
+
       background: #030303;
+
       border-top: 1px solid var(--line);
+
     }
+
 
     .footer-inner {
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 20px;
+
     }
+
 
     .brand {
+
       font-family: "Barlow Condensed", sans-serif;
+
       font-size: 1.45rem;
+
       font-weight: 800;
+
       letter-spacing: 2px;
+
       line-height: .9;
+
     }
+
 
     .brand span {
+
       color: var(--red);
+
     }
 
+
     .brand small {
+
       display: block;
+
       margin-top: 5px;
 
       color: #777;
 
       font-family: "Inter", sans-serif;
+
       font-size: .52rem;
+
       font-weight: 500;
+
       letter-spacing: 4px;
+
     }
+
 
     .footer-copy {
+
       color: #555;
+
       font-size: .72rem;
+
     }
 
+
     .footer-location {
+
       color: #666;
+
       font-size: .78rem;
+
     }
+
+
 
     /* =========================================================
        TABLET
        ========================================================= */
 
+
     @media (max-width: 900px) {
 
+
       .hero-full {
+
         padding: 16px 0;
+
       }
+
 
       .hero-stage {
+
         width: 94vw;
+
       }
+
+
+      .desktop-hero-nav a {
+
+        font-size: .58rem;
+
+        letter-spacing: 1px;
+
+      }
+
+
+      .statement {
+
+        padding: 80px 0;
+
+      }
+
 
       .services {
+
         padding: 70px 0 80px;
+
       }
 
-      .process {
-        padding: 70px 0;
-      }
-
-      .process-art-wrap {
-        width: min(1000px, calc(100% - 30px));
-      }
 
       .about {
+
         padding: 70px 0;
+
       }
 
+
       .about-art-wrap {
+
         width: min(1000px, calc(100% - 30px));
+
       }
+
+
+      .process {
+
+        padding: 70px 0;
+
+      }
+
+
+      .process-art-wrap {
+
+        width: min(1000px, calc(100% - 30px));
+
+      }
+
     }
+
+
 
     /* =========================================================
        MOBILE
        ========================================================= */
 
+
     @media (max-width: 700px) {
 
+
       .top-brand-banner {
+
         padding: 12px 0;
+
       }
+
 
       .top-brand-inner {
+
         width: calc(100% - 24px);
+
         min-height: 58px;
+
         justify-content: flex-start;
+
       }
+
 
       .top-brand-lockup {
+
         text-align: left;
-        padding-right: 58px;
+
+        padding-right: 60px;
+
       }
+
 
       .top-brand-title {
+
         font-size: 1.95rem;
+
         letter-spacing: 3px;
+
       }
+
 
       .top-brand-subtitle {
+
         margin-top: 6px;
-        font-size: .64rem;
-        letter-spacing: 3px;
+
+        font-size: .62rem;
+
+        letter-spacing: 2.8px;
+
       }
+
+
+
+      /* HAMBURGER */
+
 
       .mobile-menu-toggle {
+
         position: absolute;
+
         right: 0;
+
         top: 50%;
+
         transform: translateY(-50%);
+
         width: 44px;
+
         height: 44px;
+
         display: flex;
+
         flex-direction: column;
+
         align-items: center;
+
         justify-content: center;
+
         gap: 5px;
+
         padding: 0;
+
         background: #070707;
+
         border: 1px solid rgba(255,48,48,.58);
+
         cursor: pointer;
+
       }
+
 
       .mobile-menu-toggle span {
+
         width: 20px;
+
         height: 2px;
+
         background: #f3f3f3;
-        transition: transform .2s, opacity .2s;
+
+        transition:
+          transform .2s,
+          opacity .2s;
+
       }
+
 
       .mobile-menu-toggle.is-open span:nth-child(1) {
+
         transform: translateY(7px) rotate(45deg);
+
       }
+
 
       .mobile-menu-toggle.is-open span:nth-child(2) {
+
         opacity: 0;
+
       }
+
 
       .mobile-menu-toggle.is-open span:nth-child(3) {
+
         transform: translateY(-7px) rotate(-45deg);
+
       }
+
+
+
+      /* MOBILE DROP MENU */
+
 
       .mobile-menu {
+
         position: absolute;
+
         top: calc(100% + 12px);
+
         right: 0;
-        width: min(290px, calc(100vw - 24px));
+
+        width: min(300px, calc(100vw - 24px));
+
         padding: 10px;
-        background: rgba(3,3,3,.98);
+
+        background: rgba(3,3,3,.99);
+
         border: 1px solid rgba(255,48,48,.42);
-        box-shadow: 0 22px 45px rgba(0,0,0,.62);
+
+        box-shadow:
+          0 22px 45px rgba(0,0,0,.65),
+          0 0 30px rgba(120,0,0,.12);
+
       }
+
 
       .mobile-menu.is-open {
+
         display: block;
+
       }
+
 
       .mobile-menu a {
+
         display: block;
+
         padding: 13px 14px;
+
         border-bottom: 1px solid rgba(255,255,255,.07);
+
+        color: #e8e8e8;
+
         font-family: "Barlow Condensed", sans-serif;
+
         font-size: .9rem;
+
         font-weight: 700;
+
         letter-spacing: 2px;
+
         text-transform: uppercase;
+
       }
 
-      .mobile-menu a:last-child {
+
+      .mobile-menu a:hover {
+
+        color: var(--red2);
+
+      }
+
+
+      .mobile-menu .mobile-project {
+
         margin-top: 8px;
+
         color: #fff;
+
         background: var(--red);
+
         border-bottom: 0;
+
         text-align: center;
+
       }
 
-      .hot-home,
-      .hot-services,
-      .hot-concepts,
-      .hot-process,
-      .hot-about,
-      .hot-nav-project {
-        pointer-events: none;
+
+
+      /* REMOVE DESKTOP NAV ON MOBILE */
+
+
+      .desktop-hero-nav {
+
+        display: none;
+
       }
+
+
+      .hot-nav-project {
+
+        pointer-events: none;
+
+      }
+
+
+
+      /* HERO */
+
 
       .hero-full {
+
         padding: 8px 0;
+
       }
+
 
       .hero-stage {
+
         width: 100%;
+
       }
 
-      .services {
-        padding: 55px 0 65px;
-      }
 
-      .mockup-wrap {
-        padding: 3px;
-      }
+
+      /* SECTIONS */
+
 
       .statement {
+
         padding: 70px 0;
+
       }
+
+
+      .services {
+
+        padding: 55px 0 65px;
+
+      }
+
+
+      .mockup-wrap {
+
+        padding: 3px;
+
+      }
+
 
       .code-strip {
+
         height: 60px;
+
       }
 
-      .process {
-        padding: 45px 0;
-      }
-
-      .process-art-wrap {
-        width: calc(100% - 20px);
-      }
 
       .about {
+
         padding: 45px 0;
+
       }
+
 
       .about-art-wrap {
+
         width: calc(100% - 20px);
+
       }
+
+
+      .process {
+
+        padding: 45px 0;
+
+      }
+
+
+      .process-art-wrap {
+
+        width: calc(100% - 20px);
+
+      }
+
 
       .contact {
+
         padding: 75px 0;
+
       }
 
+
       .footer-inner {
+
         flex-direction: column;
+
         align-items: flex-start;
+
       }
+
     }
+
+
   </style>
+
 </head>
 
 
+
 <body>
+
 
 
 <!-- =========================================================
      TOP BRAND BANNER
      ========================================================= -->
 
+
 <header class="top-brand-banner">
+
 
   <div class="top-brand-inner">
 
-    <a href="#home" class="top-brand-lockup" aria-label="Reaper Forge home">
+
+    <a
+      href="#home"
+      class="top-brand-lockup"
+      aria-label="Reaper Forge home"
+    >
+
+
       <div class="top-brand-title">
+
         REAPER <span>FORGE</span>
+
       </div>
 
+
       <div class="top-brand-subtitle">
+
         WEB DESIGN AND DEVELOPMENT
+
       </div>
+
+
     </a>
+
+
+
+    <!-- MOBILE HAMBURGER -->
+
 
     <button
       class="mobile-menu-toggle"
@@ -760,42 +1408,97 @@
       aria-controls="mobile-menu"
       aria-expanded="false"
     >
+
       <span></span>
+
       <span></span>
+
       <span></span>
+
     </button>
+
+
+
+    <!-- MOBILE MENU -->
+
 
     <nav
       class="mobile-menu"
       id="mobile-menu"
       aria-label="Mobile navigation"
     >
-      <a href="#home">Home</a>
-      <a href="#services">What We Build</a>
-      <a href="#about">About</a>
-      <a href="#process">The Process</a>
+
+
+      <a href="#home">
+
+        Home
+
+      </a>
+
+
+      <a href="#approach">
+
+        Our Approach
+
+      </a>
+
+
+      <a href="#services">
+
+        What We Build
+
+      </a>
+
+
+      <a href="#about">
+
+        About
+
+      </a>
+
+
+      <a href="#process">
+
+        Process
+
+      </a>
+
 
       <a
+        class="mobile-project"
         href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
         target="_blank"
         rel="noopener noreferrer"
       >
+
         Start a Project
+
       </a>
+
+
     </nav>
+
 
   </div>
 
+
 </header>
+
 
 
 <!-- =========================================================
      COMPLETE HERO
      ========================================================= -->
 
-<section class="hero-full" id="home">
+
+<section
+  class="hero-full"
+  id="home"
+>
+
 
   <div class="hero-stage">
+
 
     <img
       src="reaper-forge-hero-full.png"
@@ -804,40 +1507,59 @@
     >
 
 
-    <!-- NAVIGATION -->
 
-    <a
-      href="#home"
-      class="hero-hotspot hot-home"
-      aria-label="Home"
-    ></a>
+    <!-- =====================================================
+         UPDATED DESKTOP NAVIGATION
+         ===================================================== -->
 
-    <a
-      href="#services"
-      class="hero-hotspot hot-services"
-      aria-label="Services"
-    ></a>
 
-    <a
-      href="#services"
-      class="hero-hotspot hot-concepts"
-      aria-label="Concepts"
-    ></a>
+    <nav
+      class="desktop-hero-nav"
+      aria-label="Main navigation"
+    >
 
-    <a
-      href="#process"
-      class="hero-hotspot hot-process"
-      aria-label="Process"
-    ></a>
 
-    <a
-      href="#about"
-      class="hero-hotspot hot-about"
-      aria-label="About"
-    ></a>
+      <a href="#home">
+
+        Home
+
+      </a>
+
+
+      <a href="#approach">
+
+        Our Approach
+
+      </a>
+
+
+      <a href="#services">
+
+        What We Build
+
+      </a>
+
+
+      <a href="#about">
+
+        About
+
+      </a>
+
+
+      <a href="#process">
+
+        Process
+
+      </a>
+
+
+    </nav>
+
 
 
     <!-- TOP START PROJECT -->
+
 
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
@@ -848,7 +1570,9 @@
     ></a>
 
 
+
     <!-- MAIN START PROJECT -->
+
 
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
@@ -859,50 +1583,81 @@
     ></a>
 
 
-    <!-- VIEW CONCEPTS -->
+
+    <!-- VIEW WHAT WE BUILD -->
+
 
     <a
       href="#services"
       class="hero-hotspot hot-view-concepts"
-      aria-label="View Concepts"
+      aria-label="View What We Build"
     ></a>
+
 
   </div>
 
+
 </section>
+
 
 
 <!-- =========================================================
      OUR APPROACH
      ========================================================= -->
 
-<section class="statement">
+
+<section
+  class="statement"
+  id="approach"
+>
+
 
   <div class="container">
 
+
     <div class="section-tag">
+
       Our Approach
+
     </div>
 
+
     <h2>
+
       Your Website Shouldn't Look Like Ours.
-      <span>It Should Look Like Yours.</span>
+
+      <span>
+
+        It Should Look Like Yours.
+
+      </span>
+
     </h2>
 
+
   </div>
+
 
 </section>
 
 
+
 <!-- =========================================================
-     WHAT WE BUILD / CONCEPTS
+     WHAT WE BUILD
      ========================================================= -->
 
-<section class="services" id="services">
+
+<section
+  class="services"
+  id="services"
+>
+
 
   <div class="container">
 
+
     <div class="mockup-wrap">
+
 
       <img
         src="reaper-forge-concepts.png"
@@ -910,69 +1665,126 @@
         class="mockup-image"
       >
 
+
     </div>
 
+
     <div class="mockup-caption">
+
       CONCEPT DESIGNS // EXAMPLES OF POSSIBLE WEBSITE DIRECTIONS
+
     </div>
+
 
   </div>
 
+
 </section>
+
 
 
 <!-- =========================================================
      CODE STRIP
      ========================================================= -->
 
+
 <div class="code-strip">
+
 
   <div class="code-track">
 
+
     <span class="red">
+
       /* DESIGN SYSTEM */
+
     </span>
 
+
     &nbsp;&nbsp;
+
 
     --brand: unique;
 
+
     &nbsp;&nbsp;
+
 
     --layout: responsive;
 
+
     &nbsp;&nbsp;
+
 
     --experience: intentional;
 
+
     &nbsp;&nbsp;
+
 
     customJavaScript: available;
 
+
     &nbsp;&nbsp;
+
 
     document.querySelector(".idea");
 
+
     &nbsp;&nbsp;
+
 
     visualIdentity++;
 
+
     &nbsp;&nbsp;
+
 
     @media screen and (max-width: 700px)
 
+
+    &nbsp;&nbsp;
+
+
+    <span class="red">
+
+      /* REAPER FORGE */
+
+    </span>
+
+
+    &nbsp;&nbsp;
+
+
+    buildExperience();
+
+
+    &nbsp;&nbsp;
+
+
+    deployWebsite();
+
+
   </div>
 
+
 </div>
+
 
 
 <!-- =========================================================
      ABOUT
      ========================================================= -->
 
-<section class="about" id="about">
+
+<section
+  class="about"
+  id="about"
+>
+
 
   <div class="about-art-wrap">
+
 
     <img
       src="reaper-forge-about.png"
@@ -980,18 +1792,27 @@
       class="about-art"
     >
 
+
   </div>
 
+
 </section>
+
 
 
 <!-- =========================================================
      PROCESS
      ========================================================= -->
 
-<section class="process" id="process">
+
+<section
+  class="process"
+  id="process"
+>
+
 
   <div class="process-art-wrap">
+
 
     <img
       src="reaper-forge-process.png"
@@ -999,35 +1820,59 @@
       class="process-art"
     >
 
+
   </div>
 
+
 </section>
+
 
 
 <!-- =========================================================
      CONTACT
      ========================================================= -->
 
-<section class="contact" id="contact">
+
+<section
+  class="contact"
+  id="contact"
+>
+
 
   <div class="container">
 
+
     <div class="section-tag">
+
       Start Something
+
     </div>
 
+
     <h2>
+
       Got an Idea?
-      <span>Let's Build It.</span>
+
+      <span>
+
+        Let's Build It.
+
+      </span>
+
     </h2>
 
+
     <p>
+
       Tell us what you're thinking, what the website is for and the style
       you have in mind.
+
     </p>
 
 
+
     <!-- BOTTOM START PROJECT -->
+
 
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
@@ -1035,8 +1880,11 @@
       rel="noopener noreferrer"
       class="btn btn-red"
     >
+
       Start a Project
+
     </a>
+
 
 
     <a
@@ -1045,120 +1893,209 @@
       rel="noopener noreferrer"
       class="contact-email"
     >
+
       reaperforgenet@gmail.com
+
     </a>
+
 
   </div>
 
+
 </section>
+
 
 
 <!-- =========================================================
      FOOTER
      ========================================================= -->
 
+
 <footer>
+
 
   <div class="container footer-inner">
 
+
     <div class="brand">
+
 
       REAPER <span>FORGE</span>
 
+
       <small>
-        WEB DEVELOPMENT
+
+        WEB DESIGN AND DEVELOPMENT
+
       </small>
 
+
     </div>
+
 
     <div class="footer-copy">
+
       © 2026 Reaper Forge. Part of Reaper Network.
+
     </div>
+
 
     <div class="footer-location">
+
       Albuquerque, New Mexico
+
     </div>
 
+
   </div>
+
 
 </footer>
 
 
+
+<!-- =========================================================
+     MOBILE MENU SCRIPT
+     ========================================================= -->
+
+
 <script>
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
+
+
+  const mobileMenuToggle =
+    document.querySelector(".mobile-menu-toggle");
+
+
+  const mobileMenu =
+    document.querySelector(".mobile-menu");
+
+
 
   if (mobileMenuToggle && mobileMenu) {
 
-    mobileMenuToggle.addEventListener('click', () => {
 
-      const isOpen = mobileMenu.classList.toggle('is-open');
-
-      mobileMenuToggle.classList.toggle('is-open', isOpen);
-
-      mobileMenuToggle.setAttribute(
-        'aria-expanded',
-        String(isOpen)
-      );
-
-      mobileMenuToggle.setAttribute(
-        'aria-label',
-        isOpen
-          ? 'Close navigation menu'
-          : 'Open navigation menu'
-      );
-
-    });
+    mobileMenuToggle.addEventListener(
+      "click",
+      function () {
 
 
-    mobileMenu.querySelectorAll('a').forEach((link) => {
+        const isOpen =
+          mobileMenu.classList.toggle("is-open");
 
-      link.addEventListener('click', () => {
 
-        mobileMenu.classList.remove('is-open');
-
-        mobileMenuToggle.classList.remove('is-open');
-
-        mobileMenuToggle.setAttribute(
-          'aria-expanded',
-          'false'
+        mobileMenuToggle.classList.toggle(
+          "is-open",
+          isOpen
         );
 
+
         mobileMenuToggle.setAttribute(
-          'aria-label',
-          'Open navigation menu'
+          "aria-expanded",
+          String(isOpen)
         );
+
+
+        mobileMenuToggle.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
+
+
+      }
+    );
+
+
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+
+        link.addEventListener(
+          "click",
+          function () {
+
+
+            mobileMenu.classList.remove(
+              "is-open"
+            );
+
+
+            mobileMenuToggle.classList.remove(
+              "is-open"
+            );
+
+
+            mobileMenuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+            mobileMenuToggle.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+
+          }
+        );
+
 
       });
 
-    });
 
 
-    document.addEventListener('click', (event) => {
+    document.addEventListener(
+      "click",
+      function (event) {
 
-      if (!event.target.closest('.top-brand-inner')) {
 
-        mobileMenu.classList.remove('is-open');
+        if (
+          !event.target.closest(
+            ".top-brand-inner"
+          )
+        ) {
 
-        mobileMenuToggle.classList.remove('is-open');
 
-        mobileMenuToggle.setAttribute(
-          'aria-expanded',
-          'false'
-        );
+          mobileMenu.classList.remove(
+            "is-open"
+          );
 
-        mobileMenuToggle.setAttribute(
-          'aria-label',
-          'Open navigation menu'
-        );
+
+          mobileMenuToggle.classList.remove(
+            "is-open"
+          );
+
+
+          mobileMenuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+
+          mobileMenuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+
+        }
+
 
       }
+    );
 
-    });
 
   }
+
+
 </script>
 
 
+
 </body>
+
 </html>
