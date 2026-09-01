@@ -4,13 +4,11 @@
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Reaper Forge | Web Design and Development</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -18,115 +16,69 @@
     rel="stylesheet"
   >
 
-
   <style>
 
     :root {
-
       --bg: #050505;
-
       --red: #d71616;
-
       --red2: #ff3030;
-
       --white: #f3f3f3;
-
       --line: rgba(255,255,255,.09);
-
     }
 
 
     * {
-
       box-sizing: border-box;
-
       margin: 0;
-
       padding: 0;
-
     }
 
 
     html {
-
       scroll-behavior: smooth;
-
     }
 
 
     body {
-
       background:
-
-        linear-gradient(
-          rgba(255,255,255,.015) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.015) 1px,
-          transparent 1px
-        ),
-
+        linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px),
         var(--bg);
 
       background-size: 44px 44px;
-
       color: var(--white);
-
       font-family: "Inter", Arial, sans-serif;
-
       line-height: 1.6;
-
       overflow-x: hidden;
-
     }
 
 
     a {
-
       color: inherit;
-
       text-decoration: none;
-
     }
 
 
     img {
-
       display: block;
-
       max-width: 100%;
-
     }
 
 
     .container {
-
       width: min(1180px, calc(100% - 40px));
-
       margin: auto;
-
     }
 
 
     .section-tag {
-
       color: var(--red2);
-
       font-family: "Barlow Condensed", sans-serif;
-
       font-size: .84rem;
-
       font-weight: 700;
-
       letter-spacing: 3px;
-
       text-transform: uppercase;
-
       margin-bottom: 8px;
-
     }
 
 
@@ -137,17 +89,12 @@
 
 
     .top-brand-banner {
-
       position: relative;
-
       z-index: 100;
-
       width: 100%;
-
       padding: 17px 0;
 
       background:
-
         linear-gradient(
           90deg,
           #020202,
@@ -160,78 +107,50 @@
       box-shadow:
         0 10px 35px rgba(0,0,0,.5),
         0 0 35px rgba(120,0,0,.08);
-
     }
 
 
     .top-brand-inner {
-
       position: relative;
-
       width: min(1320px, calc(100% - 40px));
-
       margin: auto;
-
       min-height: 68px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
     }
 
 
     .top-brand-lockup {
-
       display: inline-block;
-
       text-align: center;
-
     }
 
 
     .top-brand-title {
-
       font-family: "Barlow Condensed", sans-serif;
-
       font-size: clamp(2.3rem, 4vw, 3.5rem);
-
       font-weight: 800;
-
       letter-spacing: 5px;
-
       line-height: .9;
-
       text-transform: uppercase;
-
     }
 
 
     .top-brand-title span {
-
       color: var(--red2);
-
     }
 
 
     .top-brand-subtitle {
-
       margin-top: 9px;
-
       color: #8a8a8a;
-
       font-family: "Barlow Condensed", sans-serif;
-
       font-size: .78rem;
-
       font-weight: 600;
-
       letter-spacing: 5px;
-
       text-transform: uppercase;
-
     }
 
 
@@ -242,27 +161,19 @@
 
 
     .forge-loader-section {
-
       width: 100%;
-
       padding: 14px 0 9px;
-
       background: #000;
-
     }
 
 
     .forge-loader {
-
       position: relative;
 
       width: min(1320px, 86vw);
-
       height: 3px;
 
       margin: auto;
-
-      overflow: visible;
 
       background: rgba(80,0,0,.22);
 
@@ -271,24 +182,19 @@
       box-shadow:
         inset 0 0 10px rgba(0,0,0,.9),
         0 0 8px rgba(120,0,0,.08);
-
     }
 
 
     .forge-loader-fill {
-
       position: absolute;
 
       left: 0;
-
       top: -1px;
 
       height: 3px;
-
       width: 0%;
 
       background:
-
         linear-gradient(
           90deg,
           #700000 0%,
@@ -302,22 +208,18 @@
         0 0 22px rgba(255,0,0,.15);
 
       animation: forgeLoading 3s linear infinite;
-
     }
 
 
     .forge-loader-fill::after {
-
       content: "";
 
       position: absolute;
 
       right: -3px;
-
       top: 50%;
 
       width: 7px;
-
       height: 7px;
 
       transform: translateY(-50%);
@@ -330,48 +232,24 @@
         0 0 5px #ff2020,
         0 0 12px rgba(255,0,0,.9),
         0 0 22px rgba(255,0,0,.55);
-
     }
 
 
     @keyframes forgeLoading {
 
       0% {
-
         width: 0%;
-
         opacity: .65;
-
       }
 
       8% {
-
         opacity: 1;
-
       }
 
       100% {
-
         width: 100%;
-
         opacity: 1;
-
       }
-
-    }
-
-
-
-    /* =========================================================
-       MOBILE MENU
-       ========================================================= */
-
-
-    .mobile-menu-toggle,
-
-    .mobile-menu {
-
-      display: none;
 
     }
 
@@ -383,9 +261,7 @@
 
 
     .hero-full {
-
       position: relative;
-
       isolation: isolate;
 
       width: 100%;
@@ -397,162 +273,171 @@
       border-bottom: 1px solid var(--line);
 
       overflow: hidden;
-
     }
 
 
     .hero-stage {
-
       position: relative;
-
       z-index: 5;
 
       width: min(1320px, 86vw);
 
       margin: 0 auto;
-
     }
 
 
     .hero-full-art {
-
       position: relative;
-
       z-index: 1;
 
       width: 100%;
-
       height: auto;
 
       display: block;
-
     }
 
 
 
     /* =========================================================
-       MATRIX CODE AROUND HERO
+       MATRIX CODE FIELD
        ========================================================= */
 
 
-    .matrix-side {
-
+    .matrix-field {
       position: absolute;
 
-      z-index: 1;
+      z-index: 2;
 
       top: 0;
-
       bottom: 0;
 
-      width: clamp(100px, 10vw, 190px);
+      width: min(18vw, 320px);
+
+      min-width: 150px;
 
       overflow: hidden;
 
       pointer-events: none;
-
-      opacity: .62;
-
     }
 
 
-    .matrix-side-left {
-
+    .matrix-left {
       left: 0;
 
       -webkit-mask-image:
         linear-gradient(
           to right,
-          rgba(0,0,0,1) 0%,
-          rgba(0,0,0,1) 50%,
-          rgba(0,0,0,.65) 72%,
+          black 0%,
+          black 48%,
+          rgba(0,0,0,.75) 68%,
           transparent 100%
         );
 
       mask-image:
         linear-gradient(
           to right,
-          rgba(0,0,0,1) 0%,
-          rgba(0,0,0,1) 50%,
-          rgba(0,0,0,.65) 72%,
+          black 0%,
+          black 48%,
+          rgba(0,0,0,.75) 68%,
           transparent 100%
         );
-
     }
 
 
-    .matrix-side-right {
-
+    .matrix-right {
       right: 0;
 
       -webkit-mask-image:
         linear-gradient(
           to left,
-          rgba(0,0,0,1) 0%,
-          rgba(0,0,0,1) 50%,
-          rgba(0,0,0,.65) 72%,
+          black 0%,
+          black 48%,
+          rgba(0,0,0,.75) 68%,
           transparent 100%
         );
 
       mask-image:
         linear-gradient(
           to left,
-          rgba(0,0,0,1) 0%,
-          rgba(0,0,0,1) 50%,
-          rgba(0,0,0,.65) 72%,
+          black 0%,
+          black 48%,
+          rgba(0,0,0,.75) 68%,
           transparent 100%
         );
-
     }
 
 
-    .matrix-side::after {
 
+    /* FADE TOP + BOTTOM */
+
+
+    .matrix-field::after {
       content: "";
 
       position: absolute;
 
+      z-index: 20;
+
       inset: 0;
 
-      pointer-events: none;
-
       background:
-
         linear-gradient(
           to bottom,
           #000 0%,
-          transparent 10%,
+          transparent 9%,
           transparent 88%,
           #000 100%
         );
 
+      pointer-events: none;
     }
 
 
-    .matrix-column {
+
+    /* RED BACKGROUND HAZE */
+
+
+    .matrix-field::before {
+      content: "";
 
       position: absolute;
 
-      top: -130%;
+      inset: 8% 0;
 
-      font-family:
-        "Courier New",
-        monospace;
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(145,0,0,.16),
+          transparent 68%
+        );
+
+      filter: blur(25px);
+    }
+
+
+
+    /* MATRIX COLUMNS */
+
+
+    .matrix-rain {
+      position: absolute;
+
+      top: -45%;
+
+      font-family: "Courier New", monospace;
 
       font-size: 10px;
 
-      line-height: 1.65;
-
       font-weight: 500;
 
-      text-align: center;
+      line-height: 1.7;
 
-      white-space: pre-line;
+      white-space: pre;
 
-      color: rgba(135,25,25,.55);
+      color: rgba(177,28,28,.58);
 
       text-shadow:
-        0 0 4px rgba(180,0,0,.22);
+        0 0 4px rgba(255,0,0,.30);
 
       animation-name: matrixFall;
 
@@ -561,100 +446,96 @@
       animation-iteration-count: infinite;
 
       will-change: transform;
-
     }
 
 
-    .matrix-column.dim {
-
-      color: rgba(90,90,90,.27);
+    .matrix-rain.hot {
+      color: rgba(255,42,42,.85);
 
       text-shadow:
-        0 0 3px rgba(255,255,255,.06);
-
+        0 0 5px rgba(255,0,0,.85),
+        0 0 12px rgba(255,0,0,.40);
     }
 
 
-    .matrix-column.hot {
-
-      color: rgba(255,43,43,.72);
+    .matrix-rain.gray {
+      color: rgba(130,130,130,.35);
 
       text-shadow:
-        0 0 4px rgba(255,0,0,.55),
-        0 0 9px rgba(255,0,0,.28);
-
+        0 0 4px rgba(255,255,255,.08);
     }
+
+
+
+    /* COLUMN POSITIONS */
+
+
+    .matrix-rain:nth-child(1) {
+      left: 4%;
+      animation-duration: 8s;
+      animation-delay: -2s;
+    }
+
+
+    .matrix-rain:nth-child(2) {
+      left: 15%;
+      animation-duration: 11s;
+      animation-delay: -7s;
+    }
+
+
+    .matrix-rain:nth-child(3) {
+      left: 27%;
+      animation-duration: 7s;
+      animation-delay: -3s;
+    }
+
+
+    .matrix-rain:nth-child(4) {
+      left: 39%;
+      animation-duration: 13s;
+      animation-delay: -9s;
+    }
+
+
+    .matrix-rain:nth-child(5) {
+      left: 52%;
+      animation-duration: 9s;
+      animation-delay: -4s;
+    }
+
+
+    .matrix-rain:nth-child(6) {
+      left: 64%;
+      animation-duration: 12s;
+      animation-delay: -8s;
+    }
+
+
+    .matrix-rain:nth-child(7) {
+      left: 76%;
+      animation-duration: 7.5s;
+      animation-delay: -5s;
+    }
+
+
+    .matrix-rain:nth-child(8) {
+      left: 89%;
+      animation-duration: 10s;
+      animation-delay: -1s;
+    }
+
 
 
     @keyframes matrixFall {
 
       0% {
-
         transform: translateY(0);
-
       }
-
 
       100% {
-
-        transform: translateY(260%);
-
+        transform: translateY(500%);
       }
-
-    }
-
-
-
-    /* SUBTLE RED HAZE BEHIND SIDE CODE */
-
-
-    .matrix-glow {
-
-      position: absolute;
-
-      z-index: 0;
-
-      top: 8%;
-
-      bottom: 8%;
-
-      width: 12vw;
-
-      pointer-events: none;
-
-      opacity: .35;
-
-      filter: blur(35px);
-
-    }
-
-
-    .matrix-glow-left {
-
-      left: -5vw;
-
-      background:
-
-        radial-gradient(
-          ellipse at left,
-          rgba(130,0,0,.25),
-          transparent 70%
-        );
-
-    }
-
-
-    .matrix-glow-right {
-
-      right: -5vw;
-
-      background:
-
-        radial-gradient(
-          ellipse at right,
-          rgba(130,0,0,.25),
-          transparent 70%
-        );
 
     }
 
@@ -666,23 +547,19 @@
 
 
     .desktop-hero-nav {
-
       position: absolute;
 
       z-index: 20;
 
       left: 41.2%;
-
       top: 3.2%;
 
       width: 40%;
-
       height: 7.5%;
 
       display: flex;
 
       align-items: center;
-
       justify-content: space-evenly;
 
       gap: 10px;
@@ -690,12 +567,10 @@
       padding: 0 8px;
 
       background: #000;
-
     }
 
 
     .desktop-hero-nav a {
-
       color: #eeeeee;
 
       font-family: "Barlow Condensed", sans-serif;
@@ -713,17 +588,14 @@
       transition:
         color .2s ease,
         text-shadow .2s ease;
-
     }
 
 
     .desktop-hero-nav a:hover {
-
       color: var(--red2);
 
       text-shadow:
         0 0 12px rgba(255,48,48,.45);
-
     }
 
 
@@ -734,7 +606,6 @@
 
 
     .hero-hotspot {
-
       position: absolute;
 
       z-index: 30;
@@ -742,46 +613,33 @@
       display: block;
 
       cursor: pointer;
-
     }
 
 
     .hot-nav-project {
-
       left: 83%;
-
       top: 4.2%;
 
       width: 14%;
-
       height: 6.5%;
-
     }
 
 
     .hot-main-project {
-
       left: 3.4%;
-
       top: 74.2%;
 
       width: 18.2%;
-
       height: 7%;
-
     }
 
 
     .hot-view-concepts {
-
       left: 22.9%;
-
       top: 74.2%;
 
       width: 16.4%;
-
       height: 7%;
-
     }
 
 
@@ -792,28 +650,23 @@
 
 
     .statement {
-
       padding: 105px 0;
 
       text-align: center;
 
       background:
-
         radial-gradient(
           circle at center,
           rgba(130,0,0,.12),
           transparent 45%
         ),
-
         #070707;
 
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .statement h2 {
-
       max-width: 950px;
 
       margin: auto;
@@ -825,14 +678,11 @@
       line-height: .92;
 
       text-transform: uppercase;
-
     }
 
 
     .statement h2 span {
-
       color: var(--red);
-
     }
 
 
@@ -843,24 +693,19 @@
 
 
     .services {
-
       padding: 100px 0 115px;
 
       background:
-
         radial-gradient(
           circle at 50% 40%,
           rgba(100,0,0,.07),
           transparent 45%
         ),
-
         #050505;
-
     }
 
 
     .mockup-wrap {
-
       position: relative;
 
       width: 100%;
@@ -874,12 +719,10 @@
       box-shadow:
         0 25px 65px rgba(0,0,0,.55),
         0 0 45px rgba(120,0,0,.08);
-
     }
 
 
     .mockup-wrap::before {
-
       content: "";
 
       position: absolute;
@@ -889,21 +732,16 @@
       border: 1px solid rgba(210,20,20,.12);
 
       pointer-events: none;
-
     }
 
 
     .mockup-image {
-
       width: 100%;
-
       height: auto;
-
     }
 
 
     .mockup-caption {
-
       margin-top: 18px;
 
       text-align: center;
@@ -913,7 +751,6 @@
       font-size: .75rem;
 
       letter-spacing: 1px;
-
     }
 
 
@@ -924,7 +761,6 @@
 
 
     .code-strip {
-
       height: 78px;
 
       display: flex;
@@ -938,19 +774,16 @@
       border-bottom: 1px solid rgba(255,0,0,.10);
 
       background:
-
         linear-gradient(
           90deg,
           #030303,
           rgba(20,0,0,.2),
           #030303
         );
-
     }
 
 
     .code-track {
-
       white-space: nowrap;
 
       min-width: max-content;
@@ -962,30 +795,22 @@
       font-size: .71rem;
 
       animation: codeMove 35s linear infinite;
-
     }
 
 
     .code-track .red {
-
       color: #a12222;
-
     }
 
 
     @keyframes codeMove {
 
       from {
-
         transform: translateX(0);
-
       }
 
-
       to {
-
         transform: translateX(-35%);
-
       }
 
     }
@@ -998,7 +823,6 @@
 
 
     .about {
-
       position: relative;
 
       padding: 105px 0;
@@ -1008,14 +832,11 @@
       background: #030303;
 
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .about-art-wrap {
-
       width: min(1320px, calc(100% - 40px));
 
       margin: auto;
@@ -1025,18 +846,13 @@
       overflow: hidden;
 
       background: #000;
-
     }
 
 
     .about-art {
-
       width: 100%;
-
       height: auto;
-
       display: block;
-
     }
 
 
@@ -1047,7 +863,6 @@
 
 
     .process {
-
       position: relative;
 
       padding: 95px 0;
@@ -1057,14 +872,11 @@
       background: #030303;
 
       border-top: 1px solid var(--line);
-
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .process-art-wrap {
-
       width: min(1320px, calc(100% - 40px));
 
       margin: auto;
@@ -1074,18 +886,13 @@
       overflow: hidden;
 
       background: #000;
-
     }
 
 
     .process-art {
-
       width: 100%;
-
       height: auto;
-
       display: block;
-
     }
 
 
@@ -1096,28 +903,23 @@
 
 
     .contact {
-
       padding: 105px 0;
 
       text-align: center;
 
       background:
-
         radial-gradient(
           circle at center,
           rgba(130,0,0,.13),
           transparent 42%
         ),
-
         #050505;
 
       border-top: 1px solid var(--line);
-
     }
 
 
     .contact h2 {
-
       font-family: "Barlow Condensed", sans-serif;
 
       font-size: clamp(3rem, 6vw, 5.8rem);
@@ -1125,34 +927,27 @@
       line-height: .9;
 
       text-transform: uppercase;
-
     }
 
 
     .contact h2 span {
-
       color: var(--red);
-
     }
 
 
     .contact p {
-
       max-width: 570px;
 
       margin: 24px auto 0;
 
       color: #888;
-
     }
 
 
     .btn {
-
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       min-height: 46px;
@@ -1170,37 +965,29 @@
       text-transform: uppercase;
 
       transition: .2s;
-
     }
 
 
     .btn-red {
-
       background: var(--red);
 
       border: 1px solid var(--red);
 
       color: white;
-
     }
 
 
     .btn-red:hover {
-
       background: #f01c1c;
-
     }
 
 
     .contact .btn {
-
       margin-top: 30px;
-
     }
 
 
     .contact-email {
-
       display: block;
 
       width: fit-content;
@@ -1214,14 +1001,11 @@
       letter-spacing: 1px;
 
       transition: .2s;
-
     }
 
 
     .contact-email:hover {
-
       color: var(--red2);
-
     }
 
 
@@ -1232,31 +1016,25 @@
 
 
     footer {
-
       padding: 40px 0;
 
       background: #030303;
 
       border-top: 1px solid var(--line);
-
     }
 
 
     .footer-inner {
-
       display: flex;
 
       align-items: center;
-
       justify-content: space-between;
 
       gap: 20px;
-
     }
 
 
     .brand {
-
       font-family: "Barlow Condensed", sans-serif;
 
       font-size: 1.45rem;
@@ -1266,19 +1044,15 @@
       letter-spacing: 2px;
 
       line-height: .9;
-
     }
 
 
     .brand span {
-
       color: var(--red);
-
     }
 
 
     .brand small {
-
       display: block;
 
       margin-top: 5px;
@@ -1292,25 +1066,31 @@
       font-weight: 500;
 
       letter-spacing: 4px;
-
     }
 
 
     .footer-copy {
-
       color: #555;
 
       font-size: .72rem;
-
     }
 
 
     .footer-location {
-
       color: #666;
 
       font-size: .78rem;
+    }
 
+
+
+    /* =========================================================
+       MOBILE MENU
+       ========================================================= */
+
+
+    .mobile-navigation {
+      display: none;
     }
 
 
@@ -1324,90 +1104,59 @@
 
 
       .forge-loader {
-
         width: 94vw;
-
-      }
-
-
-      .hero-full {
-
-        padding: 7px 0 16px;
-
       }
 
 
       .hero-stage {
-
         width: 94vw;
-
       }
 
 
-      .matrix-side {
-
-        width: 78px;
-
-        opacity: .34;
-
+      .matrix-field {
+        width: 115px;
+        min-width: 115px;
       }
 
 
-      .matrix-column {
-
+      .matrix-rain {
         font-size: 8px;
-
       }
 
 
       .desktop-hero-nav a {
-
         font-size: .58rem;
-
         letter-spacing: 1px;
-
       }
 
 
       .statement {
-
         padding: 80px 0;
-
       }
 
 
       .services {
-
         padding: 70px 0 80px;
-
       }
 
 
       .about {
-
         padding: 70px 0;
-
       }
 
 
       .about-art-wrap {
-
         width: min(1000px, calc(100% - 30px));
-
       }
 
 
       .process {
-
         padding: 70px 0;
-
       }
 
 
       .process-art-wrap {
-
         width: min(1000px, calc(100% - 30px));
-
       }
 
     }
@@ -1423,75 +1172,48 @@
 
 
       .top-brand-banner {
-
         padding: 12px 0;
-
       }
 
 
       .top-brand-inner {
-
         width: calc(100% - 24px);
 
         min-height: 58px;
 
         justify-content: flex-start;
-
       }
 
 
       .top-brand-lockup {
-
         text-align: left;
 
         padding-right: 60px;
-
       }
 
 
       .top-brand-title {
-
         font-size: 1.95rem;
 
         letter-spacing: 3px;
-
       }
 
 
       .top-brand-subtitle {
-
         margin-top: 6px;
 
         font-size: .62rem;
 
         letter-spacing: 2.8px;
-
       }
 
 
 
-      /* LOADING BAR */
+      /* MOBILE MENU */
 
 
-      .forge-loader-section {
-
-        padding: 10px 0 6px;
-
-      }
-
-
-      .forge-loader {
-
-        width: calc(100% - 24px);
-
-      }
-
-
-
-      /* HAMBURGER */
-
-
-      .mobile-menu-toggle {
+      .mobile-navigation {
+        display: block;
 
         position: absolute;
 
@@ -1500,79 +1222,67 @@
         top: 50%;
 
         transform: translateY(-50%);
+      }
+
+
+      .mobile-navigation summary {
+        list-style: none;
 
         width: 44px;
-
         height: 44px;
 
         display: flex;
 
         flex-direction: column;
 
+        justify-content: center;
         align-items: center;
 
-        justify-content: center;
-
         gap: 5px;
-
-        padding: 0;
 
         background: #070707;
 
         border: 1px solid rgba(255,48,48,.58);
 
         cursor: pointer;
-
       }
 
 
-      .mobile-menu-toggle span {
+      .mobile-navigation summary::-webkit-details-marker {
+        display: none;
+      }
 
+
+      .mobile-navigation summary span {
         width: 20px;
-
         height: 2px;
 
         background: #f3f3f3;
 
-        transition:
-          transform .2s,
-          opacity .2s;
-
+        transition: .2s;
       }
 
 
-      .mobile-menu-toggle.is-open span:nth-child(1) {
-
+      .mobile-navigation[open] summary span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
-
       }
 
 
-      .mobile-menu-toggle.is-open span:nth-child(2) {
-
+      .mobile-navigation[open] summary span:nth-child(2) {
         opacity: 0;
-
       }
 
 
-      .mobile-menu-toggle.is-open span:nth-child(3) {
-
+      .mobile-navigation[open] summary span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
-
       }
-
-
-
-      /* MOBILE DROP MENU */
 
 
       .mobile-menu {
-
         position: absolute;
 
-        top: calc(100% + 12px);
-
         right: 0;
+        top: 52px;
 
         width: min(300px, calc(100vw - 24px));
 
@@ -1585,19 +1295,10 @@
         box-shadow:
           0 22px 45px rgba(0,0,0,.65),
           0 0 30px rgba(120,0,0,.12);
-
-      }
-
-
-      .mobile-menu.is-open {
-
-        display: block;
-
       }
 
 
       .mobile-menu a {
-
         display: block;
 
         padding: 13px 14px;
@@ -1615,44 +1316,33 @@
         letter-spacing: 2px;
 
         text-transform: uppercase;
-
-      }
-
-
-      .mobile-menu a:hover {
-
-        color: var(--red2);
-
       }
 
 
       .mobile-menu .mobile-project {
-
         margin-top: 8px;
 
         color: #fff;
 
         background: var(--red);
 
-        border-bottom: 0;
+        border: 0;
 
         text-align: center;
-
       }
 
 
 
-      .desktop-hero-nav {
+      /* LOADING BAR */
 
-        display: none;
 
+      .forge-loader-section {
+        padding: 10px 0 6px;
       }
 
 
-      .hot-nav-project {
-
-        pointer-events: none;
-
+      .forge-loader {
+        width: calc(100% - 24px);
       }
 
 
@@ -1660,137 +1350,85 @@
       /* HERO */
 
 
+      .desktop-hero-nav {
+        display: none;
+      }
+
+
+      .hot-nav-project {
+        pointer-events: none;
+      }
+
+
       .hero-full {
-
         padding: 5px 0 8px;
-
       }
 
 
       .hero-stage {
-
         width: 100%;
-
       }
 
 
 
-      /* HIDE MATRIX ON SMALL MOBILE SCREENS */
+      /* MATRIX OFF ON SMALL SCREENS */
 
 
-      .matrix-side,
-
-      .matrix-glow {
-
+      .matrix-field {
         display: none;
-
       }
 
-
-
-      /* SECTIONS */
 
 
       .statement {
-
         padding: 70px 0;
-
       }
 
 
       .services {
-
         padding: 55px 0 65px;
-
       }
 
 
       .mockup-wrap {
-
         padding: 3px;
-
       }
 
 
       .code-strip {
-
         height: 60px;
-
       }
 
 
       .about {
-
         padding: 45px 0;
-
       }
 
 
       .about-art-wrap {
-
         width: calc(100% - 20px);
-
       }
 
 
       .process {
-
         padding: 45px 0;
-
       }
 
 
       .process-art-wrap {
-
         width: calc(100% - 20px);
-
       }
 
 
       .contact {
-
         padding: 75px 0;
-
       }
 
 
       .footer-inner {
-
         flex-direction: column;
 
         align-items: flex-start;
-
-      }
-
-    }
-
-
-
-    @media (prefers-reduced-motion: reduce) {
-
-
-      .forge-loader-fill {
-
-        animation-duration: 6s;
-
-      }
-
-
-      .code-track {
-
-        animation: none;
-
-      }
-
-
-      .matrix-column {
-
-        animation: none;
-
-        top: 0;
-
-        opacity: .18;
-
       }
 
     }
@@ -1801,18 +1439,16 @@
 </head>
 
 
-
 <body>
 
 
 
 <!-- =========================================================
-     TOP BRAND BANNER
+     TOP BRAND
      ========================================================= -->
 
 
 <header class="top-brand-banner">
-
 
   <div class="top-brand-inner">
 
@@ -1820,9 +1456,7 @@
     <a
       href="#home"
       class="top-brand-lockup"
-      aria-label="Reaper Forge home"
     >
-
 
       <div class="top-brand-title">
 
@@ -1830,102 +1464,74 @@
 
       </div>
 
-
       <div class="top-brand-subtitle">
 
         WEB DESIGN AND DEVELOPMENT
 
       </div>
 
-
     </a>
 
 
 
-    <button
-      class="mobile-menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-    >
-
-      <span></span>
-
-      <span></span>
-
-      <span></span>
-
-    </button>
+    <!-- MOBILE MENU -->
 
 
+    <details class="mobile-navigation">
 
-    <nav
-      class="mobile-menu"
-      id="mobile-menu"
-      aria-label="Mobile navigation"
-    >
+      <summary aria-label="Navigation menu">
 
+        <span></span>
+        <span></span>
+        <span></span>
 
-      <a href="#home">
-
-        Home
-
-      </a>
+      </summary>
 
 
-      <a href="#approach">
+      <nav class="mobile-menu">
 
-        Our Approach
+        <a href="#home">
+          Home
+        </a>
 
-      </a>
+        <a href="#approach">
+          Our Approach
+        </a>
 
+        <a href="#services">
+          What We Build
+        </a>
 
-      <a href="#services">
+        <a href="#about">
+          About
+        </a>
 
-        What We Build
+        <a href="#process">
+          Process
+        </a>
 
-      </a>
+        <a
+          class="mobile-project"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start a Project
+        </a>
 
+      </nav>
 
-      <a href="#about">
-
-        About
-
-      </a>
-
-
-      <a href="#process">
-
-        Process
-
-      </a>
-
-
-      <a
-        class="mobile-project"
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        Start a Project
-
-      </a>
-
-
-    </nav>
+    </details>
 
 
   </div>
-
 
 </header>
 
 
 
 <!-- =========================================================
-     ANIMATED LOADING BAR
+     LOADING BAR
      ========================================================= -->
 
 
@@ -1942,7 +1548,7 @@
 
 
 <!-- =========================================================
-     COMPLETE HERO
+     HERO
      ========================================================= -->
 
 
@@ -1952,37 +1558,326 @@
 >
 
 
-  <!-- MATRIX BACKGROUND -->
+
+  <!-- =====================================================
+       LEFT MATRIX RAIN
+       ===================================================== -->
 
 
   <div
-    class="matrix-glow matrix-glow-left"
+    class="matrix-field matrix-left"
     aria-hidden="true"
-  ></div>
+  >
+
+
+    <span class="matrix-rain hot">01
+10
+&lt;div&gt;
+const
+1010
+{}
+JS
+function
+return
+0101
+forge
+&lt;/&gt;
+build()
+CSS
+101101
+deploy()</span>
+
+
+    <span class="matrix-rain gray">HTML
+001
+grid
+flex
+010
+body
+root
+{}
+101
+class
+node
+script
+render()
+true
+false
+0xFF</span>
+
+
+    <span class="matrix-rain">1010
+const
+{}
+0101
+&lt;/div&gt;
+style
+JS
+await
+async
+build()
+101
+010
+forge
+query()
+index
+deploy()</span>
+
+
+    <span class="matrix-rain hot">01
+01
+10
+11
+REAPER
+FORGE
+1010
+0101
+{}
+&lt;/&gt;
+render()
+build()
+deploy()
+0x01
+JS
+CSS</span>
+
+
+    <span class="matrix-rain gray">function
+return
+HTML
+body
+script
+const
+let
+grid
+flex
+node
+01010
+10101
+style
+class
+null
+true</span>
+
+
+    <span class="matrix-rain">0101
+1010
+&lt;div&gt;
+{}
+const
+JS
+CSS
+HTML
+build()
+render()
+deploy()
+010
+101
+011
+001
+forge</span>
+
+
+    <span class="matrix-rain hot">REAPER
+FORGE
+01
+10
+0101
+1010
+&lt;/&gt;
+{}
+function
+async
+await
+build()
+deploy()
+render()
+CSS
+JS</span>
+
+
+    <span class="matrix-rain gray">0x01
+0xFF
+010
+101
+110
+001
+root
+body
+grid
+flex
+node
+style
+script
+class
+true
+false</span>
+
+
+  </div>
+
+
+
+  <!-- =====================================================
+       RIGHT MATRIX RAIN
+       ===================================================== -->
 
 
   <div
-    class="matrix-glow matrix-glow-right"
+    class="matrix-field matrix-right"
     aria-hidden="true"
-  ></div>
+  >
 
 
-  <div
-    class="matrix-side matrix-side-left"
-    id="matrix-left"
-    aria-hidden="true"
-  ></div>
+    <span class="matrix-rain gray">010
+101
+HTML
+CSS
+JS
+{}
+&lt;/&gt;
+root
+body
+grid
+class
+node
+script
+0101
+1010
+001</span>
 
 
-  <div
-    class="matrix-side matrix-side-right"
-    id="matrix-right"
-    aria-hidden="true"
-  ></div>
+    <span class="matrix-rain hot">REAPER
+FORGE
+1010
+0101
+{}
+const
+function
+build()
+deploy()
+render()
+&lt;div&gt;
+JS
+CSS
+0xFF
+010
+101</span>
+
+
+    <span class="matrix-rain">01
+10
+11
+00
+const
+let
+async
+await
+{}
+&lt;/&gt;
+style
+script
+query()
+index
+client
+server</span>
+
+
+    <span class="matrix-rain gray">body
+root
+HTML
+CSS
+JS
+grid
+flex
+node
+class
+false
+true
+null
+01010
+10101
+00110
+11001</span>
+
+
+    <span class="matrix-rain hot">1010
+0101
+REAPER
+FORGE
+build()
+render()
+deploy()
+function
+return
+{}
+&lt;/&gt;
+0x01
+0xFF
+JS
+CSS
+HTML</span>
+
+
+    <span class="matrix-rain">01
+10
+010
+101
+const
+script
+style
+body
+root
+grid
+flex
+node
+class
+query()
+build()
+forge</span>
+
+
+    <span class="matrix-rain gray">001
+010
+011
+100
+101
+110
+111
+HTML
+CSS
+JS
+{}
+true
+false
+null
+async
+await</span>
+
+
+    <span class="matrix-rain hot">FORGE
+REAPER
+1010
+0101
+&lt;/&gt;
+{}
+build()
+deploy()
+render()
+function
+return
+const
+0xFF
+JS
+CSS
+HTML</span>
+
+
+  </div>
 
 
 
-  <!-- HERO ART -->
+  <!-- HERO IMAGE -->
 
 
   <div class="hero-stage">
@@ -1996,7 +1891,7 @@
 
 
 
-    <!-- DESKTOP NAVIGATION -->
+    <!-- DESKTOP NAV -->
 
 
     <nav
@@ -2004,47 +1899,31 @@
       aria-label="Main navigation"
     >
 
-
       <a href="#home">
-
         Home
-
       </a>
-
 
       <a href="#approach">
-
         Our Approach
-
       </a>
-
 
       <a href="#services">
-
         What We Build
-
       </a>
-
 
       <a href="#about">
-
         About
-
       </a>
-
 
       <a href="#process">
-
         Process
-
       </a>
-
 
     </nav>
 
 
 
-    <!-- START PROJECT -->
+    <!-- START PROJECT HOTSPOT -->
 
 
     <a
@@ -2057,6 +1936,9 @@
 
 
 
+    <!-- MAIN START PROJECT -->
+
+
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
       target="_blank"
@@ -2065,6 +1947,9 @@
       aria-label="Start a Project"
     ></a>
 
+
+
+    <!-- VIEW WHAT WE BUILD -->
 
 
     <a
@@ -2091,32 +1976,23 @@
   id="approach"
 >
 
-
   <div class="container">
 
-
     <div class="section-tag">
-
       Our Approach
-
     </div>
-
 
     <h2>
 
       Your Website Shouldn't Look Like Ours.
 
       <span>
-
         It Should Look Like Yours.
-
       </span>
 
     </h2>
 
-
   </div>
-
 
 </section>
 
@@ -2132,19 +2008,15 @@
   id="services"
 >
 
-
   <div class="container">
 
-
     <div class="mockup-wrap">
-
 
       <img
         src="reaper-forge-concepts.png"
         alt="Reaper Forge website concept examples"
         class="mockup-image"
       >
-
 
     </div>
 
@@ -2155,9 +2027,7 @@
 
     </div>
 
-
   </div>
-
 
 </section>
 
@@ -2170,83 +2040,55 @@
 
 <div class="code-strip">
 
-
   <div class="code-track">
 
-
     <span class="red">
-
       /* DESIGN SYSTEM */
-
     </span>
 
-
     &nbsp;&nbsp;
-
 
     --brand: unique;
 
-
     &nbsp;&nbsp;
-
 
     --layout: responsive;
 
-
     &nbsp;&nbsp;
-
 
     --experience: intentional;
 
-
     &nbsp;&nbsp;
-
 
     customJavaScript: available;
 
-
     &nbsp;&nbsp;
-
 
     document.querySelector(".idea");
 
-
     &nbsp;&nbsp;
-
 
     visualIdentity++;
 
-
     &nbsp;&nbsp;
-
 
     @media screen and (max-width: 700px)
 
-
     &nbsp;&nbsp;
-
 
     <span class="red">
-
       /* REAPER FORGE */
-
     </span>
 
-
     &nbsp;&nbsp;
-
 
     buildExperience();
 
-
     &nbsp;&nbsp;
-
 
     deployWebsite();
 
-
   </div>
-
 
 </div>
 
@@ -2262,9 +2104,7 @@
   id="about"
 >
 
-
   <div class="about-art-wrap">
-
 
     <img
       src="reaper-forge-about.png"
@@ -2272,9 +2112,7 @@
       class="about-art"
     >
 
-
   </div>
-
 
 </section>
 
@@ -2290,9 +2128,7 @@
   id="process"
 >
 
-
   <div class="process-art-wrap">
-
 
     <img
       src="reaper-forge-process.png"
@@ -2300,9 +2136,7 @@
       class="process-art"
     >
 
-
   </div>
-
 
 </section>
 
@@ -2318,14 +2152,10 @@
   id="contact"
 >
 
-
   <div class="container">
 
-
     <div class="section-tag">
-
       Start Something
-
     </div>
 
 
@@ -2334,9 +2164,7 @@
       Got an Idea?
 
       <span>
-
         Let's Build It.
-
       </span>
 
     </h2>
@@ -2348,7 +2176,6 @@
       you have in mind.
 
     </p>
-
 
 
     <a
@@ -2363,7 +2190,6 @@
     </a>
 
 
-
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com"
       target="_blank"
@@ -2375,9 +2201,7 @@
 
     </a>
 
-
   </div>
-
 
 </section>
 
@@ -2390,22 +2214,15 @@
 
 <footer>
 
-
   <div class="container footer-inner">
-
 
     <div class="brand">
 
-
       REAPER <span>FORGE</span>
 
-
       <small>
-
         WEB DESIGN AND DEVELOPMENT
-
       </small>
-
 
     </div>
 
@@ -2423,377 +2240,9 @@
 
     </div>
 
-
   </div>
 
-
 </footer>
-
-
-
-<script>
-
-
-  /* =========================================================
-     MOBILE MENU
-     ========================================================= */
-
-
-  const mobileMenuToggle =
-    document.querySelector(".mobile-menu-toggle");
-
-
-  const mobileMenu =
-    document.querySelector(".mobile-menu");
-
-
-
-  if (mobileMenuToggle && mobileMenu) {
-
-
-    mobileMenuToggle.addEventListener(
-      "click",
-      function () {
-
-
-        const isOpen =
-          mobileMenu.classList.toggle("is-open");
-
-
-        mobileMenuToggle.classList.toggle(
-          "is-open",
-          isOpen
-        );
-
-
-        mobileMenuToggle.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
-
-
-        mobileMenuToggle.setAttribute(
-          "aria-label",
-          isOpen
-            ? "Close navigation menu"
-            : "Open navigation menu"
-        );
-
-
-      }
-    );
-
-
-
-    mobileMenu
-      .querySelectorAll("a")
-      .forEach(function (link) {
-
-
-        link.addEventListener(
-          "click",
-          function () {
-
-
-            mobileMenu.classList.remove(
-              "is-open"
-            );
-
-
-            mobileMenuToggle.classList.remove(
-              "is-open"
-            );
-
-
-            mobileMenuToggle.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-
-            mobileMenuToggle.setAttribute(
-              "aria-label",
-              "Open navigation menu"
-            );
-
-
-          }
-        );
-
-
-      });
-
-
-
-    document.addEventListener(
-      "click",
-      function (event) {
-
-
-        if (
-          !event.target.closest(
-            ".top-brand-inner"
-          )
-        ) {
-
-
-          mobileMenu.classList.remove(
-            "is-open"
-          );
-
-
-          mobileMenuToggle.classList.remove(
-            "is-open"
-          );
-
-
-          mobileMenuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-
-          mobileMenuToggle.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-          );
-
-
-        }
-
-
-      }
-    );
-
-
-  }
-
-
-
-  /* =========================================================
-     MATRIX HERO CODE
-     ========================================================= */
-
-
-  const matrixSnippets = [
-
-    "01",
-    "10",
-    "{}",
-    "[]",
-    "</>",
-    "const",
-    "let",
-    "var",
-    "HTML",
-    "CSS",
-    "JS",
-    "0101",
-    "1010",
-    "<div>",
-    "</div>",
-    "function",
-    "return",
-    "async",
-    "await",
-    "class",
-    "true",
-    "false",
-    "null",
-    "root",
-    "body",
-    "grid",
-    "flex",
-    "deploy()",
-    "build()",
-    "render()",
-    "compile",
-    "query()",
-    "node",
-    "script",
-    "style",
-    "index",
-    "server",
-    "client",
-    "forge",
-    "reaper",
-    "0x01",
-    "0xFF",
-    "101101",
-    "001011"
-
-  ];
-
-
-
-  function randomItem(array) {
-
-    return array[
-      Math.floor(
-        Math.random() * array.length
-      )
-    ];
-
-  }
-
-
-
-  function createMatrixColumn(
-    container,
-    position,
-    index
-  ) {
-
-
-    const column =
-      document.createElement("div");
-
-
-    column.className =
-      "matrix-column";
-
-
-    const roll =
-      Math.random();
-
-
-    if (roll > .82) {
-
-      column.classList.add("hot");
-
-    }
-
-    else if (roll < .32) {
-
-      column.classList.add("dim");
-
-    }
-
-
-    column.style.left =
-      position + "%";
-
-
-    column.style.animationDuration =
-      (
-        7 +
-        Math.random() * 9
-      ) + "s";
-
-
-    column.style.animationDelay =
-      (
-        -Math.random() * 14
-      ) + "s";
-
-
-    column.style.opacity =
-      (
-        .28 +
-        Math.random() * .62
-      );
-
-
-    const amount =
-      11 +
-      Math.floor(
-        Math.random() * 12
-      );
-
-
-    const lines = [];
-
-
-    for (
-      let i = 0;
-      i < amount;
-      i++
-    ) {
-
-      lines.push(
-        randomItem(matrixSnippets)
-      );
-
-    }
-
-
-    column.textContent =
-      lines.join("\n");
-
-
-    container.appendChild(
-      column
-    );
-
-  }
-
-
-
-  function buildMatrixSide(container) {
-
-
-    if (!container) {
-
-      return;
-
-    }
-
-
-    const columnCount = 11;
-
-
-    for (
-      let i = 0;
-      i < columnCount;
-      i++
-    ) {
-
-
-      const position =
-        3 +
-        (
-          i /
-          (columnCount - 1)
-        ) *
-        92;
-
-
-      createMatrixColumn(
-        container,
-        position,
-        i
-      );
-
-    }
-
-  }
-
-
-
-  const matrixLeft =
-    document.getElementById(
-      "matrix-left"
-    );
-
-
-  const matrixRight =
-    document.getElementById(
-      "matrix-right"
-    );
-
-
-  buildMatrixSide(
-    matrixLeft
-  );
-
-
-  buildMatrixSide(
-    matrixRight
-  );
-
-
-</script>
-
 
 
 </body>
