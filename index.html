@@ -68,6 +68,63 @@
     }
 
     /* =========================================================
+       TOP BRAND BANNER
+       ========================================================= */
+
+    .top-brand-banner {
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      padding: 16px 0;
+      background: #020202;
+      border-bottom: 1px solid rgba(215,22,22,.34);
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+    }
+
+    .top-brand-inner {
+      position: relative;
+      width: min(1320px, calc(100% - 40px));
+      min-height: 70px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .top-brand-lockup {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .top-brand-title {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.35rem);
+      font-weight: 800;
+      line-height: .9;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .top-brand-title span {
+      color: var(--red2);
+    }
+
+    .top-brand-subtitle {
+      margin-top: 8px;
+      color: #8b8b8b;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .mobile-menu-toggle,
+    .mobile-menu {
+      display: none;
+    }
+
+    /* =========================================================
        FULL HERO
        ========================================================= */
 
@@ -80,10 +137,7 @@
 
     .hero-stage {
       position: relative;
-
-      /* Slightly smaller hero */
       width: min(1320px, 86vw);
-
       margin: 0 auto;
     }
 
@@ -93,20 +147,12 @@
       display: block;
     }
 
-    /*
-      Invisible clickable zones.
-      Because these live inside hero-stage,
-      they scale together with the artwork.
-    */
-
     .hero-hotspot {
       position: absolute;
       z-index: 10;
       display: block;
       cursor: pointer;
     }
-
-    /* NAV HOTSPOTS */
 
     .hot-home {
       left: 42.5%;
@@ -149,8 +195,6 @@
       width: 14%;
       height: 6.5%;
     }
-
-    /* MAIN HERO BUTTONS */
 
     .hot-main-project {
       left: 3.4%;
@@ -529,6 +573,112 @@
 
     @media (max-width: 700px) {
 
+      .top-brand-banner {
+        padding: 12px 0;
+      }
+
+      .top-brand-inner {
+        width: calc(100% - 24px);
+        min-height: 58px;
+        justify-content: flex-start;
+      }
+
+      .top-brand-lockup {
+        text-align: left;
+        padding-right: 58px;
+      }
+
+      .top-brand-title {
+        font-size: 1.95rem;
+        letter-spacing: 3px;
+      }
+
+      .top-brand-subtitle {
+        margin-top: 6px;
+        font-size: .64rem;
+        letter-spacing: 3px;
+      }
+
+      .mobile-menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        background: #070707;
+        border: 1px solid rgba(255,48,48,.58);
+        cursor: pointer;
+      }
+
+      .mobile-menu-toggle span {
+        width: 20px;
+        height: 2px;
+        background: #f3f3f3;
+        transition: transform .2s, opacity .2s;
+      }
+
+      .mobile-menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .mobile-menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      .mobile-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        width: min(290px, calc(100vw - 24px));
+        padding: 10px;
+        background: rgba(3,3,3,.98);
+        border: 1px solid rgba(255,48,48,.42);
+        box-shadow: 0 22px 45px rgba(0,0,0,.62);
+      }
+
+      .mobile-menu.is-open {
+        display: block;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 13px 14px;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: .9rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .mobile-menu a:last-child {
+        margin-top: 8px;
+        color: #fff;
+        background: var(--red);
+        border-bottom: 0;
+        text-align: center;
+      }
+
+      .hot-home,
+      .hot-services,
+      .hot-concepts,
+      .hot-process,
+      .hot-about,
+      .hot-nav-project {
+        pointer-events: none;
+      }
+
       .hero-full {
         padding: 8px 0;
       }
@@ -583,6 +733,60 @@
 
 
 <body>
+
+
+<!-- =========================================================
+     TOP BRAND BANNER
+     ========================================================= -->
+
+<header class="top-brand-banner">
+
+  <div class="top-brand-inner">
+
+    <a href="#home" class="top-brand-lockup" aria-label="Reaper Forge home">
+      <div class="top-brand-title">
+        REAPER <span>FORGE</span>
+      </div>
+
+      <div class="top-brand-subtitle">
+        WEB DESIGN AND DEVELOPMENT
+      </div>
+    </a>
+
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-label="Mobile navigation"
+    >
+      <a href="#home">Home</a>
+      <a href="#services">What We Build</a>
+      <a href="#about">About</a>
+      <a href="#process">The Process</a>
+
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=reaperforgenet@gmail.com&su=Reaper%20Forge%20Project%20Inquiry&body=Hi%20Reaper%20Forge%2C%0A%0AI%27m%20interested%20in%20having%20a%20website%20built.%0A%0AHere%27s%20what%20I%20have%20in%20mind%3A%0A"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Start a Project
+      </a>
+    </nav>
+
+  </div>
+
+</header>
 
 
 <!-- =========================================================
@@ -669,7 +873,29 @@
 
 
 <!-- =========================================================
-     CONCEPTS
+     OUR APPROACH
+     ========================================================= -->
+
+<section class="statement">
+
+  <div class="container">
+
+    <div class="section-tag">
+      Our Approach
+    </div>
+
+    <h2>
+      Your Website Shouldn't Look Like Ours.
+      <span>It Should Look Like Yours.</span>
+    </h2>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT WE BUILD / CONCEPTS
      ========================================================= -->
 
 <section class="services" id="services">
@@ -689,28 +915,6 @@
     <div class="mockup-caption">
       CONCEPT DESIGNS // EXAMPLES OF POSSIBLE WEBSITE DIRECTIONS
     </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     STATEMENT
-     ========================================================= -->
-
-<section class="statement">
-
-  <div class="container">
-
-    <div class="section-tag">
-      Our Approach
-    </div>
-
-    <h2>
-      Your Website Shouldn't Look Like Ours.
-      <span>It Should Look Like Yours.</span>
-    </h2>
 
   </div>
 
@@ -763,25 +967,6 @@
 
 
 <!-- =========================================================
-     PROCESS
-     ========================================================= -->
-
-<section class="process" id="process">
-
-  <div class="process-art-wrap">
-
-    <img
-      src="reaper-forge-process.png"
-      alt="Reaper Forge website development process from idea to launch"
-      class="process-art"
-    >
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
      ABOUT
      ========================================================= -->
 
@@ -793,6 +978,25 @@
       src="reaper-forge-about.png"
       alt="Reaper Forge web development studio"
       class="about-art"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+     ========================================================= -->
+
+<section class="process" id="process">
+
+  <div class="process-art-wrap">
+
+    <img
+      src="reaper-forge-process.png"
+      alt="Reaper Forge website development process from idea to launch"
+      class="process-art"
     >
 
   </div>
@@ -878,6 +1082,82 @@
   </div>
 
 </footer>
+
+
+<script>
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (mobileMenuToggle && mobileMenu) {
+
+    mobileMenuToggle.addEventListener('click', () => {
+
+      const isOpen = mobileMenu.classList.toggle('is-open');
+
+      mobileMenuToggle.classList.toggle('is-open', isOpen);
+
+      mobileMenuToggle.setAttribute(
+        'aria-expanded',
+        String(isOpen)
+      );
+
+      mobileMenuToggle.setAttribute(
+        'aria-label',
+        isOpen
+          ? 'Close navigation menu'
+          : 'Open navigation menu'
+      );
+
+    });
+
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+
+      link.addEventListener('click', () => {
+
+        mobileMenu.classList.remove('is-open');
+
+        mobileMenuToggle.classList.remove('is-open');
+
+        mobileMenuToggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        mobileMenuToggle.setAttribute(
+          'aria-label',
+          'Open navigation menu'
+        );
+
+      });
+
+    });
+
+
+    document.addEventListener('click', (event) => {
+
+      if (!event.target.closest('.top-brand-inner')) {
+
+        mobileMenu.classList.remove('is-open');
+
+        mobileMenuToggle.classList.remove('is-open');
+
+        mobileMenuToggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        mobileMenuToggle.setAttribute(
+          'aria-label',
+          'Open navigation menu'
+        );
+
+      }
+
+    });
+
+  }
+</script>
 
 
 </body>
