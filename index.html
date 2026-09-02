@@ -1439,7 +1439,7 @@
 </head>
 
 
-<body>
+<body id="home">
 
 
 
@@ -1554,7 +1554,6 @@
 
 <section
   class="hero-full"
-  id="home"
 >
 
 
@@ -2243,6 +2242,25 @@ HTML</span>
   </div>
 
 </footer>
+
+
+
+<script>
+
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+
+  window.addEventListener('pageshow', function () {
+
+    if (!window.location.hash || window.location.hash === '#home') {
+      window.scrollTo(0, 0);
+    }
+
+  });
+
+</script>
 
 
 </body>
